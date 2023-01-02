@@ -1,19 +1,63 @@
 {
-  "name": "ui",
-  "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
-  "license": "MIT",
-  "scripts": {
-    "lint": "eslint *.ts*"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
-    "react": "^18.2.0",
-    "tsconfig": "workspace:*",
-    "typescript": "^4.5.2"
-  }
+	"name": "@i4o-oss/catalystui",
+	"version": "0.0.0",
+	"files": [
+		"dist"
+	],
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"style": "./dist/main.css",
+	"exports": {
+		".": "./dist/index.js",
+		"./main.css": "./dist/main.css"
+	},
+	"types": "./dist/index.d.ts",
+	"license": "MIT",
+	"scripts": {
+		"build": "concurrently \"npm run build:css\" \"tsup index.tsx --format esm,cjs --dts --external react\"",
+		"build:css": "tailwindcss -m -i ./styles/main.css -o ./dist/main.css",
+		"dev": "concurrently \"npm run dev:css\" \"tsup index.tsx --format esm,cjs --watch --dts --external react\"",
+		"dev:css": "tailwindcss -w -i ./styles/main.css -o ./dist/main.css",
+		"lint": "eslint *.ts*"
+	},
+	"dependencies": {
+		"@headlessui/react": "1.7.4",
+		"@radix-ui/react-accordion": "1.0.1",
+		"@radix-ui/react-alert-dialog": "1.0.2",
+		"@radix-ui/react-avatar": "1.0.1",
+		"@radix-ui/react-checkbox": "1.0.1",
+		"@radix-ui/react-dialog": "1.0.2",
+		"@radix-ui/react-dropdown-menu": "2.0.1",
+		"@radix-ui/react-icons": "1.1.1",
+		"@radix-ui/react-label": "2.0.0",
+		"@radix-ui/react-navigation-menu": "1.1.1",
+		"@radix-ui/react-popover": "1.0.2",
+		"@radix-ui/react-radio-group": "1.1.0",
+		"@radix-ui/react-select": "1.1.2",
+		"@radix-ui/react-switch": "1.0.1",
+		"@radix-ui/react-tabs": "1.0.1",
+		"@radix-ui/react-toast": "1.1.1",
+		"@radix-ui/react-toggle": "1.0.1",
+		"@radix-ui/react-toggle-group": "1.0.1",
+		"@radix-ui/react-toolbar": "1.0.1",
+		"@radix-ui/react-tooltip": "1.0.2",
+		"@remix-run/react": "1.7.5",
+		"classnames": "2.3.2",
+		"copy-to-clipboard": "^3.3.3",
+		"tailwindcss-radix": "2.6.1"
+	},
+	"devDependencies": {
+		"@catalystui/eslint-config": "workspace:*",
+		"@catalystui/tsconfig": "workspace:*",
+		"@types/react": "^18.0.17",
+		"@types/react-dom": "^18.0.6",
+		"autoprefixer": "^10.4.13",
+		"concurrently": "^7.6.0",
+		"eslint": "^8.30.0",
+		"postcss": "^8.4.20",
+		"react": "^18.2.0",
+		"tailwindcss": "^3.2.4",
+		"tsup": "^6.5.0",
+		"typescript": "^4.5.2"
+	}
 }

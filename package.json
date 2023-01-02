@@ -1,6 +1,6 @@
 {
   "name": "catalystui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -10,12 +10,21 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"*.{js,ts,jsx,tsx,md,json}\"",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
+    "@catalystui/eslint-config": "workspace:*",
+    "husky": "8.0.2",
+    "lint-staged": "13.0.3",
     "prettier": "latest",
     "turbo": "latest"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
   },
   "engines": {
     "node": ">=14.0.0"
