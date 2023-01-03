@@ -10,7 +10,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"*.{js,ts,jsx,tsx,md,json}\"",
+    "format": "prettier --write \"*.{js,ts,jsx,tsx,md,mdx,json}\"",
     "prepare": "husky install"
   },
   "devDependencies": {

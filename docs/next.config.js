@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   theme: "nextra-theme-docs",
-  themeConfig: "./theme.config.jsx",
+  themeConfig: "./theme.config.js",
 }
 
 const withNextra = require("nextra")(nextConfig)
