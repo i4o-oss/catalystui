@@ -1,3 +1,4 @@
+import '../styles/globals.css'
 import '@i4o-oss/catalystui/main.css'
 import type { AppProps } from 'next/app'
 
