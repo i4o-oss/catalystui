@@ -18,7 +18,9 @@ importers:
 
   docs:
     specifiers:
+      '@i4o-oss/catalystui': workspace:*
       '@next/font': 13.1.1
+      '@radix-ui/react-icons': ^1.1.1
       '@types/node': 18.11.18
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
@@ -29,7 +31,9 @@ importers:
       react-dom: 18.2.0
       typescript: 4.9.4
     dependencies:
+      '@i4o-oss/catalystui': link:../packages/ui
       '@next/font': 13.1.1
+      '@radix-ui/react-icons': 1.1.1_react@18.2.0
       next: 13.1.1_biqbaboplfbrettd7655fr4n2y
       nextra: 2.0.3_q76c2b4vyoegvsbrcwkfvimnai
       nextra-theme-docs: 2.0.3_q76c2b4vyoegvsbrcwkfvimnai

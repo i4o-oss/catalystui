@@ -1,0 +1,22 @@
+import { Button, Dropdown } from '@i4o-oss/catalystui'
+
+# Dropdown
+
+export function DropdownMenu() {
+    const dropdownItems = [
+		{
+			label: 'Item 1',
+		},
+	    {
+			label: 'Item 2',
+	    },
+	    {
+			label: 'Item 3',
+	    },
+    ]
+
+    return <Dropdown items={dropdownItems} trigger={<Button>Dropdown Menu</Button>} />
+
+}
+
+<DropdownMenu />
