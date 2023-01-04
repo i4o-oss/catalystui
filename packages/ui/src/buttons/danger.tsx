@@ -15,8 +15,10 @@ const DangerButton: FC<DangerButtonProps> = ({
 	loading,
 	loadingText,
 	onClick,
+	padding = 'px-4 py-1',
 	shadow = '',
 	textColor = 'text-white',
+	textSize = 'text-sm',
 	type = 'button',
 }) => {
 	return (
@@ -27,7 +29,9 @@ const DangerButton: FC<DangerButtonProps> = ({
 			loading={loading}
 			loadingText={loadingText}
 			onClick={onClick}
+			padding={padding}
 			textColor={textColor}
+			textSize={textSize}
 			type={type}
 		>
 			{children}

@@ -15,8 +15,10 @@ const PrimaryButton: FC<PrimaryButtonProps> = ({
 	loading,
 	loadingText,
 	onClick,
+	padding = 'px-4 py-1',
 	shadow = 'shadow-md',
 	textColor = 'text-white',
+	textSize = 'text-sm',
 	tooltip = '',
 	type = 'button',
 }) => {
@@ -28,7 +30,9 @@ const PrimaryButton: FC<PrimaryButtonProps> = ({
 			loading={loading}
 			loadingText={loadingText}
 			onClick={onClick}
+			padding={padding}
 			textColor={textColor}
+			textSize={textSize}
 			tooltip={tooltip}
 			type={type}
 		>

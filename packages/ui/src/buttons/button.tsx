@@ -14,6 +14,7 @@ const Button: FC<ButtonProps> = ({
 	padding = 'px-4 py-1',
 	shadow = '',
 	textColor = 'text-gray-200',
+	textSize = 'text-sm',
 	tooltip = '',
 	type = 'button',
 }) => {
@@ -21,7 +22,7 @@ const Button: FC<ButtonProps> = ({
 		return (
 			<Tooltip content={tooltip}>
 				<button
-					className={`focus-visible:ring-blend-darken inline-flex items-center justify-center ${borderRadius} border border-transparent text-sm font-semibold hover:bg-blend-darken focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
+					className={`focus-visible:ring-blend-darken inline-flex items-center justify-center ${borderRadius} border border-transparent ${textSize} font-semibold hover:bg-blend-darken focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
 					disabled={disabled}
 					onClick={onClick}
 					type={type}
@@ -55,7 +56,7 @@ const Button: FC<ButtonProps> = ({
 	}
 	return (
 		<button
-			className={`focus-visible:ring-blend-darken inline-flex items-center justify-center ${borderRadius} border border-transparent text-sm font-semibold hover:bg-blend-darken focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
+			className={`focus-visible:ring-blend-darken inline-flex items-center justify-center ${borderRadius} border border-transparent ${textSize} font-semibold hover:bg-blend-darken focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
 			disabled={disabled}
 			onClick={onClick}
 			type={type}

@@ -21,6 +21,7 @@ const IconButton: FC<IconButtonProps> = ({
 		<Button
 			className={`focus-visible:ring-blend-darken inline-flex justify-center rounded-md border border-transparent text-sm font-semibold hover:bg-blend-darken focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
 			onClick={onClick}
+			padding={padding}
 			tooltip={tooltip}
 		>
 			{icon}

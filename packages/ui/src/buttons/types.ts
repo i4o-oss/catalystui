@@ -22,6 +22,7 @@ export interface ButtonProps {
 	shadow?: string
 	size?: ButtonSize
 	textColor?: string
+	textSize?: string
 	tooltip?: string
 	type?: 'button' | 'submit' | 'reset'
 }
