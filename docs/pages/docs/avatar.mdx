@@ -1,1 +1,48 @@
+import { Avatar } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Avatar
+
+<DemoCard className='space-x-4'>
+	<Avatar
+		src='https://images.unsplash.com/photo-1670525975578-4051a7803c38?&w=128&h=128&dpr=2&q=80'
+		variant='circle'
+	/>
+	<Avatar
+		src='https://images.unsplash.com/photo-1669585997967-06d776524f7a?&w=128&h=128&dpr=2&q=80'
+		variant='rounded'
+	/>
+	<Avatar fallback='J' variant='circle' />
+	<Avatar fallback='S' variant='rounded' />
+</DemoCard>
+
+### Example
+
+```tsx
+import { Avatar } from '@i4o-oss/catalystui'
+
+export default () => {
+	return (
+		<>
+			<Avatar
+				src='https://images.unsplash.com/photo-1670525975578-4051a7803c38?&w=128&h=128&dpr=2&q=80'
+				variant='circle'
+			/>
+			<Avatar
+				src='https://images.unsplash.com/photo-1669585997967-06d776524f7a?&w=128&h=128&dpr=2&q=80'
+				variant='rounded'
+			/>
+			<Avatar fallback='J' variant='circle' />
+			<Avatar fallback='S' variant='rounded' />
+		</>
+	)
+}
+```
+
+### Props
+
+| Name       | Type                    | Default    | Description                                                                 |
+| ---------- | ----------------------- | ---------- | --------------------------------------------------------------------------- |
+| `fallback` | `string \| ReactNode`   | `''`       | Fallback text to display if no image is provided or if image fails to load. |
+| `src`      | `string`                | `''`       | Image source.                                                               |
+| `variant`  | `'circle' \| 'rounded'` | `'circle'` | Avatar variant.                                                             |

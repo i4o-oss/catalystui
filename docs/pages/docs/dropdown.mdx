@@ -1,4 +1,5 @@
 import { Button, Dropdown } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
 
 # Dropdown
 
@@ -15,7 +16,11 @@ export function DropdownMenu() {
 	    },
     ]
 
-    return <Dropdown items={dropdownItems} trigger={<Button>Dropdown Menu</Button>} />
+    return (
+        <DemoCard>
+    	    <Dropdown align='start' items={dropdownItems} trigger={<Button>Dropdown Menu</Button>} />
+        </DemoCard>
+    )
 
 }
 
