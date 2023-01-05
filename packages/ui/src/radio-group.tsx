@@ -1,11 +1,11 @@
 import * as RadioGroupPrimitive from '@radix-ui/react-radio-group'
-import type { FC } from 'react'
+import type { FC, ReactNode } from 'react'
 import cx from 'classnames'
 
 type RadioOption = {
 	value: string
 	id: string
-	label: string
+	label: string | ReactNode
 }
 
 type RadioGroupProps = {
@@ -25,7 +25,7 @@ const RadioGroup: FC<RadioGroupProps> = ({
 }) => {
 	return (
 		<RadioGroupPrimitive.Root
-			className={className}
+			className={`flex flex-col space-y-2 ${className}`}
 			defaultValue={defaultValue}
 			name={name}
 			onValueChange={onChange}
@@ -35,9 +35,9 @@ const RadioGroup: FC<RadioGroupProps> = ({
 					<RadioGroupPrimitive.Item
 						className={cx(
 							// Setting the background in dark properly requires a workaround (see css/tailwind.css)
-							'h-4 w-4 rounded-full border border-transparent bg-gray-100 text-purple-600 dark:bg-gray-900',
-							'focus:outline-none focus:ring-0 focus:ring-offset-0 focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-800',
-							'border border-transparent radix-state-checked:border-brand-500'
+							'h-5 w-5 rounded-full border border-transparent bg-gray-100 text-brand-500 dark:bg-gray-900',
+							'focus:outline-none focus:ring-0 focus:ring-offset-0 focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-800',
+							'border border-transparent radix-state-checked:border-transparent'
 						)}
 						key={option.id}
 						id={option.id}
