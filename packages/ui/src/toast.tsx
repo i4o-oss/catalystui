@@ -14,6 +14,9 @@ type ToastProps = {
 	duration?: number
 }
 
+// TODO: Fix description and action styles
+// TODO: Add support for triggering toast from a function call
+
 const Toast: FC<ToastProps> = ({
 	title,
 	description,
@@ -75,7 +78,7 @@ const Toast: FC<ToastProps> = ({
 							</ToastPrimitive.ToastTitle>
 							<ToastPrimitive.ToastDescription
 								asChild
-								className='mt-1 text-sm text-gray-700 dark:text-gray-400'
+								className='mt-1 text-sm text-gray-800 dark:text-gray-200'
 							>
 								{description}
 							</ToastPrimitive.ToastDescription>

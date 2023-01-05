@@ -13,6 +13,8 @@ interface Tab {
 	title: string | ReactNode
 }
 
+// TODO: Add support for default tab, onchange, orientation, etc.
+// TODO: Update styles so they're consistent with the rest of the components
 interface Props {
 	tabs: Tab[]
 }

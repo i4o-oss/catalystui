@@ -5,21 +5,22 @@ import {
 } from '@radix-ui/react-icons'
 import * as SelectPrimitive from '@radix-ui/react-select'
 import cx from 'classnames'
-import React from 'react'
-import type { FC } from 'react'
+import { useState } from 'react'
+import type { FC, ReactNode } from 'react'
 import Button from './buttons/shared/button'
 
 interface SelectItem {
-	label: string
+	label: string | ReactNode
 	value: string
 }
 
+// TODO: Add default label, onchange
 interface Props {
 	items: SelectItem[]
 }
 
 const Select: FC<Props> = ({ items }) => {
-	const [selected, setSelected] = React.useState(items[0])
+	const [selected, setSelected] = useState(items[0])
 
 	const handleSelect = (value: string) => {
 		const item = items.find((item) => item.value === value)
