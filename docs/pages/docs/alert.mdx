@@ -1,1 +1,44 @@
+import { Alert, Button, DangerButton } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Alert
+
+<DemoCard>
+	<Alert
+		action={<DangerButton>Yes</DangerButton>}
+		cancel={<Button>No</Button>}
+		title='Are you sure?'
+		description='This action cannot be undone.'
+		trigger={<DangerButton>Delete Thing</DangerButton>}
+	/>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Alert, Button, DangerButton } from '@i4o-oss/catalystui'
+
+export default () => {
+	return (
+		<DemoCard>
+			<Alert
+				action={<DangerButton>Yes</DangerButton>}
+				cancel={<Button>No</Button>}
+				title='Are you sure?'
+				description='This action cannot be undone.'
+				trigger={<DangerButton>Delete Thing</DangerButton>}
+			/>
+		</DemoCard>
+	)
+}
+```
+
+### Props
+
+| Name        | Type                  | Default | Description                   |
+| :---------- | :-------------------- | :------ | :---------------------------- |
+| action      | `ReactNode`           |         | The action button.            |
+| cancel      | `ReactNode`           |         | The cancel button.            |
+| description | `string \| ReactNode` |         | The description of the alert. |
+| title       | `string \| ReactNode` |         | The title of the alert.       |
+| trigger     | `ReactNode`           |         | The trigger button.           |

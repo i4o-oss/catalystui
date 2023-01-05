@@ -1,0 +1,55 @@
+import { RadioGroup } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
+
+# Radio Group
+
+<DemoCard>
+	<RadioGroup
+		defaultValue='1'
+		name='radio'
+		options={[
+			{ label: <p className='text-gray-900'>Option 1</p>, value: '1' },
+			{ label: <p className='text-gray-900'>Option 2</p>, value: '2' },
+			{ label: <p className='text-gray-900'>Option 3</p>, value: '3' },
+		]}
+	/>
+</DemoCard>
+
+### Example
+
+```tsx
+import { RadioGroup } from '@i4o-oss/catalystui'
+
+export default () => {
+	return (
+		<RadioGroup
+			defaultValue='1'
+			name='radio'
+			options={[
+				{
+					label: <p className='text-gray-900'>Option 1</p>,
+					value: '1',
+				},
+				{
+					label: <p className='text-gray-900'>Option 2</p>,
+					value: '2',
+				},
+				{
+					label: <p className='text-gray-900'>Option 3</p>,
+					value: '3',
+				},
+			]}
+		/>
+	)
+}
+```
+
+### Props
+
+| Name           | Type                                                               | Default     | Description                                                                        |
+| :------------- | :----------------------------------------------------------------- | :---------- | :--------------------------------------------------------------------------------- |
+| `defaultValue` | `string`                                                           | `''`        | The default value of the radio group.                                              |
+| `disabled`     | `boolean`                                                          | `false`     | Whether the radio group is disabled.                                               |
+| `name`         | `string`                                                           | `''`        | The name of the radio group.                                                       |
+| `onChange`     | `(value: string) => void`                                          | `undefined` | The callback function that is triggered when the value of the radio group changes. |
+| `options`      | `Array<{ id: string, label: string \| ReactNode, value: string }>` | `[]`        | The options of the radio group.                                                    |

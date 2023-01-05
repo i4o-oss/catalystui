@@ -1,1 +1,34 @@
+import { Checkbox } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Checkbox
+
+<DemoCard>
+	<Checkbox
+		defaultChecked={true}
+		label={<p className='text-gray-900 font-semibold'>Checkbox</p>}
+	/>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Checkbox } from '@i4o-oss/catalystui'
+
+export default () => {
+	return (
+		<Checkbox
+			defaultChecked={true}
+			label={<p className='text-gray-900 font-semibold'>Checkbox</p>}
+		/>
+	)
+}
+```
+
+### Props
+
+| Name             | Type                  | Default     | Description                                |
+| :--------------- | :-------------------- | :---------- | :----------------------------------------- |
+| `defaultChecked` | `boolean`             | `false`     | Whether the checkbox is checked by default |
+| `disabled`       | `boolean`             | `false`     | Whether the checkbox is disabled           |
+| `label`          | `string \| ReactNode` | `undefined` | The label of the checkbox                  |
