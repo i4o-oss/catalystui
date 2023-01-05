@@ -1,1 +1,39 @@
+import { Select } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Select
+
+<DemoCard>
+	<Select
+		items={[
+			{ value: '1', label: 'Charmander' },
+			{ value: '2', label: 'Squirtle' },
+			{ value: '3', label: 'Bulbasaur' },
+		]}
+	/>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Select } from '@i4o-oss/catalystui'
+
+export default () => {
+	return (
+		<Select
+			items={[
+				{ value: '1', label: 'Charmander' },
+				{ value: '2', label: 'Squirtle' },
+				{ value: '3', label: 'Bulbasaur' },
+			]}
+		/>
+	)
+}
+```
+
+### Props
+
+| Name     | Type                                      | Default     | Description                             |
+| :------- | :---------------------------------------- | :---------- | :-------------------------------------- |
+| items    | `Array<{ label: string, value: string }>` | []          | Array of items to display in the select |
+| onChange | `(value: string) => void`                 | `undefined` | Callback when the value changes         |

@@ -1,1 +1,38 @@
+import { Tabs } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Tabs
+
+<DemoCard>
+	<Tabs
+		tabs={[
+			{ id: '1', title: 'Tab 1', content: 'Tab 1 Content' },
+			{ id: '2', title: 'Tab 2', content: 'Tab 2 Content' },
+			{ id: '3', title: 'Tab 3', content: 'Tab 3 Content' },
+		]}
+	/>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Tabs } from '@i4o-oss/catalystui'
+
+export default () => {
+	return (
+		<Tabs
+			tabs={[
+				{ id: '1', title: 'Tab 1', content: 'Tab 1 Content' },
+				{ id: '2', title: 'Tab 2', content: 'Tab 2 Content' },
+				{ id: '3', title: 'Tab 3', content: 'Tab 3 Content' },
+			]}
+		/>
+	)
+}
+```
+
+### Props
+
+| Name | Type                                                                              | Default | Description             |
+| :--- | :-------------------------------------------------------------------------------- | :------ | :---------------------- |
+| tabs | `Array<{ id: string, title: string \| ReactNode, content: string \| ReactNode }>` | []      | Array of tabs to render |

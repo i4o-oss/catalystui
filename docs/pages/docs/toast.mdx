@@ -1,1 +1,44 @@
+import { Button, Toast } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Toast
+
+<DemoCard>
+	<Toast
+		trigger={<Button>Trigger</Button>}
+		title='You have chosen Chikorita'
+		description='This is your starter pokemon. Take good care of it.'
+		duration={5000}
+		action={<Button>Okay</Button>}
+	/>
+</DemoCard>
+
+### Example
+
+// TODO: Add examples for triggering the toast from a button click and from a function call
+
+```tsx
+import { Button, Toast } from '@i4o-oss/catalystui'
+
+export default () => {
+	return (
+		<Toast
+			trigger={<Button>Trigger</Button>}
+			title='You have chosen Chikorita'
+			description='This is your starter pokemon. Take good care of it.'
+			duration={5000}
+			action={<Button>Okay</Button>}
+		/>
+	)
+}
+```
+
+### Props
+
+| Name        | Type        | Default | Description                                |
+| :---------- | :---------- | :------ | :----------------------------------------- |
+| trigger     | `ReactNode` | `null`  | The element that triggers the toast.       |
+| title       | `string`    | `null`  | The title of the toast.                    |
+| description | `string`    | `null`  | The description of the toast.              |
+| duration    | `number`    | `5000`  | The duration of the toast in milliseconds. |
+| action      | `ReactNode` | `null`  | The action button of the toast.            |
