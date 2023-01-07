@@ -1,0 +1,58 @@
+import Image from 'next/image'
+
+<div className='w-full flex flex-col items-center justify-center mt-10'>
+	<a className='flex flex-col items-center justify-center space-y-8' href='/'>
+		<Image
+			src='/assets/logo.png'
+			alt='CatalystUI Logo'
+			width={128}
+			height={128}
+			priority
+		/>
+	</a>
+	<span className='text-4xl font-semibold'>Catalyst UI</span>
+</div>
+
+{
+
+<p className='max-w-3xl w-full text-lg text-left leading-loose mt-16'>
+	Catalyst UI is a component library built on top of Radix UI Primitives
+	styled with Tailwind CSS made to make prototyping faster.
+</p>
+
+}
+
+{
+
+<p className='max-w-3xl w-full text-lg text-left leading-loose mt-4'>
+	Catalyst UI also comes with more than just the Radix UI Primitives. It
+	builds on top of them to provide you with more components to use in your
+	projects.
+</p>
+}
+
+<h2 className='text-2xl text-center font-semibold mt-16'>Get Started</h2>
+
+{<p className='text-base text-left font-light mt-4 mb-0 uppercase text-gray-600'>Installation</p>}
+
+```bash
+npm add @i4o-oss/catalystui
+```
+
+{<p className='text-base text-left font-light mt-8 mb-0 uppercase text-gray-600'>Example Usage</p>}
+
+```tsx
+import { Button } from '@i4o-oss/catalystui'
+
+export default function Home() {
+	return (
+		<div className='flex flex-col items-center justify-center min-h-screen py-2'>
+			<Button>Click Me</Button>
+		</div>
+	)
+}
+```
+
+<h2 className='text-2xl text-center font-semibold mt-10'>Features</h2>
+
+// TODO: Add features

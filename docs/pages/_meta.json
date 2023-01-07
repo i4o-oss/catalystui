@@ -2,13 +2,11 @@
 	"index": {
 		"title": "Home",
 		"type": "page",
-		"display": "hidden",
-		"theme": {
-			"layout": "raw"
-		}
+		"hidden": true,
+		"display": "hidden"
 	},
 	"docs": {
-		"title": "Documentation",
+		"title": "Docs",
 		"type": "page"
 	}
 }

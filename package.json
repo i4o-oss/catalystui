@@ -1,34 +1,34 @@
 {
-  "name": "catalystui",
-  "version": "0.1.0",
-  "private": true,
-  "workspaces": [
-    "docs",
-    "packages/*"
-  ],
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"*.{js,ts,jsx,tsx,md,mdx,json}\"",
-    "prepare": "husky install"
-  },
-  "devDependencies": {
-    "@catalystui/eslint-config": "workspace:*",
-    "husky": "8.0.2",
-    "lint-staged": "13.0.3",
-    "prettier": "latest",
-    "turbo": "latest"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --cache --fix",
-      "prettier --write"
-    ]
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "dependencies": {},
-  "packageManager": "pnpm@7.18.2"
+	"name": "catalystui",
+	"version": "0.1.0",
+	"private": true,
+	"workspaces": [
+		"docs",
+		"packages/*"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev --parallel",
+		"lint": "turbo run lint",
+		"format": "prettier --write \"*.{js,ts,jsx,tsx,md,mdx,json}\"",
+		"prepare": "husky install"
+	},
+	"devDependencies": {
+		"@catalystui/eslint-config": "workspace:*",
+		"husky": "8.0.2",
+		"lint-staged": "13.0.3",
+		"prettier": "latest",
+		"turbo": "latest"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"eslint --cache --fix",
+			"prettier --write"
+		]
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"dependencies": {},
+	"packageManager": "pnpm@7.18.2"
 }

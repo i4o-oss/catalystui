@@ -1,3 +1,3 @@
 module.exports = {
-  "extends": "@catalystui/eslint-config",
+	extends: '@catalystui/eslint-config',
 }

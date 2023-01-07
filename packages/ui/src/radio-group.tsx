@@ -16,6 +16,7 @@ type RadioGroupProps = {
 	onChange?: (value: string) => void
 }
 
+// TODO: Clicking on label should select the radio
 const RadioGroup: FC<RadioGroupProps> = ({
 	className,
 	defaultValue,
