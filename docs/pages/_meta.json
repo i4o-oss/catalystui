@@ -3,7 +3,11 @@
 		"title": "Home",
 		"type": "page",
 		"hidden": true,
-		"display": "hidden"
+		"display": "hidden",
+		"theme": {
+			"footer": false,
+			"toc": false
+		}
 	},
 	"docs": {
 		"title": "Docs",

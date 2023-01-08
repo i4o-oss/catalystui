@@ -15,7 +15,7 @@ body {
 }
 
 body {
-	@apply bg-[#010101];
+	@apply bg-[#010101] font-sans;
 }
 
 a {
