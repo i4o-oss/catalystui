@@ -1,6 +1,6 @@
 {
 	"index": "Introduction",
-	"get-started": "Get Started",
+	"getting-started": "Get Started",
 	"-- Components --": {
 		"type": "separator",
 		"title": "Components"
