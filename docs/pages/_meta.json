@@ -10,7 +10,18 @@
 		}
 	},
 	"docs": {
-		"title": "Docs",
-		"type": "page"
+		"title": "Documentation",
+		"type": "page",
+		"theme": {
+			"footer": false
+		}
+	},
+	"about": {
+		"title": "About",
+		"type": "page",
+		"theme": {
+			"footer": false,
+			"toc": false
+		}
 	}
 }
