@@ -23,6 +23,10 @@ a {
 	text-decoration: none;
 }
 
+article a {
+	@apply !text-brand-500 !no-underline;
+}
+
 @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
