@@ -1,5 +1,7 @@
+import type { ReactNode } from 'react'
+
 type DemoCardProps = {
-	children: React.ReactNode
+	children: ReactNode
 	className?: string
 }
 
