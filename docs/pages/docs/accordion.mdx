@@ -24,3 +24,44 @@ import DemoCard from '../../components/demo-card'
 		type='multiple'
 	/>
 </DemoCard>
+
+### Example
+
+```tsx
+import { Accordion } from '@i4o-oss/catalystui'
+
+export default () => {
+	return (
+		<Accordion
+			collapsible={true}
+			defaultValue={[]}
+			items={[
+				{
+					id: '1',
+					title: 'Dad Joke 1',
+					content:
+						"I ordered a chicken and an egg on Amazon. I'll let you know...",
+				},
+				{
+					id: '2',
+					title: 'Dad Joke 2',
+					content:
+						"Singing in the shower is fun until you get soap in your mouth. Then it's a soap opera.",
+				},
+			]}
+			type='multiple'
+		/>
+	)
+}
+```
+
+### Props
+
+| Name           | Type                     | Default    | Description                             |
+| :------------- | :----------------------- | :--------- | :-------------------------------------- |
+| `collapsible`  | `boolean`                | `true`     | Whether the accordion can be collapsed. |
+| `defaultValue` | `string[]`               | `[]`       | The default value of the accordion.     |
+| `items`        | `AccordionItem[]`        | `[]`       | The items to display in the accordion.  |
+| `type`         | `'multiple' \| 'single'` | `'single'` | The type of accordion.                  |
+
+// TODO: Add `AccordionItem` type
