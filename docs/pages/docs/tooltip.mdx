@@ -1,1 +1,30 @@
+import { Button, Tooltip } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Tooltip
+
+<DemoCard>
+	<Tooltip content='Tooltip Content'>
+		<Button>Hover me</Button>
+	</Tooltip>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Button, Tooltip } from '@i4o-oss/catalystui'
+
+export default () => (
+	<Tooltip content='Tooltip Content'>
+		<Button>Hover me</Button>
+	</Tooltip>
+)
+```
+
+### Props
+
+| Name    | Type                             | Default  | Description                                 |
+| :------ | :------------------------------- | :------- | :------------------------------------------ |
+| content | `ReactNode \| string`            | ''       | The content of the tooltip                  |
+| side    | `top \| right \| bottom \| left` | 'top'    | The placement of the tooltip                |
+| align   | `start \| center \| end`         | 'center' | Alignment of the content inside the tooltip |
