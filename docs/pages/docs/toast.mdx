@@ -5,7 +5,7 @@ import DemoCard from '../../components/demo-card'
 
 <DemoCard>
 	<Toast
-		trigger={<Button>Trigger</Button>}
+		triggerLabel='Show Toast'
 		title='You have chosen Chikorita'
 		description='This is your starter pokemon. Take good care of it.'
 		duration={5000}
@@ -23,7 +23,7 @@ import { Button, Toast } from '@i4o-oss/catalystui'
 export default () => {
 	return (
 		<Toast
-			trigger={<Button>Trigger</Button>}
+			trigger={<span>Trigger</span>}
 			title='You have chosen Chikorita'
 			description='This is your starter pokemon. Take good care of it.'
 			duration={5000}
@@ -35,10 +35,10 @@ export default () => {
 
 ### Props
 
-| Name        | Type        | Default | Description                                |
-| :---------- | :---------- | :------ | :----------------------------------------- |
-| trigger     | `ReactNode` | `null`  | The element that triggers the toast.       |
-| title       | `string`    | `null`  | The title of the toast.                    |
-| description | `string`    | `null`  | The description of the toast.              |
-| duration    | `number`    | `5000`  | The duration of the toast in milliseconds. |
-| action      | `ReactNode` | `null`  | The action button of the toast.            |
+| Name         | Type                  | Default | Description                                |
+| :----------- | :-------------------- | :------ | :----------------------------------------- |
+| triggerLabel | `ReactNode \| string` | `null`  | The element that triggers the toast.       |
+| title        | `string`              | `null`  | The title of the toast.                    |
+| description  | `string`              | `null`  | The description of the toast.              |
+| duration     | `number`              | `5000`  | The duration of the toast in milliseconds. |
+| action       | `ReactNode`           | `null`  | The action button of the toast.            |

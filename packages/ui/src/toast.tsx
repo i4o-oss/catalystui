@@ -9,7 +9,7 @@ type ToastProps = {
 	description?: ReactNode | string
 	action?: ReactNode
 	actionAltText?: string
-	trigger?: ReactNode
+	triggerLabel?: ReactNode | string
 	isOpen?: boolean
 	duration?: number
 }
@@ -22,7 +22,7 @@ const Toast: FC<ToastProps> = ({
 	description,
 	action,
 	actionAltText,
-	trigger,
+	triggerLabel,
 	isOpen,
 	duration = 3000,
 }) => {
@@ -30,7 +30,7 @@ const Toast: FC<ToastProps> = ({
 	const timerRef = useRef<number>(0)
 
 	useEffect(() => {
-		if (!trigger) {
+		if (!triggerLabel) {
 			setIsToastOpen(false)
 			timerRef.current = window.setTimeout(() => {
 				setIsToastOpen(true)
@@ -38,11 +38,11 @@ const Toast: FC<ToastProps> = ({
 		}
 
 		return () => clearTimeout(timerRef.current)
-	}, [trigger, duration, isOpen])
+	}, [triggerLabel, duration, isOpen])
 
 	return (
 		<ToastPrimitive.ToastProvider swipeDirection='right'>
-			{trigger && (
+			{triggerLabel && (
 				<Button
 					onClick={() => {
 						setIsToastOpen(false)
@@ -52,7 +52,7 @@ const Toast: FC<ToastProps> = ({
 						}, 100)
 					}}
 				>
-					{trigger}
+					{triggerLabel}
 				</Button>
 			)}
 			<ToastPrimitive.Root
