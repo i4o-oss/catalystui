@@ -3,7 +3,7 @@ import type { ButtonProps } from './types'
 import Tooltip from '../tooltip'
 
 const Button: FC<ButtonProps> = ({
-	bg = 'bg-gray-700',
+	bg = '!bg-gray-700',
 	borderRadius = 'rounded-md',
 	children,
 	className,

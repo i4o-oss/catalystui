@@ -8,7 +8,7 @@ interface DangerButtonProps extends ButtonProps {
 }
 
 const DangerButton: FC<DangerButtonProps> = ({
-	bg = 'bg-red-500',
+	bg = '!bg-red-500',
 	children,
 	className,
 	disabled,

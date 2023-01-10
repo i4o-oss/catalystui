@@ -36,7 +36,7 @@ const RadioGroup: FC<RadioGroupProps> = ({
 					<RadioGroupPrimitive.Item
 						className={cx(
 							// Setting the background in dark properly requires a workaround (see css/tailwind.css)
-							'h-5 w-5 rounded-full border border-transparent bg-gray-100 text-brand-500 dark:bg-gray-900',
+							'h-5 w-5 rounded-full border border-transparent !bg-gray-100 text-brand-500 dark:!bg-gray-900',
 							'focus:outline-none focus:ring-0 focus:ring-offset-0 focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-800',
 							'border border-transparent radix-state-checked:border-transparent'
 						)}
