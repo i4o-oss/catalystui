@@ -2,8 +2,8 @@ import { Transition } from '@headlessui/react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { Cross1Icon } from '@radix-ui/react-icons'
 import cx from 'classnames'
-import type { FC } from 'react'
-import React, { Fragment, useState } from 'react'
+import type { FC, ReactNode } from 'react'
+import { Fragment, useState } from 'react'
 
 const TransitionRoot = Transition.Root
 const TransitionChild = Transition.Child
@@ -15,15 +15,15 @@ const DialogDescription = DialogPrimitive.Description
 const DialogClose = DialogPrimitive.Close
 
 interface Props {
-	trigger: React.ReactNode
-	title: React.ReactNode
-	description?: React.ReactNode
-	content: React.ReactNode
-	footer?: React.ReactNode
+	trigger: ReactNode
+	title: ReactNode | string
+	description?: ReactNode | string
+	children: ReactNode
+	footer?: ReactNode
 }
 
 const Dialog: FC<Props> = ({
-	content,
+	children,
 	description,
 	footer,
 	title,
@@ -68,13 +68,14 @@ const Dialog: FC<Props> = ({
 							'focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75'
 						)}
 					>
-						<DialogTitle className='text-sm font-medium text-gray-900 dark:text-gray-100'>
+						<DialogTitle className='text-md font-medium text-gray-900 dark:text-gray-100'>
 							{title}
 						</DialogTitle>
 						<DialogDescription className='mt-2 text-sm font-normal text-gray-700 dark:text-gray-400'>
 							{description}
 						</DialogDescription>
-						{content}
+
+						<div className='mt-4'>{children}</div>
 
 						<div className='mt-4 flex justify-end'>{footer}</div>
 
