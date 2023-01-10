@@ -8,7 +8,7 @@ interface PrimaryButtonProps extends ButtonProps {
 }
 
 const PrimaryButton: FC<PrimaryButtonProps> = ({
-	bg = '!bg-brand-500',
+	bg = '!bg-brand-500 hover:!bg-brand-600 dark:hover:!bg-brand-600',
 	children,
 	className,
 	disabled,
