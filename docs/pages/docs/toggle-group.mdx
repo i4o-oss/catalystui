@@ -1,0 +1,77 @@
+import { ToggleGroup } from '@i4o-oss/catalystui'
+import {
+	FontBoldIcon,
+	FontItalicIcon,
+	UnderlineIcon,
+} from '@radix-ui/react-icons'
+import DemoCard from '../../components/demo-card'
+
+# Toggle Group
+
+<DemoCard>
+	<ToggleGroup
+		items={[
+			{
+				value: 'bold',
+				label: 'Font bold',
+				icon: <FontBoldIcon />,
+			},
+			{
+				value: 'italic',
+				label: 'Font italic',
+				icon: <FontItalicIcon />,
+			},
+			{
+				value: 'underline',
+				label: 'Underline',
+				icon: <UnderlineIcon />,
+			},
+		]}
+		type='multiple'
+	/>
+</DemoCard>
+
+### Example
+
+```tsx
+import { ToggleGroup } from '@i4o-oss/catalystui'
+import {
+	FontBoldIcon,
+	FontItalicIcon,
+	UnderlineIcon,
+} from '@radix-ui/react-icons'
+
+export default function ToggleGroupExample() {
+	return (
+		<ToggleGroup
+			items={[
+				{
+					value: 'bold',
+					label: 'Font bold',
+					icon: <FontBoldIcon />,
+				},
+				{
+					value: 'italic',
+					label: 'Font italic',
+					icon: <FontItalicIcon />,
+				},
+				{
+					value: 'underline',
+					label: 'Underline',
+					icon: <UnderlineIcon />,
+				},
+			]}
+			type='multiple'
+		/>
+	)
+}
+```
+
+### Props
+
+| Name  | Type                   | Default  | Description              |
+| :---- | :--------------------- | :------- | :----------------------- |
+| items | `ToggleItem[]`         | []       | Array of items to render |
+| type  | 'single' \| 'multiple' | 'single' | Type of toggle group     |
+
+// TODO: Add ToggleItem type
