@@ -27,6 +27,18 @@ article a {
 	@apply !text-brand-500 !no-underline;
 }
 
+.contains-task-list {
+	@apply mt-6 first:mt-0 ltr:ml-1 rtl:mr-1;
+}
+
+.contains-task-list .task-list-item {
+	@apply my-2;
+}
+
+.contains-task-list input[type=checkbox] {
+	@apply !mr-2;
+}
+
 @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
