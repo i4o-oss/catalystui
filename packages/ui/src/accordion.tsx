@@ -42,14 +42,19 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 	return (
 		// @ts-ignore
 		<AccordionRoot
+			className={`${
+				type === 'multiple'
+					? 'radix-state-closed:divide-y radix-state-closed:divide-gray-200 radix-state-closed:dark:divide-gray-700'
+					: ''
+			}`}
 			type={type}
 			defaultValue={defaultValue}
 			collapsible={collapsible}
 		>
-			{items.map((item) => {
+			{items.map((item, index) => {
 				return (
 					<AccordionItem
-						className='rounded-lg focus-within:ring focus-within:ring-purple-500 focus-within:ring-opacity-75 focus:outline-none'
+						className={`w-[20rem] rounded-lg focus-within:ring focus-within:ring-brand-500 focus-within:ring-opacity-75 focus:outline-none`}
 						key={item.id}
 						value={item.id}
 					>
@@ -57,9 +62,21 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 							<AccordionTrigger
 								className={cx(
 									'group',
-									'radix-state-open:rounded-t-lg radix-state-closed:rounded-lg',
+									`${
+										type === 'single'
+											? 'radix-state-open:rounded-t-lg radix-state-closed:rounded-lg'
+											: ` ${
+													index === 0
+														? 'radix-state-open:rounded-t-lg radix-state-closed:rounded-t-lg'
+														: ''
+											  } ${
+													index === items.length - 1
+														? 'radix-state-closed:rounded-b-lg'
+														: ''
+											  }`
+									}`,
 									'focus:outline-none',
-									'inline-flex w-full items-center justify-between bg-white px-4 py-2 text-left dark:bg-gray-800'
+									'inline-flex w-full items-center justify-between !bg-white px-4 py-2 text-left dark:!bg-gray-800'
 								)}
 							>
 								<span className='text-sm font-medium text-gray-900 dark:text-gray-100'>
@@ -72,7 +89,20 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 									)}
 								/>
 							</AccordionTrigger>
-							<AccordionContent className='pt-r1 w-full rounded-b-lg bg-white px-4 pb-3 dark:bg-gray-800'>
+							<AccordionContent
+								className={cx(
+									'pt-2 w-full bg-gray-100 px-4 pb-2 dark:bg-gray-700',
+									`${
+										type === 'single'
+											? 'radix-state-open:rounded-b-lg'
+											: `${
+													index === items.length - 1
+														? 'radix-state-open:rounded-b-lg'
+														: ''
+											  }`
+									}`
+								)}
+							>
 								<div className='text-sm text-gray-700 dark:text-gray-400'>
 									{item.content}
 								</div>

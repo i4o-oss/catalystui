@@ -1,1 +1,26 @@
+import { Accordion } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Accordion
+
+<DemoCard>
+	<Accordion
+		collapsible={true}
+		defaultValue={[]}
+		items={[
+			{
+				id: '1',
+				title: 'Dad Joke 1',
+				content:
+					"I ordered a chicken and an egg on Amazon. I'll let you know...",
+			},
+			{
+				id: '2',
+				title: 'Dad Joke 2',
+				content:
+					"Singing in the shower is fun until you get soap in your mouth. Then it's a soap opera.",
+			},
+		]}
+		type='multiple'
+	/>
+</DemoCard>
