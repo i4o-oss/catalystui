@@ -22,8 +22,6 @@ const Tooltip: FC<Props> = ({
 				<TooltipPrimitive.Portal>
 					<TooltipPrimitive.Content
 						align={align}
-						side={side}
-						sideOffset={4}
 						className={cx(
 							'radix-side-top:animate-slide-down-fade',
 							'radix-side-right:animate-slide-left-fade',
@@ -33,6 +31,8 @@ const Tooltip: FC<Props> = ({
 							'bg-white dark:bg-gray-800',
 							'max-w-xs'
 						)}
+						side={side}
+						sideOffset={4}
 					>
 						<TooltipPrimitive.Arrow className='fill-current text-white dark:text-gray-800' />
 						<span className='block text-xs leading-none text-gray-700 dark:text-gray-100 leading-normal'>

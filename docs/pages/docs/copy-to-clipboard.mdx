@@ -1,0 +1,24 @@
+import { CopyToClipboard } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
+
+# Copy To Clipboard
+
+<DemoCard>
+	<CopyToClipboard text='Copy me!' />
+</DemoCard>
+
+### Example
+
+```tsx
+import { CopyToClipboard } from '@i4o-oss/catalystui'
+
+export default () => {
+	return <CopyToClipboard text='Copy me!' />
+}
+```
+
+### Props
+
+| Name | Type   | Default | Description               |
+| :--- | :----- | :------ | :------------------------ |
+| text | string |         | Text to copy to clipboard |

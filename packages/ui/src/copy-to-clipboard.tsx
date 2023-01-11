@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+import { useState } from 'react'
 import copy from 'copy-to-clipboard'
 import { CopyIcon } from '@radix-ui/react-icons'
 import { Button } from './buttons'
@@ -12,7 +13,6 @@ const CopyToClipboard: FC<Props> = ({ text }) => {
 	return (
 		<Tooltip content='Copy to clipboard'>
 			<Button
-				bg='bg-transparent'
 				className='w-8 h-8'
 				padding='p-1'
 				onClick={() =>
