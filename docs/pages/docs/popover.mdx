@@ -1,1 +1,78 @@
+import { Button, Popover } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Popover
+
+<DemoCard>
+	<Popover
+		close={true}
+		title='Edit Profile'
+		trigger={<Button>Click Me</Button>}
+	>
+		<>
+			<div className='grid grid-cols-5 gap-4 mt-4'>
+				<label className='flex items-center text-sm font-semibold col-span-1'>
+					Name
+				</label>
+				<input
+					type='text'
+					className='h-8 bg-transparent rounded-lg border border-gray-200 dark:border-gray-700 col-span-4'
+				/>
+				<label className='flex items-center text-sm font-semibold col-span-1'>
+					Email
+				</label>
+				<input
+					type='text'
+					className='h-8 bg-transparent rounded-lg border border-gray-200 dark:border-gray-700 col-span-4'
+				/>
+			</div>
+		</>
+	</Popover>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Button, Popover } from '@i4o-oss/catalystui'
+
+export default () => {
+	return (
+		<Popover
+			close={true}
+			title='Edit Profile'
+			trigger={<Button>Click Me</Button>}
+			placement='bottom'
+		>
+			<>
+				<div className='grid grid-cols-5 gap-4 mt-4'>
+					<label className='flex items-center text-sm font-semibold col-span-1'>
+						Name
+					</label>
+					<input
+						type='text'
+						className='h-8 bg-transparent rounded-lg border border-gray-200 dark:border-gray-700 col-span-4'
+					/>
+					<label className='flex items-center text-sm font-semibold col-span-1'>
+						Email
+					</label>
+					<input
+						type='text'
+						className='h-8 bg-transparent rounded-lg border border-gray-200 dark:border-gray-700 col-span-4'
+					/>
+				</div>
+			</>
+		</Popover>
+	)
+}
+```
+
+### Props
+
+| Name       | Type                                     | Default  | Description                                     |
+| :--------- | :--------------------------------------- | :------- | :---------------------------------------------- |
+| close      | boolean                                  | true     | Whether to show the close button on the popover |
+| children   | ReactNode                                |          | The content of the popover                      |
+| title      | string                                   |          | The title of the popover                        |
+| trigger    | ReactNode                                |          | The element that triggers the popover           |
+| side       | `'top' \| 'right' \| 'bottom' \| 'left'` | 'bottom' | The placement of the popover.                   |
+| sideOffset | number                                   | 0        | The offset of the popover from the trigger.     |
