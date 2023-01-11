@@ -16,6 +16,7 @@ export interface ButtonProps {
 	loading?: boolean
 	loadingText?: string
 	onClick?: MouseEventHandler<HTMLButtonElement>
+	onMouseDown?: MouseEventHandler<HTMLButtonElement>
 	padding?: string
 	leftIcon?: ReactNode
 	rightIcon?: ReactNode

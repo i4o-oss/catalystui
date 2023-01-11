@@ -11,6 +11,7 @@ const Button: FC<ButtonProps> = ({
 	loading,
 	loadingText,
 	onClick,
+	onMouseDown,
 	padding = 'px-4 py-1',
 	shadow = '',
 	textColor = 'text-gray-200',
@@ -25,6 +26,7 @@ const Button: FC<ButtonProps> = ({
 					className={`focus-visible:ring-blend-darken inline-flex items-center justify-center ${borderRadius} border border-transparent ${textSize} font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
 					disabled={disabled}
 					onClick={onClick}
+					onMouseDown={onMouseDown}
 					type={type}
 				>
 					{loading && (
@@ -59,6 +61,7 @@ const Button: FC<ButtonProps> = ({
 			className={`focus-visible:ring-blend-darken inline-flex items-center justify-center ${borderRadius} border border-transparent ${textSize} font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
 			disabled={disabled}
 			onClick={onClick}
+			onMouseDown={onMouseDown}
 			type={type}
 		>
 			{loading && (
