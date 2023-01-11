@@ -1,1 +1,155 @@
+import { Toolbar } from '@i4o-oss/catalystui'
+import {
+	FontBoldIcon,
+	FontItalicIcon,
+	UnderlineIcon,
+	TextAlignLeftIcon,
+	TextAlignCenterIcon,
+	TextAlignRightIcon,
+} from '@radix-ui/react-icons'
+import DemoCard from '../../components/demo-card.tsx'
+
 # Toolbar
+
+<DemoCard>
+	<Toolbar
+		className='w-full'
+		items={[
+			{
+				type: 'toggle-group',
+				groupItems: [
+					{
+						id: 'bold',
+						icon: <FontBoldIcon />,
+					},
+					{
+						id: 'italic',
+						icon: <FontItalicIcon />,
+					},
+					{
+						id: 'underline',
+						icon: <UnderlineIcon />,
+					},
+				],
+				groupType: 'multiple',
+			},
+			{
+				type: 'separator',
+			},
+			{
+				type: 'toggle-group',
+				groupItems: [
+					{
+						id: 'left',
+						icon: <TextAlignLeftIcon />,
+					},
+					{
+						id: 'center',
+						icon: <TextAlignCenterIcon />,
+					},
+					{
+						id: 'right',
+						icon: <TextAlignRightIcon />,
+					},
+				],
+				groupType: 'multiple',
+			},
+			{
+				type: 'separator',
+			},
+			{
+				type: 'link',
+				link: '/',
+				linkText: 'Edited 2 hours ago',
+			},
+			{
+				type: 'button',
+				buttonText: 'Share',
+			},
+		]}
+	/>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Toolbar } from '@i4o-oss/catalystui'
+import {
+	FontBoldIcon,
+	FontItalicIcon,
+	UnderlineIcon,
+	TextAlignLeftIcon,
+	TextAlignCenterIcon,
+	TextAlignRightIcon,
+} from '@radix-ui/react-icons'
+
+export default () => {
+	return (
+		<Toolbar
+			className='w-full'
+			items={[
+				{
+					type: 'toggle-group',
+					groupItems: [
+						{
+							id: 'bold',
+							icon: <FontBoldIcon />,
+						},
+						{
+							id: 'italic',
+							icon: <FontItalicIcon />,
+						},
+						{
+							id: 'underline',
+							icon: <UnderlineIcon />,
+						},
+					],
+					groupType: 'multiple',
+				},
+				{
+					type: 'separator',
+				},
+				{
+					type: 'toggle-group',
+					groupItems: [
+						{
+							id: 'left',
+							icon: <TextAlignLeftIcon />,
+						},
+						{
+							id: 'center',
+							icon: <TextAlignCenterIcon />,
+						},
+						{
+							id: 'right',
+							icon: <TextAlignRightIcon />,
+						},
+					],
+					groupType: 'multiple',
+				},
+				{
+					type: 'separator',
+				},
+				{
+					type: 'link',
+					link: '/',
+					linkText: 'Edited 2 hours ago',
+				},
+				{
+					type: 'button',
+					buttonText: 'Share',
+				},
+			]}
+		/>
+	)
+}
+```
+
+### Props
+
+| Name      | Type   | Default | Description |
+| :-------- | :----- | :------ | :---------- |
+| className | string |         |             |
+| items     | Array  |         |             |
+
+// TODO: Improve props table
