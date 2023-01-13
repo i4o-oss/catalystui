@@ -10,30 +10,107 @@ import '@i4o-oss/catalystui/main.css'
 
 # Buttons
 
-### Default
+## Default
 
 <DemoCard>
 	<Button>Button</Button>
 </DemoCard>
 
-### Primary
+### Example
+
+```tsx
+import { Button } from '@i4o-oss/catalystui'
+
+export default () => {
+	return <Button>Button</Button>
+}
+```
+
+### Props
+
+| Name         | Type                        | Default | Description           |
+| :----------- | :-------------------------- | :------ | :-------------------- |
+| bg           | string                      |         | Background color      |
+| borderRadius | string                      |         | Border radius         |
+| children     | ReactNode                   |         | Button content        |
+| className    | string                      |         | Additional class name |
+| disabled     | boolean                     |         | Disabled state        |
+| loading      | boolean                     |         | Loading state         |
+| loadingText  | string                      |         | Loading text          |
+| onClick      | (event: MouseEvent) => void |         | Click handler         |
+| onMouseDown  | (event: MouseEvent) => void |         | Mouse down handler    |
+| padding      | string                      |         | Padding               |
+| leftIcon     | ReactNode                   |         | Left icon             |
+| rightIcon    | ReactNode                   |         | Right icon            |
+| shadow       | string                      |         | Box shadow            |
+| textColor    | string                      |         | Text color            |
+| textSize     | string                      |         | Text size             |
+| tooltip      | string                      |         | Tooltip text          |
+| type         | string                      |         | Button type           |
+
+## Primary
 
 <DemoCard>
 	<PrimaryButton>Primary Button</PrimaryButton>
 </DemoCard>
 
-### Danger
+### Example
+
+```tsx
+import { PrimaryButton } from '@i4o-oss/catalystui'
+
+export default () => {
+	return <PrimaryButton>Primary Button</PrimaryButton>
+}
+```
+
+### Props
+
+Refer to [Default Button Props](#props).
+
+## Danger
 
 <DemoCard>
 	<DangerButton>Danger Button</DangerButton>
 </DemoCard>
 
-### Icon
+### Example
+
+```tsx
+import { DangerButton } from '@i4o-oss/catalystui'
+
+export default () => {
+	return <DangerButton>Danger Button</DangerButton>
+}
+```
+
+### Props
+
+Refer to [Default Button Props](#props).
+
+## Icon
 
 <DemoCard>
 	<IconButton icon={<HomeIcon />} />
 </DemoCard>
 
-// TODO: Add variations for each button type, e.g. disabled, loading, etc.
+### Example
 
-// TODO: Add example code and props table for each button type
+```tsx
+import { IconButton } from '@i4o-oss/catalystui'
+import { HomeIcon } from '@radix-ui/react-icons'
+
+export default () => {
+	return <IconButton icon={<HomeIcon />} />
+}
+```
+
+### Props
+
+Refer to [Default Button Props](#props). Icon Button also has the following props:
+
+| Name | Type      | Default | Description |
+| :--- | :-------- | :------ | :---------- |
+| icon | ReactNode |         | Icon        |
+
+// TODO: Add variations for each button type, e.g. disabled, loading, etc.
