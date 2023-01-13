@@ -1,4 +1,12 @@
-import { Button, Dropdown } from '@i4o-oss/catalystui'
+import { Dropdown, IconButton } from '@i4o-oss/catalystui'
+import {
+	ExitIcon,
+	ExternalLinkIcon,
+	FileIcon,
+	GearIcon,
+	HamburgerMenuIcon,
+	InfoCircledIcon,
+} from '@radix-ui/react-icons'
 import DemoCard from '../../components/demo-card'
 
 # Dropdown
@@ -6,19 +14,64 @@ import DemoCard from '../../components/demo-card'
 export function DropdownMenu() {
     const dropdownItems = [
 		{
-			label: 'Item 1',
-		},
+			label: 'New',
+			icon: <FileIcon />,
+			submenu: [
+				{
+					label: 'File',
+					icon: <FileIcon />,
+					onClick: () => console.log('File'),
+					shortcut: 'Ctrl+N',
+				},
+				{
+					label: 'Folder',
+					icon: <FileIcon />,
+					onClick: () => console.log('Folder'),
+					shortcut: 'Ctrl+Shift+N',
+				},
+			],
+			type: 'submenu',
+    	},
+        {
+    		label: 'View Post',
+	        icon: <ExternalLinkIcon />,
+	        onClick: () => console.log('View Post'),
+	        shortcut: 'Ctrl+Shift+V',
+        },
 	    {
-			label: 'Item 2',
+		    type: 'separator',
+	    },
+        {
+    		label: 'Settings',
+	        icon: <GearIcon />,
+	        onClick: () => console.log('Settings'),
+	        shortcut: 'Ctrl+,',
+		},
+		{
+			type: 'separator',
+        },
+	    {
+		    label: 'About',
+		    icon: <InfoCircledIcon />,
+		    onClick: () => console.log('About'),
 	    },
 	    {
-			label: 'Item 3',
+		    label: 'Exit',
+		    icon: <ExitIcon />,
+		    onClick: () => console.log('Logout'),
+		    shortcut: 'Ctrl+Q',
 	    },
     ]
 
     return (
         <DemoCard>
-    	    <Dropdown align='start' items={dropdownItems} trigger={<Button>Dropdown Menu</Button>} />
+    	    <Dropdown
+    	        align='start'
+    	        items={dropdownItems}
+    	        trigger={(
+    				<IconButton icon={<HamburgerMenuIcon />} />
+    	        )}
+            />
         </DemoCard>
     )
 
@@ -26,8 +79,87 @@ export function DropdownMenu() {
 
 <DropdownMenu />
 
-// TODO: Update demo with icons, submenu, shortcuts etc
+### Example
 
-// TODO: Add example code
+```tsx
+import { Dropdown, IconButton } from '@i4o-oss/catalystui'
+import {
+	ExitIcon,
+	ExternalLinkIcon,
+	FileIcon,
+	GearIcon,
+	HamburgerMenuIcon,
+	InfoCircledIcon,
+} from '@radix-ui/react-icons'
 
-// TODO: Add props table
+export default () => {
+	const dropdownItems = [
+		{
+			label: 'New',
+			icon: <FileIcon />,
+			submenu: [
+				{
+					label: 'File',
+					icon: <FileIcon />,
+					onClick: () => console.log('File'),
+					shortcut: 'Ctrl+N',
+				},
+				{
+					label: 'Folder',
+					icon: <FileIcon />,
+					onClick: () => console.log('Folder'),
+					shortcut: 'Ctrl+Shift+N',
+				},
+			],
+			type: 'submenu',
+		},
+		{
+			label: 'View Post',
+			icon: <ExternalLinkIcon />,
+			onClick: () => console.log('View Post'),
+			shortcut: 'Ctrl+Shift+V',
+		},
+		{
+			type: 'separator',
+		},
+		{
+			label: 'Settings',
+			icon: <GearIcon />,
+			onClick: () => console.log('Settings'),
+			shortcut: 'Ctrl+,',
+		},
+		{
+			type: 'separator',
+		},
+		{
+			label: 'About',
+			icon: <InfoCircledIcon />,
+			onClick: () => console.log('About'),
+		},
+		{
+			label: 'Exit',
+			icon: <ExitIcon />,
+			onClick: () => console.log('Logout'),
+			shortcut: 'Ctrl+Q',
+		},
+	]
+
+	return (
+		<Dropdown
+			align='start'
+			items={dropdownItems}
+			trigger={<IconButton icon={<HamburgerMenuIcon />} />}
+		/>
+	)
+}
+```
+
+### Props
+
+| Name    | Type                         | Default | Description                                |
+| :------ | :--------------------------- | :------ | :----------------------------------------- |
+| align   | 'start' \| 'center' \| 'end' | 'start' | The alignment of the dropdown menu.        |
+| items   | DropdownItem[]               | []      | The items to display in the dropdown menu. |
+| trigger | ReactNode                    | null    | The trigger element.                       |
+
+// TODO: Add dropdown item props
