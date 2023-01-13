@@ -1,7 +1,7 @@
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu'
 import cx from 'classnames'
 import type { FC, ReactNode } from 'react'
-import { Link, useLocation } from '@remix-run/react'
+import { useEffect, useState } from 'react'
 
 // enum NavMenuType {
 // 	TABS = 'tabs',
@@ -23,17 +23,21 @@ export enum NavType {
 
 interface Props {
 	items: NavItem[]
-	type?: NavType
+	type?: 'row' | 'column'
 }
 
 const Nav: FC<Props> = ({ items, type = NavType.ROW }) => {
-	const location = useLocation()
+	const [pathname, setPathname] = useState('')
+
+	useEffect(() => {
+		setPathname(window?.location?.pathname)
+	}, [])
 
 	return (
 		<NavigationMenuPrimitive.Root className='relative'>
 			<NavigationMenuPrimitive.List
 				className={`flex ${
-					type === NavType.COLUMN
+					type === 'column'
 						? 'flex-col space-y-2'
 						: 'flex-row space-x-4'
 				}`}
@@ -74,20 +78,20 @@ const Nav: FC<Props> = ({ items, type = NavType.ROW }) => {
 							asChild
 							key={`nav-item-${id}`}
 						>
-							<Link
-								to={href as string}
+							<a
+								href={href as string}
 								className={cx(
 									'px-4 py-2 text-sm rounded-md hover:bg-brand-100 dark:hover:bg-brand-800',
 									'text-sm text-gray-700 dark:text-gray-100',
 									`${
-										location.pathname === href
+										pathname.includes(href as string)
 											? 'bg-brand dark:bg-brand font-semibold'
 											: 'font-medium'
 									}`
 								)}
 							>
 								{label}
-							</Link>
+							</a>
 						</NavigationMenuPrimitive.Item>
 					)
 				})}

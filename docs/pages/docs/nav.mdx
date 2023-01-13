@@ -1,1 +1,67 @@
+import { Nav } from '@i4o-oss/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Navigation Menu
+
+<DemoCard>
+	<Nav
+		items={[
+			{
+				id: 'home',
+				label: 'Home',
+				href: '/',
+			},
+			{
+				id: 'about',
+				label: 'About',
+				href: '/about',
+			},
+			{
+				id: 'contact',
+				label: 'Contact',
+				href: '/contact',
+			},
+		]}
+		type='row'
+	/>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Nav } from '@i4o-oss/catalystui'
+
+export default () => (
+	<Nav
+		items={[
+			{
+				id: 'home',
+				label: 'Home',
+				href: '/',
+			},
+			{
+				id: 'about',
+				label: 'About',
+				href: '/about',
+			},
+			{
+				id: 'contact',
+				label: 'Contact',
+				href: '/contact',
+			},
+		]}
+		type='row'
+	/>
+)
+```
+
+### Props
+
+| Name  | Type            | Default | Description               |
+| :---- | :-------------- | :------ | :------------------------ |
+| items | Array           | []      | Array of navigation items |
+| type  | `row \| column` | 'row'   | Type of navigation menu   |
+
+// TODO: Add details about the items prop
+
+// TODO: Update navbar styles
