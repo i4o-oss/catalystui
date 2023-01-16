@@ -21,14 +21,14 @@ interface AccordionItemType {
 
 interface AccordionSingle extends AccordionSingleProps {
 	collapsible: boolean
-	defaultValue: string
+	defaultValue?: string
 	items: AccordionItemType[]
 	type: 'single'
 }
 
 interface AccordionMultiple extends AccordionMultipleProps {
 	collapsible: boolean
-	defaultValue: string[] | undefined
+	defaultValue?: string[]
 	items: AccordionItemType[]
 	type: 'multiple'
 }
