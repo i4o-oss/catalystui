@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.1.2
+
+### Patch Changes
+
+-   7b9f1ab: Add Readme
+
 ## 0.1.1
 
 ### Patch Changes

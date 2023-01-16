@@ -1,5 +1,12 @@
 # @catalystui/docs
 
+## 0.1.3
+
+### Patch Changes
+
+-   Updated dependencies [7b9f1ab]
+    -   @i4o-oss/catalystui@0.1.2
+
 ## 0.1.2
 
 ### Patch Changes
