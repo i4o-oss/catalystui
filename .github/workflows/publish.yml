@@ -27,8 +27,4 @@ jobs:
           publish: pnpm run build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-<<<<<<< Updated upstream
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-=======
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
->>>>>>> Stashed changes
