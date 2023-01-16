@@ -32,7 +32,7 @@ const Checkbox: FC<Props> = ({ defaultChecked, label }) => {
 
 			<Label
 				htmlFor='c1'
-				className='ml-2 select-none text-sm font-medium text-gray-900 dark:text-gray-100'
+				className='ml-2 select-none text-sm text-gray-900 dark:text-gray-100'
 			>
 				{label}
 			</Label>
