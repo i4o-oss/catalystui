@@ -15,17 +15,19 @@ const DialogDescription = DialogPrimitive.Description
 const DialogClose = DialogPrimitive.Close
 
 interface Props {
+	action?: ReactNode
+	cancel?: ReactNode
+	children: ReactNode
+	description?: ReactNode | string
 	trigger: ReactNode
 	title: ReactNode | string
-	description?: ReactNode | string
-	children: ReactNode
-	footer?: ReactNode
 }
 
 const Dialog: FC<Props> = ({
+	action,
+	cancel,
 	children,
 	description,
-	footer,
 	title,
 	trigger,
 }) => {
@@ -77,7 +79,10 @@ const Dialog: FC<Props> = ({
 
 						<div className='mt-4'>{children}</div>
 
-						<div className='mt-4 flex justify-end'>{footer}</div>
+						<div className='mt-4 flex justify-end space-x-2'>
+							{cancel && <DialogClose>{cancel}</DialogClose>}
+							{action && <DialogClose>{action}</DialogClose>}
+						</div>
 
 						<DialogClose
 							className={cx(

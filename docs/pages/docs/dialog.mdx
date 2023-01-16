@@ -5,15 +5,11 @@ import DemoCard from '../../components/demo-card'
 
 <DemoCard>
 	<Dialog
+		action={<PrimaryButton>OK</PrimaryButton>}
+		cancel={<Button>Cancel</Button>}
 		title='Edit Profile'
 		description='Change your profile information here. Click save when you are done.'
 		trigger={<Button>Edit Profile</Button>}
-		footer={
-			<div className='flex space-x-2'>
-				<Button>Cancel</Button>
-				<PrimaryButton>Save</PrimaryButton>
-			</div>
-		}
 	>
 		<div className='grid grid-cols-5 gap-4'>
 			<label className='flex items-center text-sm font-semibold col-span-1'>
@@ -42,15 +38,11 @@ import { Button, Dialog, PrimaryButton } from '@i4o-oss/catalystui'
 export default () => {
 	return (
 		<Dialog
+			action={<PrimaryButton>OK</PrimaryButton>}
+			cancel={<Button>Cancel</Button>}
 			title='Edit Profile'
 			description='Change your profile information here. Click save when you are done.'
 			trigger={<Button>Edit Profile</Button>}
-			footer={
-				<div className='flex space-x-2'>
-					<Button>Cancel</Button>
-					<PrimaryButton>Save</PrimaryButton>
-				</div>
-			}
 		>
 			<div className='grid grid-cols-5 gap-4'>
 				<label className='flex items-center text-sm font-semibold col-span-1'>
