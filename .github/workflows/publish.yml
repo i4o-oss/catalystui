@@ -29,9 +29,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Publish to NPM
-        if: steps.changesets.outputs.published == 'true'
-        run: pnpm publish --access public
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
