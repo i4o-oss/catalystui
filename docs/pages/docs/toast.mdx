@@ -1,4 +1,4 @@
-import { Button, Toast } from '@i4o-oss/catalystui'
+import { Toast } from '@i4o-oss/catalystui'
 import DemoCard from '../../components/demo-card'
 
 # Toast
@@ -9,7 +9,9 @@ import DemoCard from '../../components/demo-card'
 		title='You have chosen Chikorita'
 		description='This is your starter pokemon. Take good care of it.'
 		duration={5000}
-		action={<Button>Okay</Button>}
+		action='Okay'
+		actionAltText='Accept action'
+		dismiss={false}
 	/>
 </DemoCard>
 
@@ -21,11 +23,11 @@ import { Button, Toast } from '@i4o-oss/catalystui'
 export default () => {
 	return (
 		<Toast
-			trigger={<span>Trigger</span>}
-			title='You have chosen Chikorita'
+			action={<Button>Okay</Button>}
 			description='This is your starter pokemon. Take good care of it.'
 			duration={5000}
-			action={<Button>Okay</Button>}
+			trigger={<span>Trigger</span>}
+			title='You have chosen Chikorita'
 		/>
 	)
 }
@@ -43,4 +45,4 @@ export default () => {
 
 // TODO: Add examples for triggering the toast from a button click and from a function call
 
-// TODO: Update toast styles
+// TODO: Update action and dismiss styles in toast
