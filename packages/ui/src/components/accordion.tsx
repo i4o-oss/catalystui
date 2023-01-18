@@ -7,12 +7,6 @@ import type {
 import { ChevronDownIcon } from '@radix-ui/react-icons'
 import cx from 'classnames'
 
-const AccordionRoot = AccordionPrimitive.Root
-const AccordionContent = AccordionPrimitive.Content
-const AccordionHeader = AccordionPrimitive.Header
-const AccordionItem = AccordionPrimitive.Item
-const AccordionTrigger = AccordionPrimitive.Trigger
-
 interface AccordionItemType {
 	id: string
 	title: string | ReactNode
@@ -20,14 +14,14 @@ interface AccordionItemType {
 }
 
 interface AccordionSingle extends AccordionSingleProps {
-	collapsible: boolean
+	collapsible?: boolean
 	defaultValue?: string
 	items: AccordionItemType[]
 	type: 'single'
 }
 
 interface AccordionMultiple extends AccordionMultipleProps {
-	collapsible: boolean
+	collapsible?: boolean
 	defaultValue?: string[]
 	items: AccordionItemType[]
 	type: 'multiple'
@@ -41,7 +35,7 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 }) => {
 	return (
 		// @ts-ignore
-		<AccordionRoot
+		<AccordionPrimitive.Root
 			className={`${
 				type === 'multiple'
 					? 'radix-state-closed:divide-y radix-state-closed:divide-gray-200 radix-state-closed:dark:divide-gray-700'
@@ -53,13 +47,13 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 		>
 			{items.map((item, index) => {
 				return (
-					<AccordionItem
+					<AccordionPrimitive.Item
 						className={`w-[20rem] rounded-lg focus-within:ring focus-within:ring-brand-500 focus-within:ring-opacity-75 focus:outline-none`}
 						key={item.id}
 						value={item.id}
 					>
-						<AccordionHeader className='w-full'>
-							<AccordionTrigger
+						<AccordionPrimitive.Header className='w-full'>
+							<AccordionPrimitive.Trigger
 								className={cx(
 									'group',
 									`${
@@ -88,8 +82,8 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 										'group-radix-state-open:rotate-180 group-radix-state-open:duration-300'
 									)}
 								/>
-							</AccordionTrigger>
-							<AccordionContent
+							</AccordionPrimitive.Trigger>
+							<AccordionPrimitive.Content
 								className={cx(
 									'pt-2 w-full bg-gray-100 px-4 pb-2 dark:bg-gray-700',
 									`${
@@ -106,12 +100,12 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 								<div className='text-sm text-gray-700 dark:text-gray-400'>
 									{item.content}
 								</div>
-							</AccordionContent>
-						</AccordionHeader>
-					</AccordionItem>
+							</AccordionPrimitive.Content>
+						</AccordionPrimitive.Header>
+					</AccordionPrimitive.Item>
 				)
 			})}
-		</AccordionRoot>
+		</AccordionPrimitive.Root>
 	)
 }
 
