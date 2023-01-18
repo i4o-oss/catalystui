@@ -2,9 +2,12 @@ import { getPagesUnderRoute } from 'nextra/context'
 import Link from 'next/link'
 
 export default function BlogIndex({ more = 'Read more' }) {
-	return getPagesUnderRoute('/blog').map((page) => {
+	return getPagesUnderRoute('/blog').map((page, index) => {
 		return (
-			<div className='flex flex-col items-start justify-start'>
+			<div
+				className='flex flex-col items-start justify-start'
+				key={index}
+			>
 				<h3 className='text-2xl font-semibold mt-8'>
 					<Link
 						className='!text-gray-900 dark:!text-white'

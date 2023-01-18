@@ -24,6 +24,7 @@ export function Author({ name, link }: { name: string; link: string }) {
 				href={link}
 				target='_blank'
 				className='mx-1 text-current'
+				rel='noreferrer'
 			>
 				{name}
 			</a>
