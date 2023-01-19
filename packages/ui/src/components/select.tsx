@@ -10,28 +10,33 @@ import type { FC, ReactNode } from 'react'
 import Button from './buttons/shared/button'
 
 interface SelectItem {
+	disabled?: boolean
 	label: string | ReactNode
 	value: string
 }
 
 // TODO: Add default label, onchange
 interface Props {
+	defaultValue?: string
 	items: SelectItem[]
+	name: string
+	onValueChange?: (item: SelectItem) => void
 }
 
-const Select: FC<Props> = ({ items }) => {
+const Select: FC<Props> = ({ defaultValue, items, name, onValueChange }) => {
 	const [selected, setSelected] = useState(items[0])
 
 	const handleSelect = (value: string) => {
 		const item = items.find((item) => item.value === value)
 		if (item) {
 			setSelected(item)
+			onValueChange?.(item)
 		}
 	}
 
 	return (
 		<SelectPrimitive.Root
-			defaultValue={items[0].value}
+			defaultValue={defaultValue}
 			onValueChange={handleSelect}
 			value={selected.value}
 		>
@@ -55,12 +60,13 @@ const Select: FC<Props> = ({ items }) => {
 							{items.map((f, i) => (
 								<SelectPrimitive.Item
 									key={`${f.value}-${i}`}
-									value={f.value}
+									disabled={f?.disabled}
 									className={cx(
 										'relative flex items-center px-8 py-2 rounded-md text-sm text-gray-700 dark:text-gray-300 font-medium focus:bg-gray-100 dark:focus:bg-gray-900',
 										'radix-disabled:opacity-50',
 										'focus:outline-none select-none'
 									)}
+									value={f.value}
 								>
 									<SelectPrimitive.ItemText>
 										{f.label}

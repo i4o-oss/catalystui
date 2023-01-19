@@ -12,7 +12,7 @@ const IconButton: FC<IconButtonProps> = ({
 	className,
 	icon,
 	onClick,
-	padding = 'p-4',
+	padding = 'p-3',
 	shadow = '',
 	textColor = 'text-white',
 	tooltip = '',
