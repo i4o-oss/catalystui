@@ -18,7 +18,7 @@ const ToggleGroup: FC<ToggleGroupProps> = ({ items, type }) => {
 		<ToggleGroupPrimitive.Root type={type}>
 			{items.map(({ value, label, icon }, i) => (
 				<ToggleGroupPrimitive.Item
-					key={`group-item-${value}-${label}`}
+					key={`group-item-${value}-${i}`}
 					value={value}
 					aria-label={label}
 					className={cx(

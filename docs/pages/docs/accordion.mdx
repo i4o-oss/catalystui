@@ -5,7 +5,8 @@ import DemoCard from '../../components/demo-card'
 
 <DemoCard>
 	<Accordion
-		defaultValue={[]}
+		collapsible
+		defaultValue={'1'}
 		items={[
 			{
 				id: '1',
@@ -19,8 +20,14 @@ import DemoCard from '../../components/demo-card'
 				content:
 					"Singing in the shower is fun until you get soap in your mouth. Then it's a soap opera.",
 			},
+			{
+				id: '3',
+				title: 'Dad Joke 3',
+				content:
+					'When two vegans get in an argument, is it still called a beef?',
+			},
 		]}
-		type='multiple'
+		type='single'
 	/>
 </DemoCard>
 
@@ -33,7 +40,7 @@ export default () => {
 	return (
 		<Accordion
 			collapsible={true}
-			defaultValue={[]}
+			defaultValue={'1'}
 			items={[
 				{
 					id: '1',
@@ -47,8 +54,14 @@ export default () => {
 					content:
 						"Singing in the shower is fun until you get soap in your mouth. Then it's a soap opera.",
 				},
+				{
+					id: '3',
+					title: 'Dad Joke 3',
+					content:
+						'When two vegans get in an argument, is it still called a beef?',
+				},
 			]}
-			type='multiple'
+			type='single'
 		/>
 	)
 }
@@ -56,11 +69,9 @@ export default () => {
 
 ### Props
 
-| Name           | Type                     | Default    | Description                             |
-| :------------- | :----------------------- | :--------- | :-------------------------------------- |
-| `collapsible`  | `boolean`                | `true`     | Whether the accordion can be collapsed. |
-| `defaultValue` | `string[]`               | `[]`       | The default value of the accordion.     |
-| `items`        | `AccordionItem[]`        | `[]`       | The items to display in the accordion.  |
-| `type`         | `'multiple' \| 'single'` | `'single'` | The type of accordion.                  |
-
-// TODO: Add `AccordionItem` type
+| Name           | Type                                                                              | Default    | Description                             |
+| :------------- | :-------------------------------------------------------------------------------- | :--------- | :-------------------------------------- |
+| `collapsible`  | `boolean`                                                                         | `true`     | Whether the accordion can be collapsed. |
+| `defaultValue` | `string[]`                                                                        | `[]`       | The default value of the accordion.     |
+| `items`        | `Array<{ id: string, title: string \| ReactNode, content: string \| ReactNode }>` | `[]`       | The items to display in the accordion.  |
+| `type`         | `'multiple' \| 'single'`                                                          | `'single'` | The type of accordion.                  |

@@ -3,56 +3,26 @@ import {
 	FontBoldIcon,
 	FontItalicIcon,
 	UnderlineIcon,
+	TextAlignLeftIcon,
+	TextAlignCenterIcon,
+	TextAlignRightIcon,
 } from '@radix-ui/react-icons'
 import DemoCard from '../../components/demo-card'
 
 # Toggle Group
 
 <DemoCard>
-	<ToggleGroup
-		items={[
-			{
-				value: 'bold',
-				label: 'Font bold',
-				icon: <FontBoldIcon />,
-			},
-			{
-				value: 'italic',
-				label: 'Font italic',
-				icon: <FontItalicIcon />,
-			},
-			{
-				value: 'underline',
-				label: 'Underline',
-				icon: <UnderlineIcon />,
-			},
-		]}
-		type='multiple'
-	/>
-</DemoCard>
-
-### Example
-
-```tsx
-import { ToggleGroup } from '@i4o-oss/catalystui'
-import {
-	FontBoldIcon,
-	FontItalicIcon,
-	UnderlineIcon,
-} from '@radix-ui/react-icons'
-
-export default function ToggleGroupExample() {
-	return (
+	<div className='flex space-x-4'>
 		<ToggleGroup
 			items={[
 				{
 					value: 'bold',
-					label: 'Font bold',
+					label: 'Font Bold',
 					icon: <FontBoldIcon />,
 				},
 				{
 					value: 'italic',
-					label: 'Font italic',
+					label: 'Font Italic',
 					icon: <FontItalicIcon />,
 				},
 				{
@@ -63,15 +33,95 @@ export default function ToggleGroupExample() {
 			]}
 			type='multiple'
 		/>
+		<ToggleGroup
+			items={[
+				{
+					value: 'left',
+					label: 'Left Align',
+					icon: <TextAlignLeftIcon />,
+				},
+				{
+					value: 'center',
+					label: 'Center Align',
+					icon: <TextAlignCenterIcon />,
+				},
+				{
+					value: 'right',
+					label: 'Right Align',
+					icon: <TextAlignRightIcon />,
+				},
+			]}
+			type='single'
+		/>
+	</div>
+</DemoCard>
+
+### Example
+
+```tsx
+import { ToggleGroup } from '@i4o-oss/catalystui'
+import {
+	FontBoldIcon,
+	FontItalicIcon,
+	UnderlineIcon,
+	TextAlignLeftIcon,
+	TextAlignCenterIcon,
+	TextAlignRightIcon,
+} from '@radix-ui/react-icons'
+
+export default function ToggleGroupExample() {
+	return (
+		<div className='flex space-x-4'>
+			<ToggleGroup
+				items={[
+					{
+						value: 'bold',
+						label: 'Font Bold',
+						icon: <FontBoldIcon />,
+					},
+					{
+						value: 'italic',
+						label: 'Font Italic',
+						icon: <FontItalicIcon />,
+					},
+					{
+						value: 'underline',
+						label: 'Underline',
+						icon: <UnderlineIcon />,
+					},
+				]}
+				type='multiple'
+			/>
+			<ToggleGroup
+				items={[
+					{
+						value: 'left',
+						label: 'Left Align',
+						icon: <TextAlignLeftIcon />,
+					},
+					{
+						value: 'center',
+						label: 'Center Align',
+						icon: <TextAlignCenterIcon />,
+					},
+					{
+						value: 'right',
+						label: 'Right Align',
+						icon: <TextAlignRightIcon />,
+					},
+				]}
+				type='single'
+			/>
+		</div>
 	)
 }
 ```
 
 ### Props
 
-| Name  | Type                   | Default  | Description              |
-| :---- | :--------------------- | :------- | :----------------------- |
-| items | `ToggleItem[]`         | []       | Array of items to render |
-| type  | 'single' \| 'multiple' | 'single' | Type of toggle group     |
+| Name  | Type                                                        | Default  | Description                                                                                                                  |
+| :---- | :---------------------------------------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------- |
+| items | `Array<{ value: string, label: string, icon: ReactNode  }>` | []       | Array of items to render                                                                                                     |
+| type  | 'single' \| 'multiple'                                      | 'single' | Type of toggle group. Single allows only one button to be toggled in a group. Multiple allows multiple toggles in the group. |
 
-// TODO: Add ToggleItem type
+// TODO: Add toggle component or add a toggle prop to the button component

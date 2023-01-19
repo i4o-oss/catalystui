@@ -28,10 +28,10 @@ interface AccordionMultiple extends AccordionMultipleProps {
 }
 
 const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
-	collapsible,
+	collapsible = true,
 	defaultValue,
 	items,
-	type,
+	type = 'single',
 }) => {
 	return (
 		// @ts-ignore
@@ -56,21 +56,18 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 							<AccordionPrimitive.Trigger
 								className={cx(
 									'group',
-									`${
-										type === 'single'
-											? 'radix-state-open:rounded-t-lg radix-state-closed:rounded-lg'
-											: ` ${
-													index === 0
-														? 'radix-state-open:rounded-t-lg radix-state-closed:rounded-t-lg'
-														: ''
-											  } ${
-													index === items.length - 1
-														? 'radix-state-closed:rounded-b-lg'
-														: ''
-											  }`
+									` ${
+										index === 0
+											? 'radix-state-open:rounded-t-lg radix-state-closed:rounded-t-lg'
+											: ''
+									} ${
+										index === items.length - 1
+											? 'radix-state-closed:rounded-b-lg'
+											: ''
 									}`,
 									'focus:outline-none',
-									'inline-flex w-full items-center justify-between !bg-white px-4 py-2 text-left dark:!bg-gray-800'
+									'inline-flex w-full items-center justify-between !bg-white px-4 py-2 text-left dark:!bg-gray-800',
+									'border-b border-gray-600 dark:border-gray-600'
 								)}
 							>
 								<span className='text-sm font-medium text-gray-900 dark:text-gray-100'>
@@ -87,13 +84,9 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 								className={cx(
 									'pt-2 w-full bg-gray-100 px-4 pb-2 dark:bg-gray-700',
 									`${
-										type === 'single'
+										index === items.length - 1
 											? 'radix-state-open:rounded-b-lg'
-											: `${
-													index === items.length - 1
-														? 'radix-state-open:rounded-b-lg'
-														: ''
-											  }`
+											: ''
 									}`
 								)}
 							>

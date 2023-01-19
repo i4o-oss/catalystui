@@ -10,20 +10,32 @@ const Label = LabelPrimitive.Label
 
 interface Props {
 	defaultChecked?: boolean
+	disabled?: boolean
 	label: string | ReactNode
+	name: string
+	required?: boolean
 }
 
-const Checkbox: FC<Props> = ({ defaultChecked, label }) => {
+const Checkbox: FC<Props> = ({
+	defaultChecked = false,
+	disabled = false,
+	label,
+	name,
+	required = false,
+}) => {
 	return (
-		<form className='flex items-center'>
+		<div className='flex items-center'>
 			<CheckboxRoot
-				id='c1'
-				defaultChecked={defaultChecked}
+				id={name}
 				className={cx(
 					'flex h-5 w-5 items-center justify-center rounded',
 					'radix-state-checked:bg-brand-500 radix-state-unchecked:bg-gray-100 dark:radix-state-unchecked:bg-gray-900',
 					'focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
 				)}
+				defaultChecked={defaultChecked}
+				disabled={disabled}
+				name={name}
+				required={required}
 			>
 				<CheckboxIndicator>
 					<CheckIcon className='h-4 w-4 self-center text-white' />
@@ -31,12 +43,12 @@ const Checkbox: FC<Props> = ({ defaultChecked, label }) => {
 			</CheckboxRoot>
 
 			<Label
-				htmlFor='c1'
+				htmlFor={name}
 				className='ml-2 select-none text-sm text-gray-900 dark:text-gray-100'
 			>
 				{label}
 			</Label>
-		</form>
+		</div>
 	)
 }
 

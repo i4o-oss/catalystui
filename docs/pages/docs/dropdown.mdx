@@ -162,4 +162,14 @@ export default () => {
 | items   | DropdownItem[]               | []      | The items to display in the dropdown menu. |
 | trigger | ReactNode                    | null    | The trigger element.                       |
 
-// TODO: Add dropdown item props
+#### DropdownItem
+
+| Name     | Type                               | Default | Description                                                                                                                           |
+| :------- | :--------------------------------- | :------ | :------------------------------------------------------------------------------------------------------------------------------------ |
+| type     | 'submenu' \| 'separator' \| 'item' | 'item'  | Type of the dropdown menu item.                                                                                                       |
+| label    | `string \| ReactNode`              | `''`    | Label to display for the item.                                                                                                        |
+| icon     | ReactNode                          | -       | Icon to display for the item.                                                                                                         |
+| submenu  | DropdownItem[]                     | []      | The items to display as the submenu for the item.                                                                                     |
+| link     | string                             | -       | URL to open on click when type is `item`.                                                                                             |
+| onSelect | () => void                         | -       | Function to call when type is `item`.                                                                                                 |
+| shortcut | string                             | -       | Keyboard shortcut to display when type is `item`. Calling the `onSelect` function is not handled. User has to handle it on their own. |

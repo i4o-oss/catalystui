@@ -4,10 +4,19 @@ import DemoCard from '../../components/demo-card'
 # Checkbox
 
 <DemoCard>
-	<Checkbox
-		defaultChecked={true}
-		label={<p className='text-gray-900'>Checkbox</p>}
-	/>
+	<div className='flex flex-col space-y-2'>
+		<Checkbox
+			defaultChecked={true}
+			label={<p className='text-gray-900'>Checkbox</p>}
+			name='test1'
+		/>
+		<Checkbox
+			defaultChecked={true}
+			disabled={true}
+			label={<p className='text-gray-900'>Checkbox</p>}
+			name='test2'
+		/>
+	</div>
 </DemoCard>
 
 ### Example
@@ -27,8 +36,12 @@ export default () => {
 
 ### Props
 
-| Name             | Type                  | Default     | Description                                |
-| :--------------- | :-------------------- | :---------- | :----------------------------------------- |
-| `defaultChecked` | `boolean`             | `false`     | Whether the checkbox is checked by default |
-| `disabled`       | `boolean`             | `false`     | Whether the checkbox is disabled           |
-| `label`          | `string \| ReactNode` | `undefined` | The label of the checkbox                  |
+| Name             | Type                  | Default | Description                                                       |
+| :--------------- | :-------------------- | :------ | :---------------------------------------------------------------- |
+| `defaultChecked` | `boolean`             | `false` | Whether the checkbox is checked by default                        |
+| `disabled`       | `boolean`             | `false` | Whether the checkbox is disabled                                  |
+| `label`          | `string \| ReactNode` | `''`    | The label of the checkbox                                         |
+| `name`           | `string`              | `''`    | The label of the checkbox                                         |
+| `required`       | `boolean`             | `false` | Whether the checkbox is required before the form can be submitted |
+
+// TODO: Update disabled state styles
