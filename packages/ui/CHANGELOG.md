@@ -1,5 +1,14 @@
 # @i4o-oss/catalystui
 
+## 0.3.0
+
+### Minor Changes
+
+-   c393da6: Add new functionality to some components
+
+    -   Add new props to checkbox component - disabled, name, required
+    -   Adjust props for accordion and toggle group
+
 ## 0.2.0
 
 ### Minor Changes
