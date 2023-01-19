@@ -62,7 +62,7 @@
     },
     "publishConfig": {
         "access": "public"
-    }
+    },
     "homepage": "https://catalyst.i4o.dev/",
     "repository": {
         "type": "git",
