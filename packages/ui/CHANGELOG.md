@@ -1,5 +1,15 @@
 # @i4o-oss/catalystui
 
+## 0.4.0
+
+### Minor Changes
+
+-   7ec079f: Add new props for select component
+
+### Patch Changes
+
+-   24f10dd: Add github repo and website to package.json
+
 ## 0.3.0
 
 ### Minor Changes
