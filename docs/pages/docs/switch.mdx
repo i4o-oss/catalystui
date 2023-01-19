@@ -6,3 +6,22 @@ import DemoCard from '../../components/demo-card'
 <DemoCard>
 	<Switch name='test' />
 </DemoCard>
+
+### Example
+
+```tsx
+import { Switch } from '@i4o-oss/catalystui'
+
+export default () => {
+	return <Switch name='test' />
+}
+```
+
+### Props
+
+| Name            | Type                         | Default     | Description                     |
+| :-------------- | :--------------------------- | :---------- | :------------------------------ |
+| defaultChecked  | `boolean`                    | `false`     | Default on or off               |
+| icon            | `ReactNode`                  | `undefined` | Icon to show inside the switch  |
+| name            | `string`                     | `''`        | Name of the switch field        |
+| onCheckedChange | `(checked: boolean) => void` | `undefined` | Callback when the value changes |
