@@ -23,7 +23,7 @@ article a {
 	@apply my-2;
 }
 
-.contains-task-list input[type=checkbox] {
+.contains-task-list input[type='checkbox'] {
 	@apply !mr-2;
 }
 
