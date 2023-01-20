@@ -11,7 +11,7 @@ a {
 	text-decoration: none;
 }
 
-article a {
+article main p > a {
 	@apply !text-brand-500 !no-underline;
 }
 
