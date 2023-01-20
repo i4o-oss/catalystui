@@ -1,4 +1,5 @@
 node_modules/
 
 docs/.next
+packages/ui/dist
 pnpm-lock.yaml
