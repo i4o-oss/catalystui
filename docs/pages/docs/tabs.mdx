@@ -5,6 +5,7 @@ import DemoCard from '../../components/demo-card'
 
 <DemoCard>
 	<Tabs
+		defaultValue='1'
 		tabs={[
 			{ id: '1', title: 'Tab 1', content: 'Tab 1 Content' },
 			{ id: '2', title: 'Tab 2', content: 'Tab 2 Content' },
@@ -21,6 +22,7 @@ import { Tabs } from '@i4o-oss/catalystui'
 export default () => {
 	return (
 		<Tabs
+			defaultValue='1'
 			tabs={[
 				{ id: '1', title: 'Tab 1', content: 'Tab 1 Content' },
 				{ id: '2', title: 'Tab 2', content: 'Tab 2 Content' },
@@ -33,8 +35,7 @@ export default () => {
 
 ### Props
 
-| Name | Type                                                                              | Default | Description             |
-| :--- | :-------------------------------------------------------------------------------- | :------ | :---------------------- |
-| tabs | `Array<{ id: string, title: string \| ReactNode, content: string \| ReactNode }>` | []      | Array of tabs to render |
-
-// TODO: Update tab styles
+| Name         | Type                                                                              | Default | Description                             |
+| :----------- | :-------------------------------------------------------------------------------- | :------ | :-------------------------------------- |
+| defaultValue | `string`                                                                          | `''`    | Id of the tab to be selected by default |
+| tabs         | `Array<{ id: string, title: string \| ReactNode, content: string \| ReactNode }>` | []      | Array of tabs to render                 |

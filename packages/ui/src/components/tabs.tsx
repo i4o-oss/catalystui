@@ -16,12 +16,13 @@ interface Tab {
 // TODO: Add support for default tab, onchange, orientation, etc.
 // TODO: Update styles so they're consistent with the rest of the components
 interface Props {
+	defaultValue: string
 	tabs: Tab[]
 }
 
-const Tabs: FC<Props> = ({ tabs }) => {
+const Tabs: FC<Props> = ({ defaultValue, tabs }) => {
 	return (
-		<TabsRoot defaultValue='tab1'>
+		<TabsRoot className='w-96' defaultValue={defaultValue}>
 			<TabsList
 				className={cx(
 					'flex w-full rounded-t-lg bg-white dark:bg-gray-800'
