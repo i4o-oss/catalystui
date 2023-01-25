@@ -10,17 +10,12 @@ interface NavItem {
 	id: string
 }
 
-export enum NavType {
-	ROW,
-	COLUMN,
-}
-
 interface Props {
 	items: NavItem[]
 	type?: 'row' | 'column'
 }
 
-const Nav: FC<Props> = ({ items, type = NavType.ROW }) => {
+const Nav: FC<Props> = ({ items, type = 'row' }) => {
 	const [pathname, setPathname] = useState('')
 
 	useEffect(() => {
@@ -30,7 +25,7 @@ const Nav: FC<Props> = ({ items, type = NavType.ROW }) => {
 	return (
 		<NavigationMenuPrimitive.Root className='relative'>
 			<NavigationMenuPrimitive.List
-				className={`flex ${
+				className={`flex rounded-lg bg-white dark:bg-gray-800 p-2 ${
 					type === 'column'
 						? 'flex-col space-y-2'
 						: 'flex-row space-x-4'
@@ -54,7 +49,8 @@ const Nav: FC<Props> = ({ items, type = NavType.ROW }) => {
 								</NavigationMenuPrimitive.Trigger>
 								<NavigationMenuPrimitive.Content
 									className={cx(
-										'absolute w-auto top-0 left-0 rounded-lg',
+										'absolute w-auto top-0 left-0 rounded-lg !z-100',
+										'bg-white dark:bg-gray-800',
 										'radix-motion-from-start:animate-enter-from-left',
 										'radix-motion-from-end:animate-enter-from-right',
 										'radix-motion-to-start:animate-exit-to-left',
@@ -92,7 +88,7 @@ const Nav: FC<Props> = ({ items, type = NavType.ROW }) => {
 
 				<NavigationMenuPrimitive.Indicator
 					className={cx(
-						'z-10',
+						'!z-100',
 						'top-[100%] flex items-end justify-center h-2 overflow-hidden',
 						'radix-state-visible:animate-fade-in',
 						'radix-state-hidden:animate-fade-out',
@@ -106,7 +102,7 @@ const Nav: FC<Props> = ({ items, type = NavType.ROW }) => {
 			<div
 				className={cx(
 					'absolute flex justify-center',
-					'w-[140%] left-[-20%] top-[100%]'
+					'w-[140%] left-[-20%] top-[100%] !z-100'
 				)}
 				style={{
 					perspective: '2000px',
