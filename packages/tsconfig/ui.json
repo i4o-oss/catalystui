@@ -3,7 +3,7 @@
     "display": "UI",
     "extends": "./base.json",
     "compilerOptions": {
-        "jsx": "react",
+        "jsx": "react-jsx",
         "lib": [
             "DOM",
             "ES2019"
