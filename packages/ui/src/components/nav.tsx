@@ -3,12 +3,6 @@ import cx from 'classnames'
 import type { FC, ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 
-// enum NavMenuType {
-// 	TABS = 'tabs',
-// 	PILLS = 'pills',
-// 	GROUP = 'group',
-// }
-
 interface NavItem {
 	content?: string | ReactNode
 	href?: string
