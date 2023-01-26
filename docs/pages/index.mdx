@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import { Button, CopyToClipboard } from '@i4o-oss/catalystui'
+import Link from 'next/link'
 
 <div className='w-full flex flex-col items-center justify-center mt-10'>
 	<a className='flex flex-col items-center justify-center space-y-8' href='/'>
@@ -31,15 +33,19 @@ import Image from 'next/image'
 </p>
 }
 
-[Get Started](/docs/getting-started) · [Components](/docs/components) · [GitHub Repository](https://github.com/i4o-oss/catalystui)
+<div className='flex items-center space-x-4 mt-8'>
+    <Link href='/docs'>
+        <Button className='h-12' padding='px-6 py-3' textSize='text-base'>Documentation</Button>
+    </Link>
+    <pre className="h-12 flex items-center justify-between pl-4 pr-12 space-x-2 rounded-lg border border-slate-100 bg-slate-100 dark:border-slate-700 dark:bg-black">
+        <code className="font-mono text-sm font-semibold text-slate-900 dark:text-slate-50">
+            npm add @i4o-oss/catalystui
+        </code>
+        <CopyToClipboard text='npm add @i4o-oss/catalystui' />
+    </pre>
+</div>
 
 <h2 className='text-2xl text-left font-semibold mt-16'>Get Started</h2>
-
-{<p className='text-base text-left font-light mt-4 mb-0 uppercase text-gray-600'>Installation</p>}
-
-```bash
-npm add @i4o-oss/catalystui
-```
 
 {<p className='text-base text-left font-light mt-8 mb-0 uppercase text-gray-600'>Example Usage</p>}
 

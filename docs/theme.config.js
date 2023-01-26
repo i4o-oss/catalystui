@@ -53,5 +53,6 @@ const theme = {
 			</>
 		)
 	},
+	gitTimestamp: null,
 }
 export default theme
