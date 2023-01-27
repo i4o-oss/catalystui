@@ -28,7 +28,7 @@ const Nav: FC<Props> = ({ items, type = 'row' }) => {
 				className={`flex rounded-lg bg-white dark:bg-gray-800 p-2 ${
 					type === 'column'
 						? 'flex-col space-y-2'
-						: 'flex-row space-x-4'
+						: 'flex-row space-x-2'
 				}`}
 			>
 				{items.map(({ content, href, label, id }) => {
@@ -39,7 +39,7 @@ const Nav: FC<Props> = ({ items, type = 'row' }) => {
 							>
 								<NavigationMenuPrimitive.Trigger
 									className={cx(
-										'px-4 py-2 text-sm rounded-md hover:bg-brand-100 dark:hover:bg-brand-800',
+										'px-4 py-1 text-sm rounded-md hover:bg-brand-100 dark:hover:bg-brand-800',
 										'text-sm font-medium',
 										'text-brand-700 dark:text-brand-100',
 										'focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
@@ -71,7 +71,7 @@ const Nav: FC<Props> = ({ items, type = 'row' }) => {
 							<a
 								href={href as string}
 								className={cx(
-									'px-4 py-2 text-sm rounded-md hover:bg-brand-100 dark:hover:bg-brand-800',
+									'px-4 py-1 text-sm rounded-md hover:bg-brand-100 dark:hover:bg-brand-800',
 									'text-sm text-gray-700 dark:text-gray-100',
 									`${
 										pathname.includes(href as string)
