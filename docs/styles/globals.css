@@ -11,7 +11,8 @@ a {
 	text-decoration: none;
 }
 
-article main p > a {
+article main p > a,
+article main ul > li > a {
 	@apply !text-brand-500 !no-underline;
 }
 
