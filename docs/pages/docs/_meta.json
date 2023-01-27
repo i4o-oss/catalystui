@@ -1,39 +1,38 @@
 {
-	"index": "Introduction",
-	"getting-started": "Get Started",
-	"components": "Components",
-	"-- Components --": {
-		"type": "separator",
-		"title": "Components"
-	},
-	"accordion": "Accordion",
-	"alert": "Alert",
-	"avatar": "Avatar",
-	"buttons": "Buttons",
-	"checkbox": "Checkbox",
-	"dialog": "Dialog",
-	"dropdown": "Dropdown",
-	"nav": "Navigation Menu",
-	"popover": "Popover",
-	"radio-group": "Radio Group",
-	"select": "Select",
-	"switch": "Switch",
-	"tabs": "Tabs",
-	"toast": "Toast",
-	"toggle-group": "Toggle Group",
-	"toolbar": "Toolbar",
-	"tooltip": "Tooltip",
-	"-- Utils --": {
-		"type": "separator",
-		"title": "Utils"
-	},
-	"copy-to-clipboard": "Copy to Clipboard",
-	"-- About --": {
-		"type": "separator",
-		"title": "More"
-	},
-	"about link": {
-		"title": "About CatalystUI",
-		"href": "/about"
-	}
+    "index": "Introduction",
+    "getting-started": "Get Started",
+    "-- Components --": {
+        "type": "separator",
+        "title": "Components"
+    },
+    "accordion": "Accordion",
+    "alert": "Alert",
+    "avatar": "Avatar",
+    "buttons": "Buttons",
+    "checkbox": "Checkbox",
+    "dialog": "Dialog",
+    "dropdown": "Dropdown",
+    "nav": "Navigation Menu",
+    "popover": "Popover",
+    "radio-group": "Radio Group",
+    "select": "Select",
+    "switch": "Switch",
+    "tabs": "Tabs",
+    "toast": "Toast",
+    "toggle-group": "Toggle Group",
+    "toolbar": "Toolbar",
+    "tooltip": "Tooltip",
+    "-- Utils --": {
+        "type": "separator",
+        "title": "Utils"
+    },
+    "copy-to-clipboard": "Copy to Clipboard",
+    "-- About --": {
+        "type": "separator",
+        "title": "More"
+    },
+    "about link": {
+        "title": "About CatalystUI",
+        "href": "/about"
+    }
 }
