@@ -16,11 +16,6 @@
             "footer": false
         }
     },
-    "components": {
-        "title": "Components",
-        "type": "page",
-        "href": "/docs/accordion"
-    },
     "about": {
         "title": "About",
         "type": "page",
