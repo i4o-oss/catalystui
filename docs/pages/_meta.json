@@ -1,37 +1,42 @@
 {
-	"index": {
-		"title": "Home",
-		"type": "page",
-		"hidden": true,
-		"display": "hidden",
-		"theme": {
-			"footer": false,
-			"toc": false
-		}
-	},
-	"docs": {
-		"title": "Documentation",
-		"type": "page",
-		"theme": {
-			"footer": false
-		}
-	},
-	"about": {
-		"title": "About",
-		"type": "page",
-		"theme": {
-			"footer": false,
-			"toc": false
-		}
-	},
-	"blog": {
-		"title": "Blog",
-		"type": "page",
-		"hidden": true,
-		"display": "hidden",
-		"theme": {
-			"pagination": false,
-			"sidebar": false
-		}
-	}
+    "index": {
+        "title": "Home",
+        "type": "page",
+        "hidden": true,
+        "display": "hidden",
+        "theme": {
+            "footer": false,
+            "toc": false
+        }
+    },
+    "docs": {
+        "title": "Documentation",
+        "type": "page",
+        "theme": {
+            "footer": false
+        }
+    },
+    "components": {
+        "title": "Components",
+        "type": "page",
+        "href": "/docs/accordion"
+    },
+    "about": {
+        "title": "About",
+        "type": "page",
+        "theme": {
+            "footer": false,
+            "toc": false
+        }
+    },
+    "blog": {
+        "title": "Blog",
+        "type": "page",
+        "hidden": true,
+        "display": "hidden",
+        "theme": {
+            "pagination": false,
+            "sidebar": false
+        }
+    }
 }
