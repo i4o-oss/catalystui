@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.5.0
+
+### Minor Changes
+
+-   003de96: Update components styles and props
+
 ## 0.4.0
 
 ### Minor Changes
