@@ -5,13 +5,12 @@ import DemoCard from '../../components/demo-card'
 
 <DemoCard>
 	<Toast
-		triggerLabel='Show Toast'
+		trigger='Show Toast'
 		title='You have chosen Chikorita'
 		description='This is your starter pokemon. Take good care of it.'
 		duration={5000}
 		action='Okay'
 		actionAltText='Accept action'
-		dismiss={false}
 	/>
 </DemoCard>
 
@@ -23,10 +22,10 @@ import { Button, Toast } from '@i4o-oss/catalystui'
 export default () => {
 	return (
 		<Toast
-			action={<Button>Okay</Button>}
+			action='Okay'
 			description='This is your starter pokemon. Take good care of it.'
 			duration={5000}
-			trigger={<span>Trigger</span>}
+		    trigger='Show Toast'
 			title='You have chosen Chikorita'
 		/>
 	)
@@ -37,12 +36,13 @@ export default () => {
 
 | Name         | Type                  | Default | Description                                |
 | :----------- | :-------------------- | :------ | :----------------------------------------- |
-| triggerLabel | `ReactNode \| string` | `null`  | The element that triggers the toast.       |
+| trigger | `ReactNode \| string` | `null`  | The element that triggers the toast.       |
 | title        | `string`              | `null`  | The title of the toast.                    |
 | description  | `string`              | `null`  | The description of the toast.              |
 | duration     | `number`              | `5000`  | The duration of the toast in milliseconds. |
 | action       | `ReactNode`           | `null`  | The action button of the toast.            |
+| actionAltText       | `string`           | `null`  | Alt text for action button.            |
+| dismiss       | `boolean`           | `true`  | If toast should have a dismiss button. |
+| dismissText       | `string`           | `'Dismiss'`  | Dismiss button text, if shown.  |
 
-// TODO: Add examples for triggering the toast from a button click and from a function call
 
-// TODO: Update action and dismiss styles in toast

@@ -4,7 +4,7 @@ import * as ToastPrimitive from '@radix-ui/react-toast'
 import cx from 'classnames'
 import { Button } from './buttons'
 
-type ToastProps = {
+interface ToastProps {
 	action?: ReactNode | string
 	actionAltText?: string
 	description?: ReactNode | string
@@ -13,11 +13,12 @@ type ToastProps = {
 	duration?: number
 	isOpen?: boolean
 	title?: ReactNode | string
-	triggerLabel?: ReactNode | string
+	trigger?: ReactNode | string
 }
 
 // TODO: Fix description and action styles
 // TODO: Add support for triggering toast from a function call
+// TODO: Add examples for triggering the toast from a button click and from a function call
 
 const Toast: FC<ToastProps> = ({
 	action,
@@ -28,13 +29,13 @@ const Toast: FC<ToastProps> = ({
 	duration = 3000,
 	isOpen,
 	title,
-	triggerLabel,
+	trigger,
 }) => {
 	const [isToastOpen, setIsToastOpen] = useState(isOpen || false)
 	const timerRef = useRef<number>(0)
 
 	useEffect(() => {
-		if (!triggerLabel) {
+		if (!trigger) {
 			setIsToastOpen(false)
 			timerRef.current = window.setTimeout(() => {
 				setIsToastOpen(true)
@@ -42,11 +43,11 @@ const Toast: FC<ToastProps> = ({
 		}
 
 		return () => clearTimeout(timerRef.current)
-	}, [triggerLabel, duration, isOpen])
+	}, [trigger, duration, isOpen])
 
 	return (
 		<ToastPrimitive.Provider swipeDirection='right'>
-			{triggerLabel && (
+			{trigger && (
 				<Button
 					onClick={() => {
 						setIsToastOpen(false)
@@ -56,7 +57,7 @@ const Toast: FC<ToastProps> = ({
 						}, 100)
 					}}
 				>
-					{triggerLabel}
+					{trigger}
 				</Button>
 			)}
 			<ToastPrimitive.Root
@@ -75,7 +76,7 @@ const Toast: FC<ToastProps> = ({
 				onOpenChange={setIsToastOpen}
 			>
 				<div className='flex'>
-					<div className='flex w-0 flex-1 items-center py-4 pl-5'>
+					<div className='flex w-0 flex-1 items-center py-4 pl-5 border-r border-gray-200 dark:border-gray-700'>
 						<div className='radix w-full'>
 							<ToastPrimitive.Title className='text-sm font-semibold text-gray-900 dark:text-gray-100'>
 								{title}
@@ -86,30 +87,35 @@ const Toast: FC<ToastProps> = ({
 						</div>
 					</div>
 					{action && dismiss && (
-						// TODO: Figure out why this divider is not working
-						<div className='grid grid-cols-1 divider-y divider-gray-200 dark:divider-gray-700'>
+						<div className='grid grid-cols-1'>
 							{typeof action === 'string' ? (
-								<ToastPrimitive.Action
-									altText={actionAltText as string}
-									className='flex items-center justify-center rounded-tr-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'
-								>
-									{action}
-								</ToastPrimitive.Action>
+								<div className='flex items-center justify-center rounded-tr-lg text-sm font-medium hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'>
+									<ToastPrimitive.Action
+										altText={actionAltText as string}
+										className='px-3 py-2 text-brand-500'
+									>
+										{action}
+									</ToastPrimitive.Action>
+								</div>
 							) : (
-								<ToastPrimitive.Action
-									asChild
-									altText={actionAltText as string}
-									className='flex items-center justify-center rounded-tr-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'
-								>
-									{action}
-								</ToastPrimitive.Action>
+								<div className='flex items-center justify-center rounded-tr-lg text-sm font-medium hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'>
+									<ToastPrimitive.Action
+										asChild
+										altText={actionAltText as string}
+										className='px-3 py-2 text-brand-500'
+									>
+										{action}
+									</ToastPrimitive.Action>
+								</div>
 							)}
-							<ToastPrimitive.Close className='flex items-center justify-center rounded-br-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'>
-								{dismissText}
-							</ToastPrimitive.Close>
+							<div className='flex items-center justify-center border-t border-gray-200 dark:border-gray-700 rounded-br-lg text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'>
+								<ToastPrimitive.Close className='px-3 py-2'>
+									{dismissText}
+								</ToastPrimitive.Close>
+							</div>
 						</div>
 					)}
-					{action && (
+					{action && !dismiss && (
 						<div className='flex flex-col justify-center px-3 py-2 '>
 							{typeof action === 'string' ? (
 								<ToastPrimitive.Action
