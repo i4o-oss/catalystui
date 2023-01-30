@@ -8,14 +8,16 @@ interface PrimaryButtonProps extends ButtonProps {
 }
 
 const PrimaryButton: FC<PrimaryButtonProps> = ({
-	bg = '!bg-brand-500 hover:!bg-brand-600 dark:hover:!bg-brand-600',
+	bg = '!bg-brand-500 hover:!bg-brand-600 disabled:hover:!bg-brand-500 dark:hover:!bg-brand-600 disabled:dark:hover:!bg-brand-500',
 	children,
 	className,
 	disabled,
+	leftIcon,
 	loading,
 	loadingText,
 	onClick,
 	padding = 'px-4 py-1',
+	rightIcon,
 	shadow = 'shadow-md',
 	textColor = 'text-white',
 	textSize = 'text-sm',
@@ -27,10 +29,12 @@ const PrimaryButton: FC<PrimaryButtonProps> = ({
 			bg={bg}
 			className={`${className} ${shadow}`}
 			disabled={disabled}
+			leftIcon={leftIcon}
 			loading={loading}
 			loadingText={loadingText}
 			onClick={onClick}
 			padding={padding}
+			rightIcon={rightIcon}
 			textColor={textColor}
 			textSize={textSize}
 			tooltip={tooltip}

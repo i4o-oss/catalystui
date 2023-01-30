@@ -4,16 +4,19 @@ import {
 	DangerButton,
 	IconButton,
 } from '@i4o-oss/catalystui'
-import { HomeIcon } from '@radix-ui/react-icons'
+import { HomeIcon, PlayIcon, PauseIcon, StopIcon } from '@radix-ui/react-icons'
 import DemoCard from '../../components/demo-card'
 import '@i4o-oss/catalystui/main.css'
 
 # Buttons
 
-## Default
-
 <DemoCard>
-	<Button>Button</Button>
+    <div className='flex space-x-2'>
+	    <Button>Button</Button>
+	    <PrimaryButton>Primary Button</PrimaryButton>
+	    <DangerButton>Danger Button</DangerButton>
+	    <IconButton icon={<HomeIcon />} />
+    </div>
 </DemoCard>
 
 ### Example
@@ -22,7 +25,14 @@ import '@i4o-oss/catalystui/main.css'
 import { Button } from '@i4o-oss/catalystui'
 
 export default () => {
-	return <Button>Button</Button>
+	return (
+        <div className='flex space-x-2'>
+            <Button>Button</Button>
+            <PrimaryButton>Primary Button</PrimaryButton>
+	        <DangerButton>Danger Button</DangerButton>
+	        <IconButton icon={<HomeIcon />} />
+        </div>
+    )
 }
 ```
 
@@ -48,64 +58,7 @@ export default () => {
 | tooltip      | string                      |         | Tooltip text          |
 | type         | string                      |         | Button type           |
 
-## Primary
-
-<DemoCard>
-	<PrimaryButton>Primary Button</PrimaryButton>
-</DemoCard>
-
-### Example
-
-```tsx
-import { PrimaryButton } from '@i4o-oss/catalystui'
-
-export default () => {
-	return <PrimaryButton>Primary Button</PrimaryButton>
-}
-```
-
-### Props
-
-Refer to [Default Button Props](#props).
-
-## Danger
-
-<DemoCard>
-	<DangerButton>Danger Button</DangerButton>
-</DemoCard>
-
-### Example
-
-```tsx
-import { DangerButton } from '@i4o-oss/catalystui'
-
-export default () => {
-	return <DangerButton>Danger Button</DangerButton>
-}
-```
-
-### Props
-
-Refer to [Default Button Props](#props).
-
-## Icon
-
-<DemoCard>
-	<IconButton icon={<HomeIcon />} />
-</DemoCard>
-
-### Example
-
-```tsx
-import { IconButton } from '@i4o-oss/catalystui'
-import { HomeIcon } from '@radix-ui/react-icons'
-
-export default () => {
-	return <IconButton icon={<HomeIcon />} />
-}
-```
-
-### Props
+### IconButton Props
 
 Refer to [Default Button Props](#props). Icon Button also has the following props:
 
@@ -113,4 +66,44 @@ Refer to [Default Button Props](#props). Icon Button also has the following prop
 | :--- | :-------- | :------ | :---------- |
 | icon | ReactNode |         | Icon        |
 
-// TODO: Add variations for each button type, e.g. disabled, loading, etc.
+## Variants
+
+### Left/Right Icons
+
+<DemoCard>
+    <div className='flex flex-col space-y-2'>
+    <div className='flex space-x-2'>
+	    <Button leftIcon={<PauseIcon />} padding='pl-3 pr-4 py-1'>Pause</Button>
+	    <PrimaryButton leftIcon={<PlayIcon />} padding='pl-3 pr-4 py-1'>Play</PrimaryButton>
+	    <DangerButton leftIcon={<StopIcon />} padding='pl-3 pr-4 py-1'>Stop</DangerButton>
+    </div>
+    <div className='flex space-x-2'>
+	    <Button rightIcon={<PauseIcon />} padding='pl-4 pr-3 py-1'>Pause</Button>
+	    <PrimaryButton rightIcon={<PlayIcon />} padding='pl-4 pr-3 py-1'>Play</PrimaryButton>
+	    <DangerButton rightIcon={<StopIcon />} padding='pl-4 pr-3 py-1'>Stop</DangerButton>
+    </div>
+    </div>
+</DemoCard>
+
+## States
+
+### Loading
+
+<DemoCard>
+    <div className='flex space-x-2'>
+	    <Button loading={true} loadingText='Loading...'>Button</Button>
+	    <PrimaryButton loading={true} loadingText='Loading...'>Primary Button</PrimaryButton>
+	    <DangerButton loading={true} loadingText='Loading...'>Danger Button</DangerButton>
+    </div>
+</DemoCard>
+
+### Disabled
+
+<DemoCard>
+    <div className='flex space-x-2'>
+	    <Button disabled={true}>Button</Button>
+	    <PrimaryButton disabled={true}>Primary Button</PrimaryButton>
+	    <DangerButton disabled={true}>Danger Button</DangerButton>
+    </div>
+</DemoCard>
+

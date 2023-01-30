@@ -3,16 +3,18 @@ import type { ButtonProps } from './types'
 import Tooltip from '../tooltip'
 
 const Button: FC<ButtonProps> = ({
-	bg = '!bg-gray-700 hover:!bg-gray-800 dark:hover:!bg-gray-800',
+	bg = '!bg-gray-700 hover:!bg-gray-800 disabled:hover:!bg-gray-700 dark:hover:!bg-gray-800 disabled:dark:hover:!bg-gray-700',
 	borderRadius = 'rounded-md',
 	children,
 	className,
 	disabled,
+	leftIcon,
 	loading,
 	loadingText,
 	onClick,
 	onMouseDown,
 	padding = 'px-4 py-1',
+	rightIcon,
 	shadow = '',
 	textColor = 'text-gray-200',
 	textSize = 'text-sm',
@@ -23,15 +25,18 @@ const Button: FC<ButtonProps> = ({
 		return (
 			<Tooltip content={tooltip}>
 				<button
-					className={`focus-visible:ring-blend-darken inline-flex items-center justify-center ${borderRadius} border border-transparent ${textSize} font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
-					disabled={disabled}
+					className={`focus-visible:ring-blend-darken inline-flex items-center justify-center ${borderRadius} border border-transparent ${textSize} font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor} disabled:opacity-80 space-x-2 ${
+						loading ? 'cursor-wait' : ''
+					}`}
+					disabled={disabled || loading}
 					onClick={onClick}
 					onMouseDown={onMouseDown}
 					type={type}
 				>
+					{leftIcon}
 					{loading && (
 						<svg
-							className='-ml-1 mr-2 h-4 w-4 animate-spin text-white'
+							className='-ml-1 h-4 w-4 animate-spin text-white'
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
 							viewBox='0 0 24 24'
@@ -51,22 +56,26 @@ const Button: FC<ButtonProps> = ({
 							/>
 						</svg>
 					)}
-					{loading ? loadingText : children}
+					<span>{loading ? loadingText : children}</span>
+					{rightIcon}
 				</button>
 			</Tooltip>
 		)
 	}
 	return (
 		<button
-			className={`focus-visible:ring-blend-darken inline-flex items-center justify-center ${borderRadius} border border-transparent ${textSize} font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
-			disabled={disabled}
+			className={`focus-visible:ring-blend-darken inline-flex items-center justify-center ${borderRadius} border border-transparent ${textSize} font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor} disabled:opacity-80  space-x-2 ${
+				loading ? 'cursor-wait' : 'disabled:cursor-not-allowed'
+			}`}
+			disabled={disabled || loading}
 			onClick={onClick}
 			onMouseDown={onMouseDown}
 			type={type}
 		>
+			{leftIcon}
 			{loading && (
 				<svg
-					className='-ml-1 mr-2 h-4 w-4 animate-spin text-white'
+					className='-ml-1 h-4 w-4 animate-spin text-white'
 					xmlns='http://www.w3.org/2000/svg'
 					fill='none'
 					viewBox='0 0 24 24'
@@ -86,7 +95,8 @@ const Button: FC<ButtonProps> = ({
 					/>
 				</svg>
 			)}
-			{loading ? loadingText : children}
+			<span>{loading ? loadingText : children}</span>
+			{rightIcon}
 		</button>
 	)
 }
