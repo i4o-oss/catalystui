@@ -1,35 +1,35 @@
 {
-	"name": "catalystui",
-	"version": "0.1.0",
-	"private": true,
-	"workspaces": [
-		"docs",
-		"packages/*"
-	],
-	"scripts": {
-		"build": "turbo run build",
-		"dev": "turbo run dev --parallel",
-		"lint": "turbo run lint",
-		"format": "prettier --write .",
-		"prepare": "husky install",
-		"release": "turbo run build --filter=ui && changeset publish"
-	},
-	"devDependencies": {
-		"@catalystui/eslint-config": "workspace:*",
-		"@changesets/cli": "^2.26.0",
-		"husky": "8.0.2",
-		"lint-staged": "13.0.3",
-		"prettier": "latest",
-		"turbo": "latest"
-	},
-	"lint-staged": {
-		"*.{js,jsx,ts,tsx}": [
-			"eslint --cache --fix",
-			"prettier --write"
-		]
-	},
-	"engines": {
-		"node": ">=14.0.0"
-	},
-	"packageManager": "pnpm@7.18.2"
+    "name": "catalystui",
+    "version": "0.1.0",
+    "private": true,
+    "workspaces": [
+        "docs",
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "turbo run build",
+        "dev": "turbo run dev --parallel",
+        "lint": "turbo run lint",
+        "format": "prettier --write .",
+        "prepare": "husky install",
+        "release": "turbo run build --filter=@i4o-oss/catalystui && changeset publish"
+    },
+    "devDependencies": {
+        "@catalystui/eslint-config": "workspace:*",
+        "@changesets/cli": "^2.26.0",
+        "husky": "8.0.2",
+        "lint-staged": "13.0.3",
+        "prettier": "latest",
+        "turbo": "latest"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "eslint --cache --fix",
+            "prettier --write"
+        ]
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "packageManager": "pnpm@7.18.2"
 }
