@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.5.1
+
+### Patch Changes
+
+-   f7f3470: Fix issue with publishing
+
 ## 0.5.0
 
 ### Minor Changes
