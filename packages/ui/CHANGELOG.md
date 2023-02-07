@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.5.2
+
+### Patch Changes
+
+-   eead4c4: Fix peer dependencies
+
 ## 0.5.1
 
 ### Patch Changes
