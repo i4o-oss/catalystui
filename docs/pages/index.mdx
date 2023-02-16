@@ -37,11 +37,11 @@ import Link from 'next/link'
     <Link href='/docs'>
         <Button className='h-12' padding='px-6 py-3' textSize='text-base'>Documentation</Button>
     </Link>
-    <pre className="h-12 flex items-center justify-between pl-4 pr-12 space-x-2 rounded-lg border border-slate-100 bg-slate-100 dark:border-slate-700 dark:bg-black">
-        <code className="font-mono text-sm font-semibold text-slate-900 dark:text-slate-50">
+    <pre className="w-96 h-12 flex items-center justify-between !pl-4 !pr-2 space-x-2 rounded-lg border border-slate-100 bg-slate-100 dark:border-slate-700 dark:bg-black">
+        <code className="flex items-center justify-between font-mono text-sm font-semibold text-slate-900 dark:text-slate-50">
             npm install @i4o-oss/catalystui
+            <CopyToClipboard text='npm add @i4o-oss/catalystui' />
         </code>
-        <CopyToClipboard text='npm add @i4o-oss/catalystui' />
     </pre>
 </div>
 
