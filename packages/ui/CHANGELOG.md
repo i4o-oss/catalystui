@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.6.0
+
+### Minor Changes
+
+-   c374db4: Add link prop to nav component which can accept link components from meta-frameworks like Remix
+
 ## 0.5.3
 
 ### Patch Changes
