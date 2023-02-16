@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.5.3
+
+### Patch Changes
+
+-   3807436: Update styles for nav component
+
 ## 0.5.2
 
 ### Patch Changes
