@@ -13,9 +13,10 @@ interface NavItem {
 interface Props {
 	items: NavItem[]
 	type?: 'row' | 'column'
+	Link?: React.ElementType
 }
 
-const Nav: FC<Props> = ({ items, type = 'row' }) => {
+const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 	const [pathname, setPathname] = useState('')
 
 	useEffect(() => {
@@ -68,20 +69,37 @@ const Nav: FC<Props> = ({ items, type = 'row' }) => {
 							asChild
 							key={`nav-item-${id}`}
 						>
-							<a
-								href={href as string}
-								className={cx(
-									'px-4 py-1 text-sm',
-									'text-sm text-gray-700 dark:text-gray-100',
-									`${
-										pathname.includes(href as string)
-											? 'bg-transparent text-brand dark:text-brand font-semibold'
-											: 'font-medium'
-									}`
-								)}
-							>
-								{label}
-							</a>
+							{Link ? (
+								<Link
+									to={href as string}
+									className={cx(
+										'px-4 py-1 text-sm',
+										'text-sm text-gray-700 dark:text-gray-100',
+										`${
+											pathname.includes(href as string)
+												? 'bg-transparent text-brand dark:text-brand font-semibold'
+												: 'font-medium'
+										}`
+									)}
+								>
+									{label}
+								</Link>
+							) : (
+								<a
+									href={href as string}
+									className={cx(
+										'px-4 py-1 text-sm',
+										'text-sm text-gray-700 dark:text-gray-100',
+										`${
+											pathname.includes(href as string)
+												? 'bg-transparent text-brand dark:text-brand font-semibold'
+												: 'font-medium'
+										}`
+									)}
+								>
+									{label}
+								</a>
+							)}
 						</NavigationMenuPrimitive.Item>
 					)
 				})}
