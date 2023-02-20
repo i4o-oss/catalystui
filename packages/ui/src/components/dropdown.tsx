@@ -1,5 +1,4 @@
 import type { FC, ReactNode } from 'react'
-import { Link } from '@remix-run/react'
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu'
 import cx from 'classnames'
 import { ChevronRightIcon } from '@radix-ui/react-icons'
@@ -115,9 +114,9 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																)
 															} else {
 																return link ? (
-																	<Link
+																	<a
 																		key={`${i}-${j}`}
-																		to={
+																		href={
 																			link
 																		}
 																	>
@@ -151,7 +150,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																				</div>
 																			)}
 																		</DropdownMenuPrimitive.Item>
-																	</Link>
+																	</a>
 																) : (
 																	<DropdownMenuPrimitive.Item
 																		key={`${i}-${j}`}
@@ -190,7 +189,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 										)
 									} else {
 										return link ? (
-											<Link key={i} to={link}>
+											<a key={i} href={link}>
 												<DropdownMenuPrimitive.Item
 													key={i}
 													className={cx(
@@ -211,7 +210,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 														</div>
 													)}
 												</DropdownMenuPrimitive.Item>
-											</Link>
+											</a>
 										) : (
 											<DropdownMenuPrimitive.Item
 												key={i}
