@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.6.1
+
+### Patch Changes
+
+-   bd0803e: Update components
+
 ## 0.6.0
 
 ### Minor Changes
