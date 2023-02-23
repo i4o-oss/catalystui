@@ -10,6 +10,7 @@
         "build": "turbo run build",
         "dev": "turbo run dev --parallel",
         "lint": "turbo run lint",
+        "start": "turbo run start --scope=@catalystui/docs",
         "format": "prettier --write .",
         "prepare": "husky install",
         "release": "turbo run build --filter=@i4o-oss/catalystui && changeset publish"
@@ -29,7 +30,7 @@
         ]
     },
     "engines": {
-        "node": ">=14.0.0"
+        "node": ">=18.0.0"
     },
     "packageManager": "pnpm@7.18.2"
 }
