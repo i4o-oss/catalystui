@@ -9,7 +9,7 @@ For full documentation and a complete list of components, visit [catalyst.i4o.de
 ## Installation
 
 ```bash
-  npm install @i4o-oss/catalystui
+  npm install @i4o/catalystui
 ```
 
 ## Features

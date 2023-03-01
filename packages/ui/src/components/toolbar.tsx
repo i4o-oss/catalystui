@@ -1,6 +1,7 @@
 import type { FC, ReactNode } from 'react'
 import * as ToolbarPrimitive from '@radix-ui/react-toolbar'
 import cx from 'classnames'
+import { Button } from './buttons'
 
 interface ToggleGroupItem {
 	id: string
@@ -58,17 +59,18 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 						)
 					} else if (type === 'button') {
 						return (
-							<ToolbarPrimitive.Button
-								key={index}
-								style={{ marginLeft: 'auto' }}
-								className={cx(
-									'focus-visible:ring-blend-darken inline-flex items-center justify-center',
-									'rounded-md border border-transparent text-sm',
-									'focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200',
-									'shadow-md !bg-brand-500 hover:!bg-brand-600 dark:hover:!bg-brand-600 px-3 py-1 text-white'
-								)}
-							>
-								{buttonText}
+							<ToolbarPrimitive.Button key={index} asChild>
+								<Button
+									className={cx(
+										'focus-visible:ring-blend-darken inline-flex items-center justify-center',
+										'rounded-md border border-transparent text-sm',
+										'focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200',
+										'shadow-md !bg-brand-500 hover:!bg-brand-600 dark:hover:!bg-brand-600 px-3 py-1 text-white'
+									)}
+									onClick={buttonOnSelect}
+								>
+									{buttonText}
+								</Button>
 							</ToolbarPrimitive.Button>
 						)
 					} else if (type === 'separator') {
@@ -89,14 +91,19 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 										<ToolbarPrimitive.ToggleItem
 											key={index}
 											value={id}
-											className={cx(
-												'group radix-state-on:!bg-gray-100 dark:radix-state-on:!bg-gray-900',
-												'border-y px-2.5 py-2 first:rounded-l-md first:border-x last:rounded-r-md last:border-x',
-												'border-gray-200 radix-state-on:border-transparent dark:border-gray-600 dark:radix-state-on:border-transparent',
-												'focus:relative focus:outline-none focus-visible:z-20 focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
-											)}
+											asChild
 										>
-											{icon}
+											<Button
+												className={cx(
+													'group radix-state-on:!bg-gray-100 dark:radix-state-on:!bg-gray-900',
+													'border-y px-2.5 py-2 first:rounded-l-md first:border-x last:rounded-r-md last:border-x',
+													'border-gray-200 radix-state-on:border-transparent dark:border-gray-600 dark:radix-state-on:border-transparent',
+													'focus:relative focus:outline-none focus-visible:z-20 focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
+												)}
+												onClick={onSelect}
+											>
+												{icon}
+											</Button>
 										</ToolbarPrimitive.ToggleItem>
 									)
 								)}

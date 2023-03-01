@@ -13,7 +13,7 @@
         "start": "turbo run start --scope=@catalystui/docs",
         "format": "prettier --write .",
         "prepare": "husky install",
-        "release": "turbo run build --filter=@i4o-oss/catalystui && changeset publish"
+        "release": "turbo run build --filter=@i4o/catalystui && changeset publish"
     },
     "devDependencies": {
         "@catalystui/eslint-config": "workspace:*",
