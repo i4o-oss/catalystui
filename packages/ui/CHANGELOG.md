@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.0
+
+### Minor Changes
+
+-   044bf7c: Rename package and update toolbar
+
 ## 0.6.1
 
 ### Patch Changes
