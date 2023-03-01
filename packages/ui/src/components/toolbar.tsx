@@ -1,7 +1,6 @@
 import type { FC, ReactNode } from 'react'
 import * as ToolbarPrimitive from '@radix-ui/react-toolbar'
 import cx from 'classnames'
-import { Button } from './buttons'
 
 interface ToggleGroupItem {
 	id: string
@@ -60,7 +59,8 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 					} else if (type === 'button') {
 						return (
 							<ToolbarPrimitive.Button key={index} asChild>
-								<Button
+								<button
+									style={{ marginLeft: 'auto' }}
 									className={cx(
 										'focus-visible:ring-blend-darken inline-flex items-center justify-center',
 										'rounded-md border border-transparent text-sm',
@@ -70,7 +70,7 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 									onClick={buttonOnSelect}
 								>
 									{buttonText}
-								</Button>
+								</button>
 							</ToolbarPrimitive.Button>
 						)
 					} else if (type === 'separator') {
@@ -93,7 +93,7 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 											value={id}
 											asChild
 										>
-											<Button
+											<button
 												className={cx(
 													'group radix-state-on:!bg-gray-100 dark:radix-state-on:!bg-gray-900',
 													'border-y px-2.5 py-2 first:rounded-l-md first:border-x last:rounded-r-md last:border-x',
@@ -103,7 +103,7 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 												onClick={onSelect}
 											>
 												{icon}
-											</Button>
+											</button>
 										</ToolbarPrimitive.ToggleItem>
 									)
 								)}
