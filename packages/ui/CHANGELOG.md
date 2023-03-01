@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.1
+
+### Patch Changes
+
+-   dc6fe75: Update toolbar component
+
 ## 0.7.0
 
 ### Minor Changes
