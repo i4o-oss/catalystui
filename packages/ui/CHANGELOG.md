@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.2
+
+### Patch Changes
+
+-   065af3f: Update dropdown link behaviour
+
 ## 0.7.1
 
 ### Patch Changes
