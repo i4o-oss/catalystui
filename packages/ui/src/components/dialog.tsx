@@ -19,7 +19,7 @@ interface Props {
 	cancel?: ReactNode
 	children: ReactNode
 	description?: ReactNode | string
-	trigger: ReactNode
+	trigger?: ReactNode
 	title: ReactNode | string
 	isOpen?: boolean
 }
@@ -37,7 +37,7 @@ const Dialog: FC<Props> = ({
 
 	return (
 		<DialogRoot open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-			<DialogTrigger asChild>{trigger}</DialogTrigger>
+			{trigger ? <DialogTrigger asChild>{trigger}</DialogTrigger> : null}
 			<TransitionRoot show={isDialogOpen}>
 				<TransitionChild
 					as={Fragment}
