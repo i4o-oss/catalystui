@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.3
+
+### Patch Changes
+
+-   782e6e5: Update props for dialog component
+
 ## 0.7.2
 
 ### Patch Changes
