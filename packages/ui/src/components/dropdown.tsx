@@ -76,9 +76,9 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 													<div className='basis-4'>
 														{icon}
 													</div>
-													<div className='text-sm font-normal flex-1'>
+													<span className='text-sm font-normal flex-1'>
 														{label}
-													</div>
+													</span>
 													<ChevronRightIcon className='w-4 h-4' />
 												</DropdownMenuPrimitive.SubTrigger>
 												<DropdownMenuPrimitive.SubContent
@@ -137,11 +137,11 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																					icon
 																				}
 																			</div>
-																			<div className='text-sm font-normal flex-1'>
+																			<span className='text-sm font-normal flex-1'>
 																				{
 																					label
 																				}
-																			</div>
+																			</span>
 																			{shortcut && (
 																				<div className='text-xs font-normal text-gray-400 dark:text-gray-600'>
 																					{
@@ -167,11 +167,11 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																				icon
 																			}
 																		</div>
-																		<div className='text-sm font-normal flex-1'>
+																		<span className='text-sm font-normal flex-1'>
 																			{
 																				label
 																			}
-																		</div>
+																		</span>
 																		{shortcut && (
 																			<div className='text-xs font-normal text-gray-400 dark:text-gray-600'>
 																				{
@@ -189,7 +189,12 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 										)
 									} else {
 										return link ? (
-											<a key={i} href={link}>
+											<a
+												key={i}
+												href={link}
+												target='_blank'
+												rel='noopener noreferrer'
+											>
 												<DropdownMenuPrimitive.Item
 													key={i}
 													className={cx(
@@ -201,9 +206,9 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 													<div className='basis-4'>
 														{icon}
 													</div>
-													<div className='text-sm font-normal flex-1'>
+													<span className='text-sm font-normal flex-1'>
 														{label}
-													</div>
+													</span>
 													{shortcut && (
 														<div className='text-xs font-normal text-gray-400 dark:text-gray-600'>
 															{shortcut}
@@ -223,9 +228,9 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 												<div className='basis-4'>
 													{icon}
 												</div>
-												<div className='text-sm font-normal flex-1'>
+												<span className='text-sm font-normal flex-1'>
 													{label}
-												</div>
+												</span>
 												{shortcut && (
 													<div className='text-xs font-normal text-gray-400 dark:text-gray-600'>
 														{shortcut}
