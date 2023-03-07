@@ -21,6 +21,7 @@ interface Props {
 	description?: ReactNode | string
 	trigger: ReactNode
 	title: ReactNode | string
+	isOpen?: boolean
 }
 
 const Dialog: FC<Props> = ({
@@ -30,13 +31,14 @@ const Dialog: FC<Props> = ({
 	description,
 	title,
 	trigger,
+	isOpen,
 }) => {
-	let [isOpen, setIsOpen] = useState(false)
+	let [isDialogOpen, setIsDialogOpen] = useState(isOpen || false)
 
 	return (
-		<DialogRoot open={isOpen} onOpenChange={setIsOpen}>
+		<DialogRoot open={isDialogOpen} onOpenChange={setIsDialogOpen}>
 			<DialogTrigger asChild>{trigger}</DialogTrigger>
-			<TransitionRoot show={isOpen}>
+			<TransitionRoot show={isDialogOpen}>
 				<TransitionChild
 					as={Fragment}
 					enter='ease-out duration-300'
