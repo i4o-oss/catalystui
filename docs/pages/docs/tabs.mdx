@@ -11,6 +11,7 @@ import DemoCard from '../../components/demo-card'
 			{ id: '2', title: 'Tab 2', content: 'Tab 2 Content' },
 			{ id: '3', title: 'Tab 3', content: 'Tab 3 Content' },
 		]}
+        type='column'
 	/>
 </DemoCard>
 
@@ -39,3 +40,4 @@ export default () => {
 | :----------- | :-------------------------------------------------------------------------------- | :------ | :-------------------------------------- |
 | defaultValue | `string`                                                                          | `''`    | Id of the tab to be selected by default |
 | tabs         | `Array<{ id: string, title: string \| ReactNode, content: string \| ReactNode }>` | []      | Array of tabs to render                 |
+| type         | `row \| column`                                                                   | `row`   | Layout of the tabs list and content     |

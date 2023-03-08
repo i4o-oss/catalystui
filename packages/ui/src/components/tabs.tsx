@@ -18,14 +18,21 @@ interface Tab {
 interface Props {
 	defaultValue: string
 	tabs: Tab[]
+	type: 'row' | 'column'
 }
 
-const Tabs: FC<Props> = ({ defaultValue, tabs }) => {
+const Tabs: FC<Props> = ({ defaultValue, tabs, type = 'row' }) => {
 	return (
-		<TabsRoot className='w-96' defaultValue={defaultValue}>
+		<TabsRoot
+			className={`min-w-[24rem] grid gap-4 ${
+				type === 'row' ? 'grid-cols-1' : 'grid-cols-3'
+			}`}
+			defaultValue={defaultValue}
+		>
 			<TabsList
 				className={cx(
-					'flex w-full rounded-t-lg bg-white dark:bg-gray-800'
+					'flex w-full gap-4',
+					`${type === 'column' ? 'flex-col' : ''}`
 				)}
 			>
 				{tabs.map(({ title, id }) => (
@@ -34,13 +41,11 @@ const Tabs: FC<Props> = ({ defaultValue, tabs }) => {
 						value={id}
 						className={cx(
 							'group',
-							'first:rounded-tl-lg last:rounded-tr-lg',
-							'border-b first:border-r last:border-l',
-							'border-gray-300 dark:border-gray-600',
-							'radix-state-active:border-b-gray-700 focus-visible:radix-state-active:border-b-transparent radix-state-inactive:bg-gray-50 dark:radix-state-active:border-b-gray-100 dark:radix-state-active:bg-gray-900 focus-visible:dark:radix-state-active:border-b-transparent dark:radix-state-inactive:bg-gray-800',
-							'flex-1 px-3 py-2.5',
+							'rounded-lg',
+							'radix-state-inactive:bg-gray-50 dark:radix-state-active:bg-gray-900 dark:radix-state-inactive:bg-gray-800',
+							'px-8 py-2',
 							'focus:radix-state-active:border-b-red',
-							'focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75'
+							'focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
 						)}
 					>
 						<span
@@ -59,7 +64,7 @@ const Tabs: FC<Props> = ({ defaultValue, tabs }) => {
 					key={`tab-content-${id}`}
 					value={id}
 					className={cx(
-						'rounded-b-lg bg-white px-6 py-4 dark:bg-gray-800'
+						'col-span-2 rounded-lg bg-white px-6 py-4 dark:bg-gray-800'
 					)}
 				>
 					{content}
