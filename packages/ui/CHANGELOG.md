@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.5
+
+### Patch Changes
+
+-   e4dacd2: Update alert and dialog components
+
 ## 0.7.4
 
 ### Patch Changes
