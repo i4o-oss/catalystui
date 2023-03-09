@@ -43,7 +43,7 @@ const Tabs: FC<Props> = ({ defaultValue, tabs, type = 'row' }) => {
 							'group',
 							'rounded-lg',
 							'radix-state-inactive:bg-gray-50 dark:radix-state-active:bg-gray-900 dark:radix-state-inactive:bg-gray-800',
-							'px-8 py-2',
+							`${type === 'row' ? 'px-8 py-2' : 'px-4 py-2'}`,
 							'focus:radix-state-active:border-b-red',
 							'focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
 						)}
@@ -64,7 +64,7 @@ const Tabs: FC<Props> = ({ defaultValue, tabs, type = 'row' }) => {
 					key={`tab-content-${id}`}
 					value={id}
 					className={cx(
-						'col-span-2 rounded-lg bg-white px-6 py-4 dark:bg-gray-800'
+						'col-span-2 rounded-lg bg-white dark:bg-gray-800'
 					)}
 				>
 					{content}

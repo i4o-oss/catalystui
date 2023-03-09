@@ -7,11 +7,11 @@ import DemoCard from '../../components/demo-card'
 	<Tabs
 		defaultValue='1'
 		tabs={[
-			{ id: '1', title: 'Tab 1', content: 'Tab 1 Content' },
-			{ id: '2', title: 'Tab 2', content: 'Tab 2 Content' },
-			{ id: '3', title: 'Tab 3', content: 'Tab 3 Content' },
+			{ id: '1', title: 'Tab 1', content: <p className='p-4'>Tab 1 Content</p> },
+			{ id: '2', title: 'Tab 2', content: <p className='p-4'>Tab 2 Content</p> },
+			{ id: '3', title: 'Tab 3', content: <p className='p-4'>Tab 3 Content</p> },
 		]}
-        type='row'
+        type='column'
 	/>
 </DemoCard>
 
