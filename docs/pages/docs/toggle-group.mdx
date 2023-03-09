@@ -12,48 +12,47 @@ import DemoCard from '../../components/demo-card'
 # Toggle Group
 
 <DemoCard>
-	<div className='flex space-x-4'>
-		<ToggleGroup
-			items={[
-				{
-					value: 'bold',
-					label: 'Font Bold',
-					icon: <FontBoldIcon />,
-				},
-				{
-					value: 'italic',
-					label: 'Font Italic',
-					icon: <FontItalicIcon />,
-				},
-				{
-					value: 'underline',
-					label: 'Underline',
-					icon: <UnderlineIcon />,
-				},
-			]}
-			type='multiple'
-		/>
-		<ToggleGroup
-			items={[
-				{
-					value: 'left',
-					label: 'Left Align',
-					icon: <TextAlignLeftIcon />,
-				},
-				{
-					value: 'center',
-					label: 'Center Align',
-					icon: <TextAlignCenterIcon />,
-				},
-				{
-					value: 'right',
-					label: 'Right Align',
-					icon: <TextAlignRightIcon />,
-				},
-			]}
-			type='single'
-		/>
-	</div>
+	<ToggleGroup
+		items={[
+			{
+				value: 'bold',
+				label: 'Font Bold',
+				icon: <FontBoldIcon />,
+			},
+			{
+				value: 'italic',
+				label: 'Font Italic',
+				icon: <FontItalicIcon />,
+			},
+			{
+				value: 'underline',
+				label: 'Underline',
+				icon: <UnderlineIcon />,
+			},
+		]}
+        orientation='vertical'
+        type='multiple'
+	/>
+	<ToggleGroup
+		items={[
+			{
+				value: 'left',
+				label: 'Left Align',
+				icon: <TextAlignLeftIcon />,
+			},
+			{
+				value: 'center',
+				label: 'Center Align',
+				icon: <TextAlignCenterIcon />,
+			},
+			{
+				value: 'right',
+				label: 'Right Align',
+				icon: <TextAlignRightIcon />,
+			},
+		]}
+		type='single'
+	/>
 </DemoCard>
 
 ### Example

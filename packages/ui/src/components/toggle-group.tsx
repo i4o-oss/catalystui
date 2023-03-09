@@ -10,12 +10,30 @@ interface ToggleItem {
 
 interface ToggleGroupProps {
 	items: ToggleItem[]
+	orientation?: 'vertical' | 'horizontal'
 	type: 'single' | 'multiple'
 }
 
-const ToggleGroup: FC<ToggleGroupProps> = ({ items, type }) => {
+const ToggleGroup: FC<ToggleGroupProps> = ({
+	items,
+	orientation = 'horizontal',
+	type,
+}) => {
 	return (
-		<ToggleGroupPrimitive.Root type={type}>
+		<ToggleGroupPrimitive.Root
+			className={cx(
+				'flex items-center',
+				'divide-gray-200 dark:divide-gray-600 radix-state-on:divide-transparent radix-state-on:dark:divide-transparent',
+				'rounded-md overflow-hidden',
+				`${
+					orientation === 'horizontal'
+						? 'divide-x'
+						: 'divide-y flex-col'
+				}`
+			)}
+			type={type}
+			data-orientation={orientation}
+		>
 			{items.map(({ value, label, icon }, i) => (
 				<ToggleGroupPrimitive.Item
 					key={`group-item-${value}-${i}`}
@@ -24,8 +42,7 @@ const ToggleGroup: FC<ToggleGroupProps> = ({ items, type }) => {
 					className={cx(
 						'group radix-state-on:!bg-gray-100 dark:radix-state-on:!bg-gray-900',
 						'!bg-white dark:!bg-gray-700',
-						'border-y px-2.5 py-2 first:rounded-l-md first:border-x last:rounded-r-md last:border-x',
-						'border-gray-200 radix-state-on:border-transparent dark:border-gray-600 dark:radix-state-on:border-transparent',
+						'px-2.5 py-2',
 						'focus:relative focus:outline-none focus-visible:z-20 focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
 					)}
 				>
