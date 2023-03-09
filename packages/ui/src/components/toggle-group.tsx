@@ -1,6 +1,6 @@
+import type { FC, ReactElement } from 'react'
 import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group'
 import cx from 'classnames'
-import React, { FC, ReactElement } from 'react'
 
 interface ToggleItem {
 	value: string
@@ -26,6 +26,7 @@ const ToggleGroup: FC<ToggleGroupProps> = ({
 	type,
 }) => {
 	return (
+		// @ts-ignore
 		<ToggleGroupPrimitive.Root
 			className={cx(
 				'flex items-center',
