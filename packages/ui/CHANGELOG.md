@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.11
+
+### Patch Changes
+
+-   814d449: Update tab styles
+
 ## 0.7.10
 
 ### Patch Changes
