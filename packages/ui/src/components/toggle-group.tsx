@@ -9,30 +9,41 @@ interface ToggleItem {
 }
 
 interface ToggleGroupProps {
+	defaultValue?: string | string[]
 	items: ToggleItem[]
+	onValueChange?: (value: string) => void
 	orientation?: 'vertical' | 'horizontal'
+	style?: 'stitched' | 'pills'
 	type: 'single' | 'multiple'
 }
 
 const ToggleGroup: FC<ToggleGroupProps> = ({
+	defaultValue,
 	items,
+	onValueChange,
 	orientation = 'horizontal',
+	style = 'stitched',
 	type,
 }) => {
 	return (
 		<ToggleGroupPrimitive.Root
 			className={cx(
 				'flex items-center',
-				'divide-gray-200 dark:divide-gray-600 radix-state-on:divide-transparent radix-state-on:dark:divide-transparent',
-				'rounded-md overflow-hidden',
 				`${
 					orientation === 'horizontal'
 						? 'divide-x'
 						: 'divide-y flex-col'
+				}`,
+				`${
+					style === 'stitched'
+						? 'rounded-md overflow-hidden divide-gray-200 dark:divide-gray-600 radix-state-on:divide-transparent radix-state-on:dark:divide-transparent'
+						: 'gap-0.5 !divide-none'
 				}`
 			)}
+			defaultValue={defaultValue}
+			onValueChange={onValueChange}
+			orientation={orientation}
 			type={type}
-			data-orientation={orientation}
 		>
 			{items.map(({ value, label, icon }, i) => (
 				<ToggleGroupPrimitive.Item
@@ -40,9 +51,15 @@ const ToggleGroup: FC<ToggleGroupProps> = ({
 					value={value}
 					aria-label={label}
 					className={cx(
-						'group radix-state-on:!bg-gray-100 dark:radix-state-on:!bg-gray-900',
-						'!bg-white dark:!bg-gray-700',
-						'px-2.5 py-2',
+						'group transition-colors duration-200',
+						'hover:!bg-brand-500/50 hover:dark:!bg-brand-500/50',
+						`${
+							style === 'stitched'
+								? '!bg-white dark:!bg-gray-700 radix-state-on:!bg-brand-500/70 dark:radix-state-on:!bg-brand-500/70'
+								: 'radix-state-on:!bg-brand-500/70 dark:radix-state-on:!bg-brand-500/70 text-gray-900'
+						}`,
+						'p-2',
+						`${style === 'pills' ? 'rounded-md' : ''}`,
 						'focus:relative focus:outline-none focus-visible:z-20 focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
 					)}
 				>
