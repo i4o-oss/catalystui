@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.12
+
+### Patch Changes
+
+-   1c3191a: Update tabs and toggle group styles
+
 ## 0.7.11
 
 ### Patch Changes
