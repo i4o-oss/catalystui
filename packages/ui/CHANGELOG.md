@@ -1,5 +1,12 @@
 # @i4o-oss/catalystui
 
+## 0.7.13
+
+### Patch Changes
+
+-   cc6128c: Update toggle group styles
+-   e9ada54: Fix type in toggle group
+
 ## 0.7.12
 
 ### Patch Changes
