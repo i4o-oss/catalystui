@@ -31,7 +31,7 @@ const Tabs: FC<Props> = ({ defaultValue, tabs, type = 'row' }) => {
 		>
 			<TabsList
 				className={cx(
-					'flex w-full gap-4',
+					'col-span-1 flex gap-4',
 					`${type === 'column' ? 'flex-col' : ''}`
 				)}
 			>
