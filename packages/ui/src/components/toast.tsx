@@ -69,7 +69,7 @@ const Toast: FC<ToastProps> = ({
 					'radix-swipe-end:animate-toast-swipe-out',
 					'translate-x-radix-toast-swipe-move-x',
 					'radix-swipe-cancel:translate-x-0 radix-swipe-cancel:duration-200 radix-swipe-cancel:ease-[ease]',
-					'focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75'
+					'focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
 				)}
 				duration={duration}
 				open={isToastOpen}
@@ -77,7 +77,7 @@ const Toast: FC<ToastProps> = ({
 			>
 				<div className='flex'>
 					<div className='flex flex-1 items-center py-4 pl-5 border-r border-gray-200 dark:border-gray-700'>
-						<div className='radix w-full'>
+						<div className='radix w-full pr-4'>
 							<ToastPrimitive.Title className='text-sm font-semibold text-gray-900 dark:text-gray-100'>
 								{title}
 							</ToastPrimitive.Title>
