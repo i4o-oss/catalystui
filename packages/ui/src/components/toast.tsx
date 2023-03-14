@@ -88,26 +88,14 @@ const Toast: FC<ToastProps> = ({
 					</div>
 					{action && dismiss && (
 						<div className='grid grid-cols-1'>
-							{typeof action === 'string' ? (
-								<div className='flex items-center justify-center rounded-tr-lg text-sm font-medium hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'>
-									<ToastPrimitive.Action
-										altText={actionAltText as string}
-										className='px-3 py-2 text-brand-500'
-									>
-										{action}
-									</ToastPrimitive.Action>
-								</div>
-							) : (
-								<div className='flex items-center justify-center rounded-tr-lg text-sm font-medium hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'>
-									<ToastPrimitive.Action
-										asChild
-										altText={actionAltText as string}
-										className='px-3 py-2 text-brand-500'
-									>
-										{action}
-									</ToastPrimitive.Action>
-								</div>
-							)}
+							<div className='flex items-center justify-center rounded-tr-lg text-sm font-medium hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'>
+								<ToastPrimitive.Action
+									altText={actionAltText as string}
+									className='px-3 py-2 text-brand-500'
+								>
+									{action}
+								</ToastPrimitive.Action>
+							</div>
 							<div className='flex items-center justify-center border-t border-gray-200 dark:border-gray-700 rounded-br-lg text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'>
 								<ToastPrimitive.Close className='px-3 py-2'>
 									{dismissText}
