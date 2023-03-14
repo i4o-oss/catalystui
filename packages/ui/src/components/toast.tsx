@@ -75,7 +75,7 @@ const Toast: FC<ToastProps> = ({
 			>
 				<div className='flex'>
 					<div className='flex flex-1 items-center py-4 pl-5 border-r border-gray-200 dark:border-gray-700'>
-						<div className='radix w-full'>
+						<div className='radix w-full pr-4'>
 							<ToastPrimitive.Title className='text-sm font-semibold text-gray-900 dark:text-gray-100'>
 								{title}
 							</ToastPrimitive.Title>
