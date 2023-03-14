@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.14
+
+### Patch Changes
+
+-   0cc2511: Update toast styles
+
 ## 0.7.13
 
 ### Patch Changes
