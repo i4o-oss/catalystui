@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.15
+
+### Patch Changes
+
+-   5ffb099: Update toast component
+
 ## 0.7.14
 
 ### Patch Changes
