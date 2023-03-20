@@ -4,6 +4,7 @@ const tailwindRadix = require('tailwindcss-radix')
 module.exports = {
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	darkMode: 'class',
+	prefix: 'cui-',
 	theme: {
 		extend: {
 			colors: {
