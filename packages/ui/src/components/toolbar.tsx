@@ -83,6 +83,7 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 					} else {
 						return (
 							<ToolbarPrimitive.ToggleGroup
+								className='cui-flex'
 								key={index}
 								type={groupType}
 							>
