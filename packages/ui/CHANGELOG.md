@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.19
+
+### Patch Changes
+
+-   76fb28f: Add prefix to tailwind classes to prevent collisions
+
 ## 0.7.18
 
 ### Patch Changes
