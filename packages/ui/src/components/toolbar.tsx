@@ -26,7 +26,7 @@ interface ToolbarProps {
 const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 	return (
 		<ToolbarPrimitive.Root
-			className={`${className} h-12 flex items-center space-x-4 rounded-lg bg-white px-2.5 py-2 dark:bg-gray-800`}
+			className={`${className} cui-h-12 cui-flex cui-items-center cui-space-x-4 cui-rounded-lg cui-bg-white cui-px-2.5 cui-py-2 dark:cui-bg-gray-800`}
 		>
 			{items.map(
 				(
@@ -45,9 +45,9 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 						return (
 							<ToolbarPrimitive.Link
 								className={cx(
-									'h-full flex items-center',
-									'text-sm !text-gray-500 dark:!text-gray-400',
-									'focus:outline-none focus-visible:z-20 focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
+									'cui-h-full cui-flex cui-items-center',
+									'cui-text-sm !cui-text-gray-500 dark:!cui-text-gray-400',
+									'focus:cui-outline-none focus-visible:cui-z-20 focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 								)}
 								href={link}
 								key={index}
@@ -62,10 +62,10 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 								<button
 									style={{ marginLeft: 'auto' }}
 									className={cx(
-										'focus-visible:ring-blend-darken inline-flex items-center justify-center',
-										'rounded-md border border-transparent text-sm',
-										'focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200',
-										'shadow-md !bg-brand-500 hover:!bg-brand-600 dark:hover:!bg-brand-600 px-3 py-1 text-white'
+										'focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center',
+										'cui-rounded-md cui-border cui-border-transparent cui-text-sm',
+										'focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200',
+										'cui-shadow-md !cui-bg-brand-500 hover:!cui-bg-brand-600 dark:hover:!cui-bg-brand-600 cui-px-3 cui-py-1 cui-text-white'
 									)}
 									onClick={buttonOnSelect}
 								>
@@ -76,7 +76,7 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 					} else if (type === 'separator') {
 						return (
 							<ToolbarPrimitive.Separator
-								className='h-full mx-4 my-0.5 hidden w-px dark:bg-gray-600 xl:flex'
+								className='cui-h-full cui-mx-4 cui-my-0.5 cui-hidden cui-w-px dark:cui-bg-gray-600 xl:cui-flex'
 								key={index}
 							/>
 						)
@@ -95,10 +95,10 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 										>
 											<button
 												className={cx(
-													'group radix-state-on:!bg-gray-100 dark:radix-state-on:!bg-gray-900',
-													'border-y px-2.5 py-2 first:rounded-l-md first:border-x last:rounded-r-md last:border-x',
-													'border-gray-200 radix-state-on:border-transparent dark:border-gray-600 dark:radix-state-on:border-transparent',
-													'focus:relative focus:outline-none focus-visible:z-20 focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
+													'cui-group radix-state-on:!cui-bg-gray-100 dark:radix-state-on:!cui-bg-gray-900',
+													'cui-border-y cui-px-2.5 cui-py-2 first:cui-rounded-l-md first:cui-border-x last:cui-rounded-r-md last:cui-border-x',
+													'cui-border-gray-200 radix-state-on:cui-border-transparent dark:cui-border-gray-600 dark:radix-state-on:cui-border-transparent',
+													'focus:cui-relative focus:cui-outline-none focus-visible:cui-z-20 focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 												)}
 												onClick={onSelect}
 											>

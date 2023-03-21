@@ -29,16 +29,16 @@ const ToggleGroup: FC<ToggleGroupProps> = ({
 		// @ts-ignore
 		<ToggleGroupPrimitive.Root
 			className={cx(
-				'flex items-center',
+				'cui-flex cui-items-center',
 				`${
 					orientation === 'horizontal'
-						? 'divide-x'
-						: 'divide-y flex-col'
+						? 'cui-divide-x'
+						: 'cui-divide-y cui-flex-col'
 				}`,
 				`${
 					style === 'stitched'
-						? 'rounded-md overflow-hidden divide-gray-200 dark:divide-gray-600 radix-state-on:divide-transparent radix-state-on:dark:divide-transparent'
-						: 'gap-0.5 !divide-none'
+						? 'cui-rounded-md cui-overflow-hidden cui-divide-gray-200 dark:cui-divide-gray-600 radix-state-on:cui-divide-transparent dark:radix-state-on:cui-divide-transparent'
+						: 'cui-gap-0.5 !cui-divide-none'
 				}`
 			)}
 			defaultValue={defaultValue}
@@ -52,16 +52,16 @@ const ToggleGroup: FC<ToggleGroupProps> = ({
 					value={value}
 					aria-label={label}
 					className={cx(
-						'group transition-colors duration-200',
-						'hover:!bg-brand-500/50 hover:dark:!bg-brand-500/50',
+						'cui-group cui-transition-colors cui-duration-200',
+						'hover:!cui-bg-brand-500/50 hover:dark:!cui-bg-brand-500/50',
 						`${
 							style === 'stitched'
-								? '!bg-white dark:!bg-gray-700 radix-state-on:!bg-brand-500/70 dark:radix-state-on:!bg-brand-500/70'
-								: 'radix-state-on:!bg-brand-500/70 dark:radix-state-on:!bg-brand-500/70 text-gray-900'
+								? '!cui-bg-white dark:!cui-bg-gray-700 radix-state-on:!cui-bg-brand-500/70 dark:radix-state-on:!cui-bg-brand-500/70'
+								: 'radix-state-on:!cui-bg-brand-500/70 dark:radix-state-on:!cui-bg-brand-500/70 cui-text-gray-900'
 						}`,
-						'p-2',
-						`${style === 'pills' ? 'rounded-md' : ''}`,
-						'focus:relative focus:outline-none focus-visible:z-20 focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
+						'cui-p-2',
+						`${style === 'pills' ? 'cui-rounded-md' : ''}`,
+						'focus:cui-relative focus:cui-outline-none focus-visible:cui-z-20 focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 					)}
 				>
 					{icon}

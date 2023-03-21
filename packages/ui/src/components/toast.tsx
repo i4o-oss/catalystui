@@ -60,63 +60,63 @@ const Toast: FC<ToastProps> = ({
 			)}
 			<ToastPrimitive.Root
 				className={cx(
-					'fixed inset-x-4 bottom-4 z-50 w-auto rounded-lg shadow-lg md:top-4 md:right-4 md:left-auto md:bottom-auto md:w-full md:max-w-sm',
-					'bg-white dark:bg-gray-800',
-					'radix-state-open:animate-toast-slide-in-bottom md:radix-state-open:animate-toast-slide-in-right',
-					'radix-state-closed:animate-toast-hide',
-					'radix-swipe-end:animate-toast-swipe-out',
-					'translate-x-radix-toast-swipe-move-x',
-					'radix-swipe-cancel:translate-x-0 radix-swipe-cancel:duration-200 radix-swipe-cancel:ease-[ease]',
-					'focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
+					'cui-fixed cui-inset-x-4 cui-bottom-4 cui-z-50 cui-w-auto cui-rounded-lg cui-shadow-lg md:cui-top-4 md:cui-right-4 md:cui-left-auto md:cui-bottom-auto md:cui-w-full md:cui-max-w-sm',
+					'cui-bg-white dark:cui-bg-gray-800',
+					'radix-state-open:cui-animate-toast-slide-in-bottom md:radix-state-open:cui-animate-toast-slide-in-right',
+					'radix-state-closed:cui-animate-toast-hide',
+					'radix-swipe-end:cui-animate-toast-swipe-out',
+					'cui-translate-x-cui-radix-toast-swipe-move-x',
+					'radix-swipe-cancel:cui-translate-x-0 radix-swipe-cancel:cui-duration-200 radix-swipe-cancel:cui-ease-[ease]',
+					'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 				)}
 				duration={duration}
 				open={isToastOpen}
 				onOpenChange={setIsToastOpen}
 			>
-				<div className='flex'>
-					<div className='flex flex-1 items-center py-4 pl-5 border-r border-gray-200 dark:border-gray-700'>
-						<div className='radix w-full pr-4'>
-							<ToastPrimitive.Title className='text-sm font-semibold text-gray-900 dark:text-gray-100'>
+				<div className='cui-flex'>
+					<div className='cui-flex cui-flex-1 cui-items-center cui-py-4 cui-pl-5 cui-border-r cui-border-gray-200 dark:cui-border-gray-700'>
+						<div className='cui-radix cui-w-full cui-pr-4'>
+							<ToastPrimitive.Title className='cui-text-sm cui-font-semibold cui-text-gray-900 dark:cui-text-gray-100'>
 								{title}
 							</ToastPrimitive.Title>
-							<ToastPrimitive.Description className='mt-1 text-sm text-gray-800 dark:text-gray-200'>
+							<ToastPrimitive.Description className='cui-mt-1 cui-text-sm cui-text-gray-800 dark:cui-text-gray-200'>
 								{description}
 							</ToastPrimitive.Description>
 						</div>
 					</div>
 					{action && dismiss && (
-						<div className='grid grid-cols-1'>
+						<div className='cui-grid cui-grid-cols-1'>
 							{typeof action === 'string' ? (
-								<div className='flex items-center justify-center rounded-tr-lg text-sm font-medium hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'>
+								<div className='cui-flex cui-items-center cui-justify-center cui-rounded-tr-lg cui-text-sm cui-font-medium hover:cui-bg-gray-50 focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75 dark:cui-text-gray-100 dark:hover:cui-bg-gray-900'>
 									<ToastPrimitive.Action
 										altText={actionAltText as string}
-										className='px-3 py-2 text-brand-500'
+										className='cui-px-3 cui-py-2 cui-text-brand-500'
 									>
 										{action}
 									</ToastPrimitive.Action>
 								</div>
 							) : (
-								<div className='flex items-center justify-center rounded-tr-lg text-sm font-medium hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'>
+								<div className='cui-flex cui-items-center cui-justify-center cui-rounded-tr-lg cui-text-sm cui-font-medium hover:cui-bg-gray-50 focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75 dark:cui-text-gray-100 dark:hover:cui-bg-gray-900'>
 									<ToastPrimitive.Action
 										asChild
 										altText={actionAltText as string}
-										className='px-3 py-2 text-brand-500'
+										className='cui-px-3 cui-py-2 cui-text-brand-500'
 									>
 										{action}
 									</ToastPrimitive.Action>
 								</div>
 							)}
 							{typeof dismiss === 'string' ? (
-								<div className='flex items-center justify-center border-t border-gray-200 dark:border-gray-700 rounded-br-lg text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'>
-									<ToastPrimitive.Close className='px-3 py-2'>
+								<div className='cui-flex cui-items-center cui-justify-center cui-border-t cui-border-gray-200 dark:cui-border-gray-700 cui-rounded-br-lg cui-text-sm cui-font-medium cui-text-gray-700 hover:cui-bg-gray-50 focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75 dark:cui-text-gray-100 dark:hover:cui-bg-gray-900'>
+									<ToastPrimitive.Close className='cui-px-3 cui-py-2'>
 										{dismiss}
 									</ToastPrimitive.Close>
 								</div>
 							) : (
-								<div className='flex items-center justify-center border-t border-gray-200 dark:border-gray-700 rounded-br-lg text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'>
+								<div className='cui-flex cui-items-center cui-justify-center cui-border-t cui-border-gray-200 dark:cui-border-gray-700 cui-rounded-br-lg cui-text-sm cui-font-medium cui-text-gray-700 hover:cui-bg-gray-50 focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75 dark:cui-text-gray-100 dark:hover:cui-bg-gray-900'>
 									<ToastPrimitive.Close
 										asChild
-										className='px-3 py-2'
+										className='cui-px-3 cui-py-2'
 									>
 										{dismiss}
 									</ToastPrimitive.Close>
@@ -125,11 +125,11 @@ const Toast: FC<ToastProps> = ({
 						</div>
 					)}
 					{action && !dismiss && (
-						<div className='flex flex-col justify-center px-3 py-2 '>
+						<div className='cui-flex cui-flex-col cui-justify-center cui-px-3 cui-py-2 '>
 							{typeof action === 'string' ? (
 								<ToastPrimitive.Action
 									altText={actionAltText as string}
-									className='flex w-full items-center justify-center rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'
+									className='cui-flex cui-w-full cui-items-center cui-justify-center cui-rounded-lg cui-px-3 cui-py-2 cui-text-sm cui-font-medium cui-text-gray-700 hover:cui-bg-gray-50 focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75 dark:cui-text-gray-100 dark:hover:cui-bg-gray-900'
 								>
 									{action}
 								</ToastPrimitive.Action>
@@ -137,7 +137,7 @@ const Toast: FC<ToastProps> = ({
 								<ToastPrimitive.Action
 									asChild
 									altText={actionAltText as string}
-									className='flex w-full items-center justify-center rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 dark:text-gray-100 dark:hover:bg-gray-900'
+									className='cui-flex cui-w-full cui-items-center cui-justify-center cui-rounded-lg cui-px-3 cui-py-2 cui-text-sm cui-font-medium cui-text-gray-700 hover:cui-bg-gray-50 focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75 dark:cui-text-gray-100 dark:hover:cui-bg-gray-900'
 								>
 									{action}
 								</ToastPrimitive.Action>

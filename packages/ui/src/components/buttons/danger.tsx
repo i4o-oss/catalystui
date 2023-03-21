@@ -8,7 +8,7 @@ interface DangerButtonProps extends ButtonProps {
 }
 
 const DangerButton: FC<DangerButtonProps> = ({
-	bg = '!bg-red-500 hover:!bg-red-600 disabled:hover:!bg-red-500 dark:hover:!bg-red-600 disabled:dark:hover:!bg-red-500',
+	bg = '!cui-bg-red-500 hover:!cui-bg-red-600 disabled:hover:!cui-bg-red-500 dark:hover:!cui-bg-red-600 disabled:dark:hover:!cui-bg-red-500',
 	children,
 	className,
 	disabled,
@@ -16,11 +16,11 @@ const DangerButton: FC<DangerButtonProps> = ({
 	loading,
 	loadingText,
 	onClick,
-	padding = 'px-4 py-1',
+	padding = 'cui-px-4 cui-py-1',
 	rightIcon,
 	shadow = '',
-	textColor = 'text-white',
-	textSize = 'text-sm',
+	textColor = 'cui-text-white',
+	textSize = 'cui-text-sm',
 	type = 'button',
 }) => {
 	return (

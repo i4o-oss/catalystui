@@ -24,15 +24,15 @@ interface Props {
 const Tabs: FC<Props> = ({ defaultValue, tabs, type = 'row' }) => {
 	return (
 		<TabsRoot
-			className={`min-w-[24rem] grid gap-4 ${
-				type === 'row' ? 'grid-cols-1' : 'grid-cols-3'
+			className={`cui-min-w-[24rem] cui-grid cui-gap-4 ${
+				type === 'row' ? 'cui-grid-cols-1' : 'cui-grid-cols-3'
 			}`}
 			defaultValue={defaultValue}
 		>
 			<TabsList
 				className={cx(
-					'col-span-1 flex gap-4',
-					`${type === 'column' ? 'flex-col' : ''}`
+					'cui-col-span-1 cui-flex cui-gap-4',
+					`${type === 'column' ? 'cui-flex-col' : ''}`
 				)}
 			>
 				{tabs.map(({ title, id }) => (
@@ -40,17 +40,21 @@ const Tabs: FC<Props> = ({ defaultValue, tabs, type = 'row' }) => {
 						key={`tab-trigger-${id}`}
 						value={id}
 						className={cx(
-							'group',
-							'rounded-lg',
-							'radix-state-inactive:bg-gray-50 dark:radix-state-active:bg-gray-900 dark:radix-state-inactive:bg-gray-800',
-							`${type === 'row' ? 'px-8 py-2' : 'px-4 py-2'}`,
-							'focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
+							'cui-group',
+							'cui-rounded-lg',
+							'radix-state-inactive:cui-bg-gray-50 dark:radix-state-active:cui-bg-gray-900 dark:radix-state-inactive:cui-bg-gray-800',
+							`${
+								type === 'row'
+									? 'cui-px-8 cui-py-2'
+									: 'cui-px-4 cui-py-2'
+							}`,
+							'focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 						)}
 					>
 						<span
 							className={cx(
-								'text-sm font-medium',
-								'text-gray-700 dark:text-gray-100'
+								'cui-text-sm cui-font-medium',
+								'cui-text-gray-700 dark:cui-text-gray-100'
 							)}
 						>
 							{title}
@@ -63,8 +67,8 @@ const Tabs: FC<Props> = ({ defaultValue, tabs, type = 'row' }) => {
 					key={`tab-content-${id}`}
 					value={id}
 					className={cx(
-						'col-span-2 rounded-lg bg-white dark:bg-gray-800',
-						'focus:outline-none'
+						'cui-col-span-2 cui-rounded-lg cui-bg-white dark:cui-bg-gray-800',
+						'focus:cui-outline-none'
 					)}
 				>
 					{content}

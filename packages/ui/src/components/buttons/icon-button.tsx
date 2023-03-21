@@ -8,18 +8,18 @@ interface IconButtonProps extends ButtonProps {
 }
 
 const IconButton: FC<IconButtonProps> = ({
-	bg = 'bg-transparent',
+	bg = 'cui-bg-transparent',
 	className,
 	icon,
 	onClick,
-	padding = 'p-3',
+	padding = 'cui-p-3',
 	shadow = '',
-	textColor = 'text-white',
+	textColor = 'cui-text-white',
 	tooltip = '',
 }) => {
 	return (
 		<Button
-			className={`focus-visible:ring-blend-darken inline-flex justify-center rounded-md border border-transparent text-sm font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
+			className={`focus-visible:cui-ring-blend-darken cui-inline-flex cui-justify-center cui-rounded-md cui-border cui-border-transparent cui-text-sm cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
 			onClick={onClick}
 			padding={padding}
 			tooltip={tooltip}

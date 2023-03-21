@@ -23,7 +23,7 @@ const Popover: FC<PopoverProps> = ({
 	trigger,
 }) => {
 	return (
-		<div className='relative inline-block text-left'>
+		<div className='cui-relative cui-inline-block cui-text-left'>
 			<PopoverPrimitive.Root>
 				<PopoverPrimitive.Trigger>{trigger}</PopoverPrimitive.Trigger>
 				<PopoverPrimitive.Portal>
@@ -31,27 +31,27 @@ const Popover: FC<PopoverProps> = ({
 						align={align}
 						avoidCollisions={true}
 						className={cx(
-							'radix-side-top:animate-slide-up radix-side-bottom:animate-slide-down',
-							'w-auto rounded-lg p-4 shadow-md',
-							'bg-white dark:bg-gray-700',
-							'text-black dark:text-white'
+							'radix-side-top:cui-animate-slide-up radix-side-bottom:cui-animate-slide-down',
+							'cui-w-auto cui-rounded-lg cui-p-4 cui-shadow-md',
+							'cui-bg-white dark:cui-bg-gray-700',
+							'cui-text-black dark:cui-text-white'
 						)}
 						side={side}
 						sideOffset={sideOffset}
 					>
-						<PopoverPrimitive.Arrow className='fill-current text-white dark:text-gray-700' />
-						<h3 className='text-md font-medium text-gray-900 dark:text-gray-100'>
+						<PopoverPrimitive.Arrow className='cui-fill-current cui-text-white dark:cui-text-gray-700' />
+						<h3 className='cui-text-md cui-font-medium cui-text-gray-900 dark:cui-text-gray-100'>
 							{title}
 						</h3>
 						{children}
 						{close && (
 							<PopoverPrimitive.Close
 								className={cx(
-									'absolute top-3.5 right-3.5 inline-flex items-center justify-center rounded-full p-1',
-									'focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75'
+									'cui-absolute cui-top-3.5 cui-right-3.5 cui-inline-flex cui-items-center cui-justify-center cui-rounded-full cui-p-1',
+									'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 								)}
 							>
-								<Cross1Icon className='h-4 w-4 text-gray-500 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-400' />
+								<Cross1Icon className='cui-h-4 cui-w-4 cui-text-gray-500 hover:cui-text-gray-700 dark:cui-text-gray-500 dark:hover:cui-text-gray-400' />
 							</PopoverPrimitive.Close>
 						)}
 					</PopoverPrimitive.Content>

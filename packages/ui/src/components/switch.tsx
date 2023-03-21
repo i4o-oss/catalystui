@@ -16,11 +16,11 @@ const Switch: FC<Props> = ({ defaultChecked, icon, onCheckedChange, name }) => {
 	return (
 		<SwitchRoot
 			className={cx(
-				'group',
-				'radix-state-checked:bg-brand-500',
-				'radix-state-unchecked:bg-gray-200 dark:radix-state-unchecked:bg-gray-900',
-				'relative inline-flex h-[20px] w-[32px] flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out',
-				'focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
+				'cui-group',
+				'radix-state-checked:cui-bg-brand-500',
+				'radix-state-unchecked:cui-bg-gray-200 dark:radix-state-unchecked:cui-bg-gray-900',
+				'cui-relative cui-inline-flex cui-h-[20px] cui-w-[32px] cui-flex-shrink-0 cui-cursor-pointer cui-rounded-full cui-border-2 cui-border-transparent cui-transition-colors cui-duration-200 cui-ease-in-out',
+				'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 			)}
 			defaultChecked={defaultChecked}
 			onCheckedChange={onCheckedChange}
@@ -28,10 +28,10 @@ const Switch: FC<Props> = ({ defaultChecked, icon, onCheckedChange, name }) => {
 		>
 			<SwitchThumb
 				className={cx(
-					'group-radix-state-checked:translate-x-3',
-					'group-radix-state-unchecked:translate-x-0',
-					'flex items-center justify-center',
-					'pointer-events-none inline-block h-[16px] w-[16px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out'
+					'group-radix-state-checked:cui-translate-x-3',
+					'group-radix-state-unchecked:cui-translate-x-0',
+					'cui-flex cui-items-center cui-justify-center',
+					'cui-pointer-events-none cui-inline-block cui-h-[16px] cui-w-[16px] cui-transform cui-rounded-full cui-bg-white cui-shadow-lg cui-ring-0 cui-transition cui-duration-200 cui-ease-in-out'
 				)}
 			>
 				{icon}

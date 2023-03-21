@@ -27,7 +27,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 	trigger,
 }) => {
 	return (
-		<div className='relative inline-flex text-left [&_div["data-radix-popper-content-wrapper"]]:!z-100'>
+		<div className='cui-relative cui-inline-flex cui-text-left [&_div["data-radix-popper-content-wrapper"]]:!cui-z-100'>
 			<DropdownMenuPrimitive.Root>
 				<DropdownMenuPrimitive.Trigger>
 					{trigger}
@@ -37,9 +37,9 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 						align={align}
 						asChild={true}
 						className={cx(
-							' radix-side-top:animate-slide-up radix-side-bottom:animate-slide-down',
-							'w-48 rounded-lg p-1 shadow-md md:w-56',
-							'bg-white dark:bg-gray-800'
+							' radix-side-top:cui-animate-slide-up radix-side-bottom:cui-animate-slide-down',
+							'cui-w-48 cui-rounded-lg cui-p-1 cui-shadow-md md:cui-w-56',
+							'cui-bg-white dark:cui-bg-gray-800'
 						)}
 						sideOffset={sideOffset}
 					>
@@ -61,7 +61,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 										return (
 											<DropdownMenuPrimitive.Separator
 												key={i}
-												className='my-1 h-px bg-gray-200 dark:bg-gray-700'
+												className='cui-my-1 cui-h-px cui-bg-gray-200 dark:cui-bg-gray-700'
 											/>
 										)
 									} else if (type === 'submenu') {
@@ -69,23 +69,23 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 											<DropdownMenuPrimitive.Sub key={i}>
 												<DropdownMenuPrimitive.SubTrigger
 													className={cx(
-														'flex cursor-pointer select-none items-center space-x-2 rounded-md px-2 py-2 outline-none',
-														'text-gray-600 focus:bg-gray-50 dark:text-gray-400 dark:focus:bg-gray-900'
+														'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
+														'cui-text-gray-600 focus:cui-bg-gray-50 dark:cui-text-gray-400 dark:focus:cui-bg-gray-900'
 													)}
 												>
-													<div className='basis-4'>
+													<div className='cui-basis-4'>
 														{icon}
 													</div>
-													<span className='text-sm font-normal flex-1'>
+													<span className='cui-text-sm cui-font-normal cui-flex-1'>
 														{label}
 													</span>
-													<ChevronRightIcon className='w-4 h-4' />
+													<ChevronRightIcon className='cui-w-4 cui-h-4' />
 												</DropdownMenuPrimitive.SubTrigger>
 												<DropdownMenuPrimitive.SubContent
 													className={cx(
-														' radix-side-top:animate-slide-up radix-side-bottom:animate-slide-down',
-														'w-48 rounded-lg px-1.5 py-1 shadow-lg md:w-56',
-														'bg-white dark:bg-gray-800'
+														' radix-side-top:cui-animate-slide-up radix-side-bottom:cui-animate-slide-down',
+														'cui-w-48 cui-rounded-lg cui-px-1.5 cui-py-1 cui-shadow-lg md:cui-w-56',
+														'cui-bg-white dark:cui-bg-gray-800'
 													)}
 													sideOffset={sideOffset}
 													alignOffset={-5}
@@ -109,7 +109,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																return (
 																	<DropdownMenuPrimitive.Separator
 																		key={`${i}-${j}`}
-																		className='my-1 h-px bg-gray-200 dark:bg-gray-700'
+																		className='cui-my-1 cui-h-px cui-bg-gray-200 dark:cui-bg-gray-700'
 																	/>
 																)
 															} else {
@@ -125,25 +125,25 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																				i
 																			}
 																			className={cx(
-																				'flex cursor-pointer select-none items-center space-x-2 rounded-md px-2 py-2 outline-none',
-																				'text-gray-600 focus:bg-gray-50 dark:text-gray-400 dark:focus:bg-gray-900'
+																				'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
+																				'cui-text-gray-600 focus:cui-bg-gray-50 dark:cui-text-gray-400 dark:focus:cui-bg-gray-900'
 																			)}
 																			onSelect={
 																				onSelect
 																			}
 																		>
-																			<div className='basis-4'>
+																			<div className='cui-basis-4'>
 																				{
 																					icon
 																				}
 																			</div>
-																			<span className='text-sm font-normal flex-1'>
+																			<span className='cui-text-sm cui-font-normal cui-flex-1'>
 																				{
 																					label
 																				}
 																			</span>
 																			{shortcut && (
-																				<div className='text-xs font-normal text-gray-400 dark:text-gray-600'>
+																				<div className='cui-text-xs cui-font-normal cui-text-gray-400 dark:cui-text-gray-600'>
 																					{
 																						shortcut
 																					}
@@ -155,25 +155,25 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																	<DropdownMenuPrimitive.Item
 																		key={`${i}-${j}`}
 																		className={cx(
-																			'flex cursor-pointer select-none items-center space-x-2 rounded-md px-2 py-2 outline-none',
-																			'text-gray-600 focus:bg-gray-50 dark:text-gray-400 dark:focus:bg-gray-900'
+																			'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
+																			'cui-text-gray-600 focus:cui-bg-gray-50 dark:cui-text-gray-400 dark:focus:cui-bg-gray-900'
 																		)}
 																		onSelect={
 																			onSelect
 																		}
 																	>
-																		<div className='basis-4'>
+																		<div className='cui-basis-4'>
 																			{
 																				icon
 																			}
 																		</div>
-																		<span className='text-sm font-normal flex-1'>
+																		<span className='cui-text-sm cui-font-normal cui-flex-1'>
 																			{
 																				label
 																			}
 																		</span>
 																		{shortcut && (
-																			<div className='text-xs font-normal text-gray-400 dark:text-gray-600'>
+																			<div className='cui-text-xs cui-font-normal cui-text-gray-400 dark:cui-text-gray-600'>
 																				{
 																					shortcut
 																				}
@@ -198,19 +198,19 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 												<DropdownMenuPrimitive.Item
 													key={i}
 													className={cx(
-														'flex cursor-pointer select-none items-center space-x-2 rounded-md px-2 py-2 outline-none',
-														'text-gray-600 focus:bg-gray-50 dark:text-gray-400 dark:focus:bg-gray-900'
+														'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
+														'cui-text-gray-600 focus:cui-bg-gray-50 dark:cui-text-gray-400 dark:focus:cui-bg-gray-900'
 													)}
 													onSelect={onSelect}
 												>
-													<div className='basis-4'>
+													<div className='cui-basis-4'>
 														{icon}
 													</div>
-													<span className='text-sm font-normal flex-1'>
+													<span className='cui-text-sm cui-font-normal cui-flex-1'>
 														{label}
 													</span>
 													{shortcut && (
-														<div className='text-xs font-normal text-gray-400 dark:text-gray-600'>
+														<div className='cui-text-xs cui-font-normal cui-text-gray-400 dark:cui-text-gray-600'>
 															{shortcut}
 														</div>
 													)}
@@ -220,19 +220,19 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 											<DropdownMenuPrimitive.Item
 												key={i}
 												className={cx(
-													'flex cursor-pointer select-none items-center space-x-2 rounded-md px-2 py-2 outline-none',
-													'text-gray-600 focus:bg-gray-50 dark:text-gray-400 dark:focus:bg-gray-900'
+													'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
+													'cui-text-gray-600 focus:cui-bg-gray-50 dark:cui-text-gray-400 dark:focus:cui-bg-gray-900'
 												)}
 												onSelect={onSelect}
 											>
-												<div className='basis-4'>
+												<div className='cui-basis-4'>
 													{icon}
 												</div>
-												<span className='text-sm font-normal flex-1'>
+												<span className='cui-text-sm cui-font-normal cui-flex-1'>
 													{label}
 												</span>
 												{shortcut && (
-													<div className='text-xs font-normal text-gray-400 dark:text-gray-600'>
+													<div className='cui-text-xs cui-font-normal cui-text-gray-400 dark:cui-text-gray-600'>
 														{shortcut}
 													</div>
 												)}

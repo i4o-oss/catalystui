@@ -24,13 +24,13 @@ const Checkbox: FC<Props> = ({
 	required = false,
 }) => {
 	return (
-		<div className='flex items-center'>
+		<div className='cui-flex cui-items-center'>
 			<CheckboxRoot
 				id={name}
 				className={cx(
-					'flex h-5 w-5 items-center justify-center rounded',
-					'radix-state-checked:bg-brand-500 radix-state-unchecked:bg-gray-100 dark:radix-state-unchecked:bg-gray-900',
-					'focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
+					'cui-flex cui-h-5 cui-w-5 cui-items-center cui-justify-center cui-rounded',
+					'radix-state-checked:cui-bg-brand-500 radix-state-unchecked:cui-bg-gray-100 dark:radix-state-unchecked:cui-bg-gray-900',
+					'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 				)}
 				defaultChecked={defaultChecked}
 				disabled={disabled}
@@ -38,13 +38,13 @@ const Checkbox: FC<Props> = ({
 				required={required}
 			>
 				<CheckboxIndicator>
-					<CheckIcon className='h-4 w-4 self-center text-white' />
+					<CheckIcon className='cui-h-4 cui-w-4 cui-self-center cui-text-white' />
 				</CheckboxIndicator>
 			</CheckboxRoot>
 
 			<Label
 				htmlFor={name}
-				className='ml-2 select-none text-sm text-gray-900 dark:text-gray-100'
+				className='cui-ml-2 cui-select-none cui-text-sm cui-text-gray-900 dark:cui-text-gray-100'
 			>
 				{label}
 			</Label>

@@ -26,25 +26,28 @@ const RadioGroup: FC<RadioGroupProps> = ({
 }) => {
 	return (
 		<RadioGroupPrimitive.Root
-			className={`flex flex-col space-y-2 ${className}`}
+			className={`cui-flex cui-flex-col cui-space-y-2 ${className}`}
 			defaultValue={defaultValue}
 			name={name}
 			onValueChange={onChange}
 		>
 			{options.map((option, index) => (
-				<div key={index} className='flex items-center space-x-2'>
+				<div
+					key={index}
+					className='cui-flex cui-items-center cui-space-x-2'
+				>
 					<RadioGroupPrimitive.Item
 						className={cx(
 							// Setting the background in dark properly requires a workaround (see css/tailwind.css)
-							'h-5 w-5 rounded-full border border-transparent !bg-gray-100 text-brand-500 dark:!bg-gray-900',
-							'focus:outline-none focus:ring-0 focus:ring-offset-0 focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-800',
-							'border border-transparent radix-state-checked:border-transparent'
+							'cui-h-5 cui-w-5 cui-rounded-full cui-border cui-border-transparent !cui-bg-gray-100 cui-text-brand-500 dark:!cui-bg-gray-900',
+							'focus:cui-outline-none focus:cui-ring-0 focus:cui-ring-offset-0 focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75 focus-visible:cui-ring-offset-2 dark:focus-visible:cui-ring-offset-gray-800',
+							'cui-border cui-border-transparent radix-state-checked:cui-border-transparent'
 						)}
 						key={option.id}
 						id={option.id}
 						value={option.value}
 					>
-						<RadioGroupPrimitive.Indicator className='relative flex h-full w-full items-center justify-center rounded-full after:block after:h-2 after:w-2 after:rounded-full after:bg-brand-500 after:content-[""]' />
+						<RadioGroupPrimitive.Indicator className='cui-relative cui-flex cui-h-full cui-w-full cui-items-center cui-justify-center cui-rounded-full after:cui-block after:cui-h-2 after:cui-w-2 after:cui-rounded-full after:cui-bg-brand-500 after:cui-content-[""]' />
 					</RadioGroupPrimitive.Item>
 					<label className='text-sm' htmlFor={option.id}>
 						{option.label}

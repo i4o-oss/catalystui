@@ -40,45 +40,45 @@ const Select: FC<Props> = ({ defaultValue, items, name, onValueChange }) => {
 			onValueChange={handleSelect}
 			value={selected.value}
 		>
-			<SelectPrimitive.Trigger asChild aria-label='Food'>
+			<SelectPrimitive.Trigger asChild>
 				<Button className=''>
 					<SelectPrimitive.Value>
 						{selected.label}
 					</SelectPrimitive.Value>
-					<SelectPrimitive.Icon className='ml-2'>
+					<SelectPrimitive.Icon className='cui-ml-2'>
 						<ChevronDownIcon />
 					</SelectPrimitive.Icon>
 				</Button>
 			</SelectPrimitive.Trigger>
 			<SelectPrimitive.Portal>
 				<SelectPrimitive.Content>
-					<SelectPrimitive.ScrollUpButton className='flex items-center justify-center text-gray-700 dark:text-gray-300'>
+					<SelectPrimitive.ScrollUpButton className='cui-flex cui-items-center cui-justify-center cui-text-gray-700 dark:cui-text-gray-300'>
 						<ChevronUpIcon />
 					</SelectPrimitive.ScrollUpButton>
-					<SelectPrimitive.Viewport className='bg-white dark:bg-gray-800 p-2 rounded-lg shadow-lg'>
+					<SelectPrimitive.Viewport className='cui-bg-white dark:cui-bg-gray-800 cui-p-2 cui-rounded-lg cui-shadow-lg'>
 						<SelectPrimitive.Group>
 							{items.map((f, i) => (
 								<SelectPrimitive.Item
 									key={`${f.value}-${i}`}
 									disabled={f?.disabled}
 									className={cx(
-										'relative flex items-center px-8 py-2 rounded-md text-sm text-gray-700 dark:text-gray-300 font-medium focus:bg-gray-100 dark:focus:bg-gray-900',
-										'radix-disabled:opacity-50',
-										'focus:outline-none select-none'
+										'cui-relative cui-flex cui-items-center cui-px-8 cui-py-2 cui-rounded-md cui-text-sm cui-text-gray-700 dark:cui-text-gray-300 cui-font-medium focus:cui-bg-gray-100 dark:focus:cui-bg-gray-900',
+										'radix-disabled:cui-opacity-50',
+										'focus:cui-outline-none cui-select-none'
 									)}
 									value={f.value}
 								>
 									<SelectPrimitive.ItemText>
 										{f.label}
 									</SelectPrimitive.ItemText>
-									<SelectPrimitive.ItemIndicator className='absolute left-2 inline-flex items-center'>
+									<SelectPrimitive.ItemIndicator className='cui-absolute cui-left-2 cui-inline-flex cui-items-center'>
 										<CheckIcon />
 									</SelectPrimitive.ItemIndicator>
 								</SelectPrimitive.Item>
 							))}
 						</SelectPrimitive.Group>
 					</SelectPrimitive.Viewport>
-					<SelectPrimitive.ScrollDownButton className='flex items-center justify-center text-gray-700 dark:text-gray-300'>
+					<SelectPrimitive.ScrollDownButton className='cui-flex cui-items-center cui-justify-center cui-text-gray-700 dark:cui-text-gray-300'>
 						<ChevronDownIcon />
 					</SelectPrimitive.ScrollDownButton>
 				</SelectPrimitive.Content>

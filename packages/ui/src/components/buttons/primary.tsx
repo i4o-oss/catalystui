@@ -8,7 +8,7 @@ interface PrimaryButtonProps extends ButtonProps {
 }
 
 const PrimaryButton: FC<PrimaryButtonProps> = ({
-	bg = '!bg-brand-500 hover:!bg-brand-600 disabled:hover:!bg-brand-500 dark:hover:!bg-brand-600 disabled:dark:hover:!bg-brand-500',
+	bg = '!cui-bg-brand-500 hover:!cui-bg-brand-600 disabled:hover:!cui-bg-brand-500 dark:hover:!cui-bg-brand-600 disabled:dark:hover:!cui-bg-brand-500',
 	children,
 	className,
 	disabled,
@@ -16,11 +16,11 @@ const PrimaryButton: FC<PrimaryButtonProps> = ({
 	loading,
 	loadingText,
 	onClick,
-	padding = 'px-4 py-1',
+	padding = 'cui-px-4 cui-py-1',
 	rightIcon,
-	shadow = 'shadow-md',
-	textColor = 'text-white',
-	textSize = 'text-sm',
+	shadow = 'cui-shadow-md',
+	textColor = 'cui-text-white',
+	textSize = 'cui-text-sm',
 	tooltip = '',
 	type = 'button',
 }) => {

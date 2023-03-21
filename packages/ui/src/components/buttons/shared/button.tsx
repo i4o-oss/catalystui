@@ -10,15 +10,15 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				{...props}
 				// className={`focus-visible:ring-blend-darken inline-flex items-center justify-center rounded-md border border-transparent text-sm font-semibold hover:bg-blend-darken focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
 				className={cx(
-					'inline-flex select-none items-center justify-center rounded-md px-4 py-2 text-sm font-medium',
-					'!bg-white text-gray-700 hover:!bg-gray-50 dark:!bg-gray-800 dark:text-gray-100 dark:hover:!bg-gray-900',
-					'hover:bg-gray-50',
-					'focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75',
+					'cui-inline-flex cui-select-none cui-items-center cui-justify-center cui-rounded-md cui-px-4 cui-py-2 cui-text-sm cui-font-medium',
+					'!cui-bg-white cui-text-gray-700 hover:!cui-bg-gray-50 dark:!cui-bg-gray-800 dark:cui-text-gray-100 dark:hover:!cui-bg-gray-900',
+					'hover:cui-bg-gray-50',
+					'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75',
 					// Register all radix states
-					'group',
-					'radix-state-open:bg-gray-50 dark:radix-state-open:bg-gray-900',
-					'radix-state-on:bg-gray-50 dark:radix-state-on:bg-gray-900',
-					'radix-state-instant-open:bg-gray-50 radix-state-delayed-open:bg-gray-50',
+					'cui-group',
+					'radix-state-open:cui-bg-gray-50 dark:radix-state-open:cui-bg-gray-900',
+					'radix-state-on:cui-bg-gray-50 dark:radix-state-on:cui-bg-gray-900',
+					'radix-state-instant-open:cui-bg-gray-50 radix-state-delayed-open:cui-bg-gray-50',
 					`${props.className}`
 				)}
 				disabled={props.disabled}
@@ -27,7 +27,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				{props.leftIcon}
 				{props.loading && (
 					<svg
-						className='-ml-1 mr-2 h-4 w-4 animate-spin text-white'
+						className='-cui-ml-1 cui-mr-2 cui-h-4 cui-w-4 cui-animate-spin cui-text-white'
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
 						viewBox='0 0 24 24'

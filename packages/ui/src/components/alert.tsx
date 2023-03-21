@@ -31,29 +31,29 @@ const Alert: FC<AlertProps> = ({
 			<AlertPrimitive.Portal>
 				<AlertPrimitive.Overlay
 					forceMount
-					className='fixed inset-0 z-20 bg-black/50'
+					className='cui-fixed cui-inset-0 cui-z-20 cui-bg-black/50'
 				/>
 				<AlertPrimitive.Content
 					forceMount
 					className={cx(
-						'fixed z-50',
-						'w-[95vw] max-w-md rounded-lg p-4 md:w-full',
-						'top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]',
-						'bg-white dark:bg-gray-800',
-						'focus:outline-none focus-visible:ring focus-visible:ring-brand-500 focus-visible:ring-opacity-75'
+						'cui-fixed cui-z-50',
+						'cui-w-[95vw] cui-max-w-md cui-rounded-lg cui-p-4 md:cui-w-full',
+						'cui-top-[50%] cui-left-[50%] -cui-translate-x-[50%] -cui-translate-y-[50%]',
+						'cui-bg-white dark:cui-bg-gray-800',
+						'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 					)}
 				>
 					{title && (
-						<AlertPrimitive.Title className='text-sm font-medium text-gray-900 dark:text-gray-100'>
+						<AlertPrimitive.Title className='cui-text-sm cui-font-medium cui-text-gray-900 dark:cui-text-gray-100'>
 							{title}
 						</AlertPrimitive.Title>
 					)}
 					{description && (
-						<AlertPrimitive.Description className='mt-2 text-sm font-normal text-gray-700 dark:text-gray-400'>
+						<AlertPrimitive.Description className='cui-mt-2 cui-text-sm cui-font-normal cui-text-gray-700 dark:cui-text-gray-400'>
 							{description}
 						</AlertPrimitive.Description>
 					)}
-					<div className='mt-4 flex justify-end space-x-2'>
+					<div className='cui-mt-4 cui-flex cui-justify-end cui-space-x-2'>
 						<AlertPrimitive.Cancel>{cancel}</AlertPrimitive.Cancel>
 						<AlertPrimitive.Action>{action}</AlertPrimitive.Action>
 					</div>

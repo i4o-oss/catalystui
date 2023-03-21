@@ -13,8 +13,8 @@ const CopyToClipboard: FC<Props> = ({ text }) => {
 	return (
 		<Tooltip content='Copy to clipboard'>
 			<Button
-				className='w-8 h-8'
-				padding='p-1'
+				className='cui-w-8 cui-h-8'
+				padding='cui-p-1'
 				onClick={() =>
 					copy(text, {
 						format: 'text/plain',

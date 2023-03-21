@@ -11,23 +11,31 @@ interface AvatarProps {
 
 const Avatar: FC<AvatarProps> = ({ alt, fallback, src, variant }) => {
 	return (
-		<AvatarPrimitive.Root className='relative inline-flex h-10 w-10 overflow-hidden'>
+		<AvatarPrimitive.Root className='cui-relative cui-inline-flex cui-h-10 cui-w-10 cui-overflow-hidden'>
 			<AvatarPrimitive.Image
 				alt={alt}
 				className={cx(
-					'h-full w-full object-cover shadow-md',
-					`${variant === 'circle' ? 'rounded-full' : 'rounded'}`
+					'cui-h-full cui-w-full cui-object-cover cui-shadow-md',
+					`${
+						variant === 'circle'
+							? 'cui-rounded-full'
+							: 'cui-rounded'
+					}`
 				)}
 				src={src}
 			/>
 			<AvatarPrimitive.Fallback
 				className={cx(
-					'flex h-full w-full items-center justify-center bg-gray-200 dark:bg-gray-800 shadow-md',
-					`${variant === 'circle' ? 'rounded-full' : 'rounded'}`
+					'cui-flex cui-h-full cui-w-full cui-items-center cui-justify-center cui-bg-gray-200 dark:cui-bg-gray-800 cui-shadow-md',
+					`${
+						variant === 'circle'
+							? 'cui-rounded-full'
+							: 'cui-rounded'
+					}`
 				)}
 				delayMs={500}
 			>
-				<span className='text-sm font-medium uppercase text-gray-700 dark:text-gray-400'>
+				<span className='cui-text-sm cui-font-medium cui-uppercase cui-text-gray-700 dark:cui-text-gray-400'>
 					{fallback}
 				</span>
 			</AvatarPrimitive.Fallback>
