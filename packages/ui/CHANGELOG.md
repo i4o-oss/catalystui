@@ -1,5 +1,12 @@
 # @i4o-oss/catalystui
 
+## 0.7.20
+
+### Patch Changes
+
+-   e7bf713: Fix toggle-group styles in toolbar component
+-   5152a1a: Fix toggle-group styles in toolbar component
+
 ## 0.7.19
 
 ### Patch Changes
