@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.21
+
+### Patch Changes
+
+-   fe9a70a: Fix z-index of dropdown menu
+
 ## 0.7.20
 
 ### Patch Changes
