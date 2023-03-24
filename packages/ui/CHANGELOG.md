@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.22
+
+### Patch Changes
+
+-   aaa928b: Add open link in new tab option to dropdown item
+
 ## 0.7.21
 
 ### Patch Changes
