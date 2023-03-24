@@ -7,6 +7,7 @@ interface DropdownMenuItem {
 	icon?: ReactNode
 	label?: string | ReactNode
 	link?: string
+	openLinkInNewTab?: boolean
 	onSelect?: (e: Event) => void
 	shortcut?: string
 	type: 'item' | 'separator' | 'submenu'
@@ -51,6 +52,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 									link,
 									icon,
 									onSelect,
+									openLinkInNewTab = false,
 									shortcut,
 									type,
 									submenu,
@@ -183,7 +185,11 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 										<a
 											key={i}
 											href={link}
-											target='_blank'
+											target={
+												openLinkInNewTab
+													? '_blank'
+													: '_self'
+											}
 											rel='noopener noreferrer'
 										>
 											<DropdownMenuPrimitive.Item
