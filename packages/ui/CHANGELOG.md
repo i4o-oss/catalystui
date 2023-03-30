@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.23
+
+### Patch Changes
+
+-   5abf743: Add aria-label prop to buttons
+
 ## 0.7.22
 
 ### Patch Changes
