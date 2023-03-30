@@ -8,6 +8,7 @@ interface DangerButtonProps extends ButtonProps {
 }
 
 const DangerButton: FC<DangerButtonProps> = ({
+	ariaLabel = '',
 	bg = '!cui-bg-red-500 hover:!cui-bg-red-600 disabled:hover:!cui-bg-red-500 dark:hover:!cui-bg-red-600 disabled:dark:hover:!cui-bg-red-500',
 	children,
 	className,
@@ -25,6 +26,7 @@ const DangerButton: FC<DangerButtonProps> = ({
 }) => {
 	return (
 		<Button
+			ariaLabel={ariaLabel}
 			bg={bg}
 			className={`${className} ${shadow}`}
 			disabled={disabled}

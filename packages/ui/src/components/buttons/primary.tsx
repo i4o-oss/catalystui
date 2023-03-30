@@ -8,6 +8,7 @@ interface PrimaryButtonProps extends ButtonProps {
 }
 
 const PrimaryButton: FC<PrimaryButtonProps> = ({
+	ariaLabel = '',
 	bg = '!cui-bg-brand-500 hover:!cui-bg-brand-600 disabled:hover:!cui-bg-brand-500 dark:hover:!cui-bg-brand-600 disabled:dark:hover:!cui-bg-brand-500',
 	children,
 	className,
@@ -26,6 +27,7 @@ const PrimaryButton: FC<PrimaryButtonProps> = ({
 }) => {
 	return (
 		<Button
+			ariaLabel={ariaLabel}
 			bg={bg}
 			className={`${className} ${shadow}`}
 			disabled={disabled}

@@ -8,6 +8,7 @@ export enum ButtonSize {
 }
 
 export interface ButtonProps {
+	ariaLabel?: string
 	bg?: string
 	borderRadius?: string
 	children?: ReactNode | string

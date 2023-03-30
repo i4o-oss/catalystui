@@ -3,6 +3,7 @@ import type { ButtonProps } from './types'
 import Tooltip from '../tooltip'
 
 const Button: FC<ButtonProps> = ({
+	ariaLabel = '',
 	bg = '!cui-bg-gray-700 hover:!cui-bg-gray-800 disabled:hover:!cui-bg-gray-700 dark:hover:!cui-bg-gray-800 disabled:dark:hover:!cui-bg-gray-700',
 	borderRadius = 'cui-rounded-md',
 	children,
@@ -25,6 +26,7 @@ const Button: FC<ButtonProps> = ({
 		return (
 			<Tooltip content={tooltip}>
 				<button
+					aria-label={ariaLabel}
 					className={`focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center ${borderRadius} cui-border cui-border-transparent ${textSize} cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor} disabled:cui-opacity-80 cui-space-x-2 ${
 						loading ? 'cui-cursor-wait' : ''
 					}`}
@@ -64,6 +66,7 @@ const Button: FC<ButtonProps> = ({
 	}
 	return (
 		<button
+			aria-label={ariaLabel}
 			className={`focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center ${borderRadius} cui-border cui-border-transparent ${textSize} cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor} disabled:cui-opacity-80 cui-space-x-2 ${
 				loading ? 'cui-cursor-wait' : ''
 			}`}
