@@ -40,7 +40,7 @@ const Dialog: FC<Props> = ({
 					forceMount
 					className={cx(
 						'cui-fixed cui-z-50',
-						'cui-rounded-lg cui-p-4',
+						'cui-rounded-lg',
 						'cui-top-[50%] cui-left-[50%] -cui-translate-x-[50%] -cui-translate-y-[50%]',
 						'cui-bg-white dark:cui-bg-gray-800',
 						'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
@@ -55,18 +55,20 @@ const Dialog: FC<Props> = ({
 
 					<div className='cui-mt-4'>{children}</div>
 
-					<div className='cui-mt-4 cui-flex cui-justify-end cui-space-x-2'>
-						{cancel && (
-							<DialogPrimitive.Close>
-								{cancel}
-							</DialogPrimitive.Close>
-						)}
-						{action && (
-							<DialogPrimitive.Close>
-								{action}
-							</DialogPrimitive.Close>
-						)}
-					</div>
+					{action || cancel ? (
+						<div className='cui-mt-4 cui-flex cui-justify-end cui-space-x-2 cui-px-4 cui-pb-4'>
+							{cancel && (
+								<DialogPrimitive.Close>
+									{cancel}
+								</DialogPrimitive.Close>
+							)}
+							{action && (
+								<DialogPrimitive.Close>
+									{action}
+								</DialogPrimitive.Close>
+							)}
+						</div>
+					) : null}
 
 					<DialogPrimitive.Close
 						className={cx(
