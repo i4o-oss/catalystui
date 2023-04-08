@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.7.24
+
+### Patch Changes
+
+-   e6d7bcd: Update dialog component styles
+
 ## 0.7.23
 
 ### Patch Changes
