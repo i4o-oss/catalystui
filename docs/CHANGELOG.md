@@ -1,5 +1,12 @@
 # @catalystui/docs
 
+## 0.1.38
+
+### Patch Changes
+
+-   Updated dependencies [b66cade]
+    -   @i4o/catalystui@0.8.0
+
 ## 0.1.37
 
 ### Patch Changes
