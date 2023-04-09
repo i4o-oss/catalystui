@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.8.0
+
+### Minor Changes
+
+-   b66cade: Split tab components and export them all
+
 ## 0.7.24
 
 ### Patch Changes
