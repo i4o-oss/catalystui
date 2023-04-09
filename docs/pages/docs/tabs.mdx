@@ -1,18 +1,29 @@
-import { Tabs } from '@i4o/catalystui'
+import { Tabs, TabsList, TabsContent } from '@i4o/catalystui'
 import DemoCard from '../../components/demo-card'
 
 # Tabs
 
 <DemoCard>
-	<Tabs
-		defaultValue='1'
-		tabs={[
-			{ id: '1', title: 'Tab 1', content: <p className='p-4'>Tab 1 Content</p> },
-			{ id: '2', title: 'Tab 2', content: <p className='p-4'>Tab 2 Content</p> },
-			{ id: '3', title: 'Tab 3', content: <p className='p-4'>Tab 3 Content</p> },
-		]}
-        type='column'
-	/>
+	<Tabs defaultValue='1'>
+        <div className='flex flex-col gap-2'>
+            <TabsList 
+                tabs={[
+    			    { id: '1', title: 'Tab 1', content: <p className='p-4'>Tab 1 Content</p> },
+	    	        { id: '2', title: 'Tab 2', content: <p className='p-4'>Tab 2 Content</p> },
+                    { id: '3', title: 'Tab 3', content: <p className='p-4'>Tab 3 Content</p> },
+        		]}
+            />
+            <div className='bg-white dark:bg-gray-800 rounded-md'>
+                <TabsContent 
+                    tabs={[
+		        	    { id: '1', title: 'Tab 1', content: <p className='p-4'>Tab 1 Content</p> },
+			            { id: '2', title: 'Tab 2', content: <p className='p-4'>Tab 2 Content</p> },
+        			    { id: '3', title: 'Tab 3', content: <p className='p-4'>Tab 3 Content</p> },
+		            ]}
+                />
+            </div>
+        </div>
+    </Tabs>
 </DemoCard>
 
 ### Example
@@ -21,15 +32,25 @@ import DemoCard from '../../components/demo-card'
 import { Tabs } from '@i4o/catalystui'
 
 export default () => {
+    const tabs = [
+    	{ id: '1', title: 'Tab 1', content: <p className='p-4'>Tab 1 Content</p> },
+        { id: '2', title: 'Tab 2', content: <p className='p-4'>Tab 2 Content</p> },
+        { id: '3', title: 'Tab 3', content: <p className='p-4'>Tab 3 Content</p> },
+    ]
+
 	return (
-		<Tabs
-			defaultValue='1'
-			tabs={[
-				{ id: '1', title: 'Tab 1', content: 'Tab 1 Content' },
-				{ id: '2', title: 'Tab 2', content: 'Tab 2 Content' },
-				{ id: '3', title: 'Tab 3', content: 'Tab 3 Content' },
-			]}
-		/>
+	    <Tabs defaultValue='1'>
+            <div className='flex flex-col gap-2'>
+                <TabsList 
+                    tabs={tabs}
+                />
+                <div className='bg-white dark:bg-gray-800 rounded-md'>
+                    <TabsContent 
+                        tabs={tabs}
+                    />
+                </div>
+            </div>
+        </Tabs>
 	)
 }
 ```
