@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.9.0
+
+### Minor Changes
+
+-   92ddeef: Update button and dropdown components
+
 ## 0.8.0
 
 ### Minor Changes
