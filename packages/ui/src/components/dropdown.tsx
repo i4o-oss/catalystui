@@ -29,7 +29,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 }) => {
 	return (
 		<DropdownMenuPrimitive.Root>
-			<DropdownMenuPrimitive.Trigger>
+			<DropdownMenuPrimitive.Trigger asChild={true}>
 				{trigger}
 			</DropdownMenuPrimitive.Trigger>
 			<DropdownMenuPrimitive.Portal className='cui-z-[100]'>
