@@ -46,14 +46,18 @@ const Dialog: FC<Props> = ({
 						'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 					)}
 				>
-					<DialogPrimitive.Title className='cui-text-md cui-font-medium cui-text-gray-900 dark:cui-text-gray-100'>
-						{title}
-					</DialogPrimitive.Title>
-					<DialogPrimitive.Description className='cui-mt-2 cui-text-sm cui-font-normal cui-text-gray-700 dark:cui-text-gray-400'>
-						{description}
-					</DialogPrimitive.Description>
+					{title ? (
+						<DialogPrimitive.Title className='cui-text-md cui-font-medium cui-text-gray-900 dark:cui-text-gray-100'>
+							{title}
+						</DialogPrimitive.Title>
+					) : null}
+					{description ? (
+						<DialogPrimitive.Description className='cui-mt-2 cui-mb-4 cui-text-sm cui-font-normal cui-text-gray-700 dark:cui-text-gray-400'>
+							{description}
+						</DialogPrimitive.Description>
+					) : null}
 
-					<div className='cui-mt-4'>{children}</div>
+					<div>{children}</div>
 
 					{action || cancel ? (
 						<div className='cui-mt-4 cui-flex cui-justify-end cui-space-x-2 cui-px-4 cui-pb-4'>
