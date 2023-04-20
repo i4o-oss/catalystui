@@ -17,10 +17,10 @@ const Switch: FC<Props> = ({ defaultChecked, icon, onCheckedChange, name }) => {
 		<SwitchRoot
 			className={cx(
 				'cui-group',
-				'radix-state-checked:cui-bg-brand-500',
-				'radix-state-unchecked:cui-bg-gray-200 dark:radix-state-unchecked:cui-bg-gray-900',
+				'radix-state-checked:cui-bg-brand',
+				'radix-state-unchecked:cui-bg-ui',
 				'cui-relative cui-inline-flex cui-h-[20px] cui-w-[32px] cui-flex-shrink-0 cui-cursor-pointer cui-rounded-full cui-border-2 cui-border-transparent cui-transition-colors cui-duration-200 cui-ease-in-out',
-				'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
+				'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
 			)}
 			defaultChecked={defaultChecked}
 			onCheckedChange={onCheckedChange}

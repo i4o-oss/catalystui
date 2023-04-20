@@ -8,7 +8,7 @@ type AlertProps = {
 	cancel: ReactNode
 	action: ReactNode
 	trigger?: ReactNode
-	isOpen?: boolean
+	open?: boolean
 	onOpenChange?: Dispatch<SetStateAction<boolean>>
 }
 
@@ -18,16 +18,16 @@ const Alert: FC<AlertProps> = ({
 	cancel,
 	action,
 	trigger = null,
-	isOpen,
+	open,
 	onOpenChange,
 }) => {
 	return (
-		<AlertPrimitive.Root open={isOpen} onOpenChange={onOpenChange}>
-			{trigger && (
+		<AlertPrimitive.Root open={open} onOpenChange={onOpenChange}>
+			{trigger ? (
 				<AlertPrimitive.Trigger asChild>
 					{trigger}
 				</AlertPrimitive.Trigger>
-			)}
+			) : null}
 			<AlertPrimitive.Portal>
 				<AlertPrimitive.Overlay
 					forceMount
@@ -39,17 +39,17 @@ const Alert: FC<AlertProps> = ({
 						'cui-fixed cui-z-50',
 						'cui-w-[95vw] cui-max-w-md cui-rounded-lg cui-p-4 md:cui-w-full',
 						'cui-top-[50%] cui-left-[50%] -cui-translate-x-[50%] -cui-translate-y-[50%]',
-						'cui-bg-white dark:cui-bg-gray-800',
-						'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
+						'cui-bg-primary-subtle',
+						'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
 					)}
 				>
 					{title && (
-						<AlertPrimitive.Title className='cui-text-sm cui-font-medium cui-text-gray-900 dark:cui-text-gray-100'>
+						<AlertPrimitive.Title className='cui-text-sm cui-font-semibold cui-text-primary-foreground'>
 							{title}
 						</AlertPrimitive.Title>
 					)}
 					{description && (
-						<AlertPrimitive.Description className='cui-mt-2 cui-text-sm cui-font-normal cui-text-gray-700 dark:cui-text-gray-400'>
+						<AlertPrimitive.Description className='cui-mt-2 cui-text-sm cui-font-normal cui-text-primary-foreground-subtle'>
 							{description}
 						</AlertPrimitive.Description>
 					)}

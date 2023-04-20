@@ -5,9 +5,9 @@ import {
 } from '@radix-ui/react-icons'
 import * as SelectPrimitive from '@radix-ui/react-select'
 import cx from 'classnames'
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 import type { FC, ReactNode } from 'react'
-import Button from './buttons/shared/button'
+import { Button } from './buttons'
 
 interface SelectItem {
 	disabled?: boolean
@@ -21,6 +21,7 @@ interface Props {
 	items: SelectItem[]
 	name: string
 	open?: boolean
+	onOpenChange?: Dispatch<SetStateAction<boolean>>
 	onValueChange?: (item: SelectItem) => void
 }
 
@@ -29,6 +30,7 @@ const Select: FC<Props> = ({
 	items,
 	name,
 	open,
+	onOpenChange,
 	onValueChange,
 }) => {
 	const [selected, setSelected] = useState(items[0])
@@ -46,11 +48,12 @@ const Select: FC<Props> = ({
 			defaultValue={defaultValue}
 			name={name}
 			open={open}
+			onOpenChange={onOpenChange}
 			onValueChange={handleSelect}
 			value={selected.value}
 		>
 			<SelectPrimitive.Trigger asChild>
-				<Button className=''>
+				<Button className='cui-flex'>
 					<SelectPrimitive.Value>
 						{selected.label}
 					</SelectPrimitive.Value>
@@ -61,17 +64,17 @@ const Select: FC<Props> = ({
 			</SelectPrimitive.Trigger>
 			<SelectPrimitive.Portal>
 				<SelectPrimitive.Content>
-					<SelectPrimitive.ScrollUpButton className='cui-flex cui-items-center cui-justify-center cui-text-gray-700 dark:cui-text-gray-300'>
+					<SelectPrimitive.ScrollUpButton className='cui-flex cui-items-center cui-justify-center cui-text-primary-foreground'>
 						<ChevronUpIcon />
 					</SelectPrimitive.ScrollUpButton>
-					<SelectPrimitive.Viewport className='cui-bg-white dark:cui-bg-gray-800 cui-p-2 cui-rounded-lg cui-shadow-lg'>
+					<SelectPrimitive.Viewport className='cui-bg-ui cui-p-2 cui-rounded-lg cui-shadow-lg'>
 						<SelectPrimitive.Group>
 							{items.map((f, i) => (
 								<SelectPrimitive.Item
 									key={`${f.value}-${i}`}
 									disabled={f?.disabled}
 									className={cx(
-										'cui-relative cui-flex cui-items-center cui-px-8 cui-py-2 cui-rounded-md cui-text-sm cui-text-gray-700 dark:cui-text-gray-300 cui-font-medium focus:cui-bg-gray-100 dark:focus:cui-bg-gray-900',
+										'cui-relative cui-flex cui-items-center cui-px-8 cui-py-2 cui-rounded-md cui-text-sm cui-text-primary-foreground cui-font-medium focus:cui-bg-primary-subtle',
 										'radix-disabled:cui-opacity-50',
 										'focus:cui-outline-none cui-select-none'
 									)}
@@ -87,7 +90,7 @@ const Select: FC<Props> = ({
 							))}
 						</SelectPrimitive.Group>
 					</SelectPrimitive.Viewport>
-					<SelectPrimitive.ScrollDownButton className='cui-flex cui-items-center cui-justify-center cui-text-gray-700 dark:cui-text-gray-300'>
+					<SelectPrimitive.ScrollDownButton className='cui-flex cui-items-center cui-justify-center cui-text-primary-foreground'>
 						<ChevronDownIcon />
 					</SelectPrimitive.ScrollDownButton>
 				</SelectPrimitive.Content>

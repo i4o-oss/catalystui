@@ -26,7 +26,7 @@ const Avatar: FC<AvatarProps> = ({ alt, fallback, src, variant }) => {
 			/>
 			<AvatarPrimitive.Fallback
 				className={cx(
-					'cui-flex cui-h-full cui-w-full cui-items-center cui-justify-center cui-bg-gray-200 dark:cui-bg-gray-800 cui-shadow-md',
+					'cui-flex cui-h-full cui-w-full cui-items-center cui-justify-center cui-bg-ui cui-shadow-md',
 					`${
 						variant === 'circle'
 							? 'cui-rounded-full'
@@ -35,7 +35,7 @@ const Avatar: FC<AvatarProps> = ({ alt, fallback, src, variant }) => {
 				)}
 				delayMs={500}
 			>
-				<span className='cui-text-sm cui-font-medium cui-uppercase cui-text-gray-700 dark:cui-text-gray-400'>
+				<span className='cui-text-sm cui-font-medium cui-uppercase cui-text-primary-foreground'>
 					{fallback}
 				</span>
 			</AvatarPrimitive.Fallback>

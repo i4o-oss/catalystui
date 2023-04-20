@@ -10,7 +10,7 @@ interface Props {
 	description?: ReactNode | string
 	trigger?: ReactNode
 	title: ReactNode | string
-	isOpen?: boolean
+	open?: boolean
 	onOpenChange?: Dispatch<SetStateAction<boolean>>
 }
 
@@ -21,11 +21,11 @@ const Dialog: FC<Props> = ({
 	description,
 	title,
 	trigger = null,
-	isOpen,
+	open,
 	onOpenChange,
 }) => {
 	return (
-		<DialogPrimitive.Root open={isOpen} onOpenChange={onOpenChange}>
+		<DialogPrimitive.Root open={open} onOpenChange={onOpenChange}>
 			{trigger ? (
 				<DialogPrimitive.Trigger asChild>
 					{trigger}
@@ -42,17 +42,17 @@ const Dialog: FC<Props> = ({
 						'cui-fixed',
 						'cui-rounded-lg',
 						'cui-top-[50%] cui-left-[50%] -cui-translate-x-[50%] -cui-translate-y-[50%]',
-						'cui-bg-white dark:cui-bg-gray-800',
-						'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
+						'cui-bg-primary-subtle',
+						'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
 					)}
 				>
 					{title ? (
-						<DialogPrimitive.Title className='cui-text-md cui-font-medium cui-text-gray-900 dark:cui-text-gray-100'>
+						<DialogPrimitive.Title className='cui-text-md cui-font-semibold cui-text-primary-foreground'>
 							{title}
 						</DialogPrimitive.Title>
 					) : null}
 					{description ? (
-						<DialogPrimitive.Description className='cui-mt-2 cui-mb-4 cui-text-sm cui-font-normal cui-text-gray-700 dark:cui-text-gray-400'>
+						<DialogPrimitive.Description className='cui-mt-2 cui-mb-4 cui-text-sm cui-font-normal cui-text-primary-foreground-subtle'>
 							{description}
 						</DialogPrimitive.Description>
 					) : null}
@@ -80,7 +80,7 @@ const Dialog: FC<Props> = ({
 							'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 						)}
 					>
-						<Cross1Icon className='cui-h-4 cui-w-4 cui-text-gray-500 hover:cui-text-gray-700 dark:cui-text-gray-500 dark:hover:cui-text-gray-400' />
+						<Cross1Icon className='cui-h-4 cui-w-4 cui-text-primary-foreground-subtle hover:text-primary-foreground' />
 					</DialogPrimitive.Close>
 				</DialogPrimitive.Content>
 			</DialogPrimitive.Portal>

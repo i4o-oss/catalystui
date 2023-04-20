@@ -38,16 +38,15 @@ const RadioGroup: FC<RadioGroupProps> = ({
 				>
 					<RadioGroupPrimitive.Item
 						className={cx(
-							// Setting the background in dark properly requires a workaround (see css/tailwind.css)
-							'cui-h-5 cui-w-5 cui-rounded-full cui-border cui-border-transparent !cui-bg-gray-100 cui-text-brand-500 dark:!cui-bg-gray-900',
-							'focus:cui-outline-none focus:cui-ring-0 focus:cui-ring-offset-0 focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75 focus-visible:cui-ring-offset-2 dark:focus-visible:cui-ring-offset-gray-800',
+							'cui-h-5 cui-w-5 cui-rounded-full cui-border cui-border-transparent !cui-bg-ui cui-text-brand',
+							'focus:cui-outline-none focus:cui-ring-0 focus:cui-ring-offset-0 focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75 focus-visible:cui-ring-offset-2 dark:focus-visible:cui-ring-offset-gray-800',
 							'cui-border cui-border-transparent radix-state-checked:cui-border-transparent'
 						)}
 						key={option.id}
 						id={option.id}
 						value={option.value}
 					>
-						<RadioGroupPrimitive.Indicator className='cui-relative cui-flex cui-h-full cui-w-full cui-items-center cui-justify-center cui-rounded-full after:cui-block after:cui-h-2 after:cui-w-2 after:cui-rounded-full after:cui-bg-brand-500 after:cui-content-[""]' />
+						<RadioGroupPrimitive.Indicator className='cui-relative cui-flex cui-h-full cui-w-full cui-items-center cui-justify-center cui-rounded-full after:cui-block after:cui-h-2 after:cui-w-2 after:cui-rounded-full after:cui-bg-brand after:cui-content-[""]' />
 					</RadioGroupPrimitive.Item>
 					<label className='text-sm' htmlFor={option.id}>
 						{option.label}
