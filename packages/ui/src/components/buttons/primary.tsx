@@ -61,7 +61,7 @@ const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
 								/>
 							</svg>
 						)}
-						<span>{loading ? loadingText : children}</span>
+						{loading ? loadingText : children}
 						{rightIcon}
 					</button>
 				</Tooltip>
@@ -103,7 +103,7 @@ const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
 						/>
 					</svg>
 				)}
-				<span>{loading ? loadingText : children}</span>
+				{loading ? loadingText : children}
 				{rightIcon}
 			</button>
 		)
