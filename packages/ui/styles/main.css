@@ -9,9 +9,12 @@
 		--primary-subtle: 248 248 248;
 		--primary-foreground: 22 22 22;
 		--primary-foreground-subtle: 28 28 28;
+
 		--ui: 243 243 243;
 		--ui-hover: 237 237 237;
 		--ui-states: 232 232 232;
+
+		--separator: 226 226 226;
 
 		/* brand */
 		/* TODO: difference in colors between default, hover, and other states is too big. choose better hover and state colors. */
@@ -44,8 +47,11 @@
 		--primary-subtle: 28 28 28;
 		--primary-foreground: 252 252 252;
 		--primary-foreground-subtle: 248 248 248;
+
 		--ui: 35 35 35;
 		--ui-hover: 40 40 40;
 		--ui-states: 46 46 46;
+
+		--separator: 52 52 52;
 	}
 }

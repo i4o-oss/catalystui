@@ -61,7 +61,7 @@ const Toast: FC<ToastProps> = ({
 			<ToastPrimitive.Root
 				className={cx(
 					'cui-fixed cui-inset-x-4 cui-bottom-4 cui-z-50 cui-w-auto cui-rounded-lg cui-shadow-lg md:cui-top-4 md:cui-right-4 md:cui-left-auto md:cui-bottom-auto md:cui-w-full md:cui-max-w-sm',
-					'cui-bg-white dark:cui-bg-gray-800',
+					'cui-bg-ui',
 					'radix-state-open:cui-animate-toast-slide-in-bottom md:radix-state-open:cui-animate-toast-slide-in-right',
 					'radix-state-closed:cui-animate-toast-hide',
 					'radix-swipe-end:cui-animate-toast-swipe-out',
@@ -74,12 +74,12 @@ const Toast: FC<ToastProps> = ({
 				onOpenChange={setIsToastOpen}
 			>
 				<div className='cui-flex'>
-					<div className='cui-flex cui-flex-1 cui-items-center cui-py-4 cui-pl-5 cui-border-r cui-border-gray-200 dark:cui-border-gray-700'>
+					<div className='cui-flex cui-flex-1 cui-items-center cui-py-4 cui-pl-5 cui-border-r cui-border-separator'>
 						<div className='cui-radix cui-w-full cui-pr-4'>
-							<ToastPrimitive.Title className='cui-text-sm cui-font-semibold cui-text-gray-900 dark:cui-text-gray-100'>
+							<ToastPrimitive.Title className='cui-text-sm cui-font-semibold cui-text-primary-foreground'>
 								{title}
 							</ToastPrimitive.Title>
-							<ToastPrimitive.Description className='cui-mt-1 cui-text-sm cui-text-gray-800 dark:cui-text-gray-200'>
+							<ToastPrimitive.Description className='cui-mt-1 cui-text-sm cui-text-primary-foreground-subtle'>
 								{description}
 							</ToastPrimitive.Description>
 						</div>

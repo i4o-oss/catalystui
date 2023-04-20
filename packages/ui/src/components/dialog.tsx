@@ -57,7 +57,9 @@ const Dialog: FC<Props> = ({
 						</DialogPrimitive.Description>
 					) : null}
 
-					<div>{children}</div>
+					<div className='cui-text-primary-foreground'>
+						{children}
+					</div>
 
 					{action || cancel ? (
 						<div className='cui-mt-4 cui-flex cui-justify-end cui-space-x-2 cui-px-4 cui-pb-4'>
