@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 0.9.3
+
+### Patch Changes
+
+-   a67f196: Update dialog and select components
+
 ## 0.9.2
 
 ### Patch Changes
