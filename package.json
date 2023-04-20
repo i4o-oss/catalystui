@@ -12,22 +12,13 @@
         "lint": "turbo run lint",
         "start": "turbo run start --scope=@catalystui/docs",
         "format": "prettier --write .",
-        "prepare": "husky install",
         "release": "turbo run build --filter=@i4o/catalystui && changeset publish"
     },
     "devDependencies": {
         "@catalystui/eslint-config": "workspace:*",
         "@changesets/cli": "^2.26.0",
-        "husky": "8.0.2",
-        "lint-staged": "13.0.3",
         "prettier": "latest",
         "turbo": "latest"
-    },
-    "lint-staged": {
-        "*.{js,jsx,ts,tsx}": [
-            "eslint --cache --fix",
-            "prettier --write"
-        ]
     },
     "engines": {
         "node": ">=18.0.0"
