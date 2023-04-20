@@ -7,24 +7,48 @@ module.exports = {
 	prefix: 'cui-',
 	theme: {
 		extend: {
+			borderRadius: {
+				DEFAULT: 'var(--ui-border-radius)',
+			},
 			colors: {
 				brand: {
-					DEFAULT: '#2CB67D',
-					50: '#E6F9F1',
-					100: '#D2F4E6',
-					200: '#A5E9CD',
-					300: '#77DEB3',
-					400: '#46D298',
-					500: '#2CB67D',
-					600: '#239062',
-					700: '#1B6F4C',
-					800: '#124A33',
-					900: '#092519',
+					DEFAULT: 'rgb(var(--brand) / <alpha-value>)',
+					subtle: 'rgb(var(--brand-subtle) / <alpha-value>)',
+					hover: 'rgb(var(--brand-hover) / <alpha-value>)',
+					states: 'rgb(var(--brand-states) / <alpha-value>)',
+				},
+
+				danger: {
+					DEFAULT: 'rgb(var(--danger) / <alpha-value>)',
+					subtle: 'rgb(var(--danger-subtle) / <alpha-value>)',
+					hover: 'rgb(var(--danger-hover) / <alpha-value>)',
+					states: 'rgb(var(--danger-states) / <alpha-value>)',
+				},
+
+				primary: {
+					DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
+					subtle: 'rgb(var(--primary-subtle) / <alpha-value>)',
+					foreground:
+						'rgb(var(--primary-foreground) / <alpha-value>)',
+					'foreground-subtle':
+						'rgb(var(--primary-foreground-subtle) / <alpha-value>)',
+				},
+
+				ui: {
+					DEFAULT: 'rgb(var(--ui) / <alpha-value>)',
+					hover: 'rgb(var(--ui-hover) / <alpha-value>)',
+					states: 'rgb(var(--ui-states) / <alpha-value>)',
 				},
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				serif: ['Merriweather', 'serif'],
+				mono: 'var(--font-mono)',
+				sans: 'var(--font-sans)',
+				serif: 'var(--font-serif)',
+			},
+			padding: {
+				DEFAULT: 'var(--ui-p)',
+				btn: 'var(--ui-btn-p)',
+				'icon-btn': 'var(--ui-icon-btn-p)',
 			},
 		},
 	},
