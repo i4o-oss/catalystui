@@ -61,7 +61,9 @@ const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
 								/>
 							</svg>
 						)}
-						{loading ? loadingText : children}
+						<span className='cui-flex cui-items-center'>
+							{loading ? loadingText : children}
+						</span>
 						{rightIcon}
 					</button>
 				</Tooltip>
@@ -103,7 +105,9 @@ const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
 						/>
 					</svg>
 				)}
-				{loading ? loadingText : children}
+				<span className='cui-flex cui-items-center'>
+					{loading ? loadingText : children}
+				</span>
 				{rightIcon}
 			</button>
 		)
