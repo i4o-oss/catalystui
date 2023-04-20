@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer base { */
+/* 	:root { */
+/* 		--brand: 104 221 253; */
+/* 		--brand-hover: 46 189 229; */
+/* 		--brand-states: 121 207 234; */
+/* 	} */
+/* } */
+
 body {
 	@apply bg-[#010101] font-sans;
 }
