@@ -34,8 +34,8 @@ module.exports = {
 						'rgb(var(--primary-foreground-subtle) / <alpha-value>)',
 				},
 
-				separator: {
-					DEFAULT: 'rgb(var(--separator) / <alpha-value>)',
+				subtle: {
+					DEFAULT: 'rgb(var(--subtle) / <alpha-value>)',
 				},
 
 				ui: {

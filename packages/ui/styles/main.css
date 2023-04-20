@@ -4,39 +4,30 @@
 
 @layer base {
 	:root {
-		/* colors */
 		--primary: 252 252 252;
 		--primary-subtle: 248 248 248;
 		--primary-foreground: 22 22 22;
 		--primary-foreground-subtle: 28 28 28;
-
 		--ui: 243 243 243;
 		--ui-hover: 237 237 237;
 		--ui-states: 232 232 232;
 
-		--separator: 226 226 226;
+		--subtle: 226 226 226;
 
-		/* brand */
-		/* TODO: difference in colors between default, hover, and other states is too big. choose better hover and state colors. */
 		--brand: 44 182 125;
 		--brand-hover: 70 210 152;
 		--brand-states: 119 222 179;
 
-		/* danger */
-		/* TODO: states colors seem too washed out. maybe choose better colors */
 		--danger: 229 72 77;
 		--danger-hover: 235 144 145;
 		--danger-states: 243 174 175;
 
-		/* border radius */
 		--ui-border-radius: 0.5rem;
 
-		/* fonts */
 		--font-sans: 'Inter, sans-serif';
 		--font-serif: 'Merriweather, serif';
 		--font-mono: 'ui-monospace';
 
-		/* padding */
 		--ui-p: 1rem;
 		--ui-btn-p: 0.5rem 1rem;
 		--ui-icon-btn-p: 0.75rem;
@@ -47,11 +38,10 @@
 		--primary-subtle: 28 28 28;
 		--primary-foreground: 252 252 252;
 		--primary-foreground-subtle: 248 248 248;
-
 		--ui: 35 35 35;
 		--ui-hover: 40 40 40;
 		--ui-states: 46 46 46;
 
-		--separator: 52 52 52;
+		--subtle: 226 226 226;
 	}
 }
