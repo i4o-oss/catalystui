@@ -34,12 +34,12 @@ const Dialog: FC<Props> = ({
 			<DialogPrimitive.Portal>
 				<DialogPrimitive.Overlay
 					forceMount
-					className='cui-fixed cui-inset-0 cui-z-20 cui-bg-black/50'
+					className='cui-fixed cui-inset-0 cui-bg-black/50'
 				/>
 				<DialogPrimitive.Content
 					forceMount
 					className={cx(
-						'cui-fixed cui-z-50',
+						'cui-fixed',
 						'cui-rounded-lg',
 						'cui-top-[50%] cui-left-[50%] -cui-translate-x-[50%] -cui-translate-y-[50%]',
 						'cui-bg-white dark:cui-bg-gray-800',

@@ -20,10 +20,17 @@ interface Props {
 	defaultValue?: string
 	items: SelectItem[]
 	name: string
+	open?: boolean
 	onValueChange?: (item: SelectItem) => void
 }
 
-const Select: FC<Props> = ({ defaultValue, items, name, onValueChange }) => {
+const Select: FC<Props> = ({
+	defaultValue,
+	items,
+	name,
+	open,
+	onValueChange,
+}) => {
 	const [selected, setSelected] = useState(items[0])
 
 	const handleSelect = (value: string) => {
@@ -37,6 +44,8 @@ const Select: FC<Props> = ({ defaultValue, items, name, onValueChange }) => {
 	return (
 		<SelectPrimitive.Root
 			defaultValue={defaultValue}
+			name={name}
+			open={open}
 			onValueChange={handleSelect}
 			value={selected.value}
 		>
