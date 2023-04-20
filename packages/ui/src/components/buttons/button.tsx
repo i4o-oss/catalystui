@@ -2,12 +2,11 @@ import React from 'react'
 import type { ButtonProps } from './types'
 import Tooltip from '../tooltip'
 
+// TODO: Remove important ! modifier here when switching to Rescribe
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 	(
 		{
 			ariaLabel = '',
-			bg = '!cui-bg-gray-700 hover:!cui-bg-gray-800 disabled:hover:!cui-bg-gray-700 dark:hover:!cui-bg-gray-800 disabled:dark:hover:!cui-bg-gray-700',
-			borderRadius = 'cui-rounded-md',
 			children,
 			className,
 			disabled,
@@ -16,10 +15,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			loadingText,
 			onClick,
 			onMouseDown,
-			padding = 'cui-px-4 cui-py-1',
 			rightIcon,
-			shadow = '',
-			textColor = 'cui-text-gray-200',
 			textSize = 'cui-text-sm',
 			tooltip = '',
 			type = 'button',
@@ -32,7 +28,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				<Tooltip content={tooltip}>
 					<button
 						aria-label={ariaLabel}
-						className={`focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center ${borderRadius} cui-border cui-border-transparent ${textSize} cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor} disabled:cui-opacity-80 cui-space-x-2 ${
+						className={`!cui-bg-ui hover:!cui-bg-ui-hover active:!cui-bg-ui-states focus:!cui-bg-ui-states disabled:!cui-bg-primary-states cui-text-primary-foreground focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center cui-rounded cui-border cui-border-transparent ${textSize} cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200 ${className} cui-p-btn disabled:cui-opacity-80 cui-space-x-2 ${
 							loading ? 'cui-cursor-wait' : ''
 						}`}
 						disabled={disabled || loading}
@@ -45,7 +41,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 						{leftIcon}
 						{loading && (
 							<svg
-								className='-cui-ml-1 cui-h-4 cui-w-4 cui-animate-spin cui-text-white'
+								className='-cui-ml-1 cui-h-4 cui-w-4 cui-animate-spin cui-text-primary-foreground'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='none'
 								viewBox='0 0 24 24'
@@ -74,7 +70,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 		return (
 			<button
 				aria-label={ariaLabel}
-				className={`focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center ${borderRadius} cui-border cui-border-transparent ${textSize} cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200 ${className} ${bg} ${padding} ${shadow} ${textColor} disabled:cui-opacity-80 cui-space-x-2 ${
+				className={`!cui-bg-ui hover:!cui-bg-ui-hover active:!cui-bg-ui-states focus:!cui-bg-ui-states disabled:!cui-bg-primary-states cui-text-primary-foreground focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center cui-rounded cui-border cui-border-transparent ${textSize} cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200 ${className} cui-p-btn disabled:cui-opacity-80 cui-space-x-2 ${
 					loading ? 'cui-cursor-wait' : ''
 				}`}
 				disabled={disabled || loading}
@@ -87,7 +83,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				{leftIcon}
 				{loading && (
 					<svg
-						className='-cui-ml-1 cui-h-4 cui-w-4 cui-animate-spin cui-text-white'
+						className='-cui-ml-1 cui-h-4 cui-w-4 cui-animate-spin cui-text-primary-foreground'
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
 						viewBox='0 0 24 24'

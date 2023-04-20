@@ -1,7 +1,7 @@
 import React from 'react'
 import type { ReactNode } from 'react'
 import type { ButtonProps } from './types'
-import Button from './button'
+import Tooltip from '../tooltip'
 
 interface IconButtonProps extends ButtonProps {
 	icon: ReactNode
@@ -13,28 +13,47 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
 			ariaLabel = '',
 			bg = 'cui-bg-transparent',
 			className,
+			disabled,
 			icon,
 			onClick,
-			padding = 'cui-p-3',
-			shadow = '',
-			textColor = 'cui-text-white',
+			onMouseDown,
 			tooltip = '',
+			type = 'button',
 			...props
 		},
 		ref
 	) => {
+		if (tooltip) {
+			return (
+				<Tooltip content={tooltip}>
+					<button
+						aria-label={ariaLabel}
+						className={`!cui-bg-ui hover:!cui-bg-ui-hover active:!cui-bg-ui-states focus:!cui-bg-ui-states disabled:!cui-bg-primary-states cui-text-primary-foreground focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center cui-rounded cui-border cui-border-transparent cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200 ${className} cui-p-icon-btn disabled:cui-opacity-80 cui-space-x-2`}
+						disabled={disabled}
+						onClick={onClick}
+						onMouseDown={onMouseDown}
+						{...props}
+						ref={ref}
+						type={type}
+					>
+						{icon}
+					</button>
+				</Tooltip>
+			)
+		}
 		return (
-			<Button
-				ariaLabel={ariaLabel}
-				className={`focus-visible:cui-ring-blend-darken cui-inline-flex cui-justify-center cui-rounded-md cui-border cui-border-transparent cui-text-sm cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
+			<button
+				aria-label={ariaLabel}
+				className={`!cui-bg-ui hover:!cui-bg-ui-hover active:!cui-bg-ui-states focus:!cui-bg-ui-states disabled:!cui-bg-primary-states cui-text-primary-foreground focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center cui-rounded cui-border cui-border-transparent cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200 ${className} cui-p-icon-btn disabled:cui-opacity-80 cui-space-x-2`}
+				disabled={disabled}
 				onClick={onClick}
-				padding={padding}
+				onMouseDown={onMouseDown}
 				{...props}
 				ref={ref}
-				tooltip={tooltip}
+				type={type}
 			>
 				{icon}
-			</Button>
+			</button>
 		)
 	}
 )
