@@ -8,22 +8,10 @@ module.exports = {
 	theme: {
 		extend: {
 			animation: {
-				'enter-from-right': {
-					'0%': { transform: 'translateX(200px)', opacity: 0 },
-					'100%': { transform: 'translateX(0)', opacity: 1 },
-				},
-				'enter-from-left': {
-					'0%': { transform: 'translateX(-200px)', opacity: 0 },
-					'100%': { transform: 'translateX(0)', opacity: 1 },
-				},
-				'exit-to-right': {
-					'0%': { transform: 'translateX(0)', opacity: 1 },
-					'100%': { transform: 'translateX(200px)', opacity: 0 },
-				},
-				'exit-to-left': {
-					'0%': { transform: 'translateX(0)', opacity: 1 },
-					'100%': { transform: 'translateX(-200px)', opacity: 0 },
-				},
+				'enter-from-right': 'enter-from-right 0.25s ease',
+				'enter-from-left': 'enter-from-left 0.25s ease',
+				'exit-to-right': 'exit-to-right 0.25s ease',
+				'exit-to-left': 'exit-to-left 0.25s ease',
 				'toast-hide': 'toast-hide 100ms ease-in forwards',
 				'toast-slide-in-right':
 					'toast-slide-in-right 150ms cubic-bezier(0.16, 1, 0.3, 1)',
@@ -77,6 +65,22 @@ module.exports = {
 				serif: 'var(--font-serif)',
 			},
 			keyframes: {
+				'enter-from-right': {
+					'0%': { transform: 'translateX(200px)', opacity: 0 },
+					'100%': { transform: 'translateX(0)', opacity: 1 },
+				},
+				'enter-from-left': {
+					'0%': { transform: 'translateX(-200px)', opacity: 0 },
+					'100%': { transform: 'translateX(0)', opacity: 1 },
+				},
+				'exit-to-right': {
+					'0%': { transform: 'translateX(0)', opacity: 1 },
+					'100%': { transform: 'translateX(200px)', opacity: 0 },
+				},
+				'exit-to-left': {
+					'0%': { transform: 'translateX(0)', opacity: 1 },
+					'100%': { transform: 'translateX(-200px)', opacity: 0 },
+				},
 				// toast
 				'toast-hide': {
 					'0%': { opacity: 1 },
