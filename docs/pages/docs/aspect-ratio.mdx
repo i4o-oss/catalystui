@@ -1,0 +1,38 @@
+import { AspectRatio } from '@i4o/catalystui'
+import DemoCard from '../../components/demo-card'
+
+# Aspect Ratio
+
+<DemoCard>
+	<AspectRatio
+        alt='Picture of Wedge Ponds, Alberta, Canada'
+        ratio={16 / 9}
+        src="https://images.unsplash.com/photo-1681648531827-e9d7591cf063"
+	/>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Alert, Button, DangerButton } from '@i4o/catalystui'
+
+export default () => {
+	return (
+		<DemoCard>
+            <AspectRatio
+                alt='Picture of Wedge Ponds, Alberta, Canada'
+                ratio={16 / 9}
+                src="https://images.unsplash.com/photo-1681648531827-e9d7591cf063"
+        	/>
+		</DemoCard>
+	)
+}
+```
+
+### Props
+
+| Name        | Type                  | Default | Description                   |
+| :---------- | :-------------------- | :------ | :---------------------------- |
+| alt      | `string`           |         | Alt text of the image            |
+| ratio      | `number`           | `1`       | The desired aspect ratio            |
+| src | `string` |         | URL of the image |
