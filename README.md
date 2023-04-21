@@ -23,8 +23,8 @@ For full documentation and a complete list of components, visit [catalyst.i4o.de
 
 -   [x] Have a base list of usable components
 -   [x] Fix library styles being overridden by nextra styles
--   [ ] Make the API and styles more consistent
--   [ ] Make docs light/dark mode work for the components
+-   [x] Make the API and styles more consistent
+-   [x] Make docs light/dark mode work for the components
 -   [ ] Implement all Radix UI Primitives
 -   [ ] Fix accessibility issues
 -   [ ] Add explanation for props in the docs
