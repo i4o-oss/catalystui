@@ -58,6 +58,7 @@ const theme = {
 		titleComponent({ title }) {
 			if (
 				title === 'Aspect Ratio' ||
+				title === 'Collapsible' ||
 				title === 'Hover Card' ||
 				title === 'Progress'
 			) {
