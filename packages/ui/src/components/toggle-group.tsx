@@ -37,7 +37,7 @@ const ToggleGroup: FC<ToggleGroupProps> = ({
 				}`,
 				`${
 					style === 'stitched'
-						? 'cui-rounded-md cui-overflow-hidden cui-divide-gray-200 dark:cui-divide-gray-600 radix-state-on:cui-divide-transparent dark:radix-state-on:cui-divide-transparent'
+						? 'cui-rounded-md cui-overflow-hidden cui-divide-subtle radix-state-on:cui-divide-transparent dark:radix-state-on:cui-divide-transparent'
 						: 'cui-gap-0.5 !cui-divide-none'
 				}`
 			)}
@@ -53,15 +53,15 @@ const ToggleGroup: FC<ToggleGroupProps> = ({
 					aria-label={label}
 					className={cx(
 						'cui-group cui-transition-colors cui-duration-200',
-						'hover:!cui-bg-brand-500/50 hover:dark:!cui-bg-brand-500/50',
+						'hover:cui-bg-ui-hover',
 						`${
 							style === 'stitched'
-								? '!cui-bg-white dark:!cui-bg-gray-700 radix-state-on:!cui-bg-brand-500/70 dark:radix-state-on:!cui-bg-brand-500/70'
-								: 'radix-state-on:!cui-bg-brand-500/70 dark:radix-state-on:!cui-bg-brand-500/70 cui-text-gray-900'
+								? '!cui-bg-ui radix-state-on:!cui-bg-ui-states'
+								: 'radix-state-on:!cui-bg-ui-states cui-text-primary-foreground'
 						}`,
 						'cui-p-2',
 						`${style === 'pills' ? 'cui-rounded-md' : ''}`,
-						'focus:cui-relative focus:cui-outline-none focus-visible:cui-z-20 focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
+						'focus:cui-relative focus:cui-outline-none focus-visible:cui-z-20 focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
 					)}
 				>
 					{icon}

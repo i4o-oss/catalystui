@@ -8,7 +8,7 @@ interface Props {
 	content: string | ReactNode
 	children: ReactNode
 	open?: boolean
-	onOpenChange: (open: boolean) => void
+	onOpenChange?: (open: boolean) => void
 	side?: 'top' | 'right' | 'bottom' | 'left'
 }
 

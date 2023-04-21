@@ -13,7 +13,6 @@ import DemoCard from '../../components/demo-card.tsx'
 
 <DemoCard>
 	<Toolbar
-		className='w-full'
 		items={[
 			{
 				type: 'toggle-group',
@@ -58,13 +57,16 @@ import DemoCard from '../../components/demo-card.tsx'
 				type: 'separator',
 			},
 			{
-				type: 'link',
-				link: '/',
-				linkText: 'Edited 2 hours ago',
-			},
-			{
 				type: 'button',
 				buttonText: 'Share',
+			},
+			{
+				type: 'separator',
+			},
+			{
+				type: 'link',
+				link: '/',
+				linkText: <p className='px-4'>Edited 2 hours ago</p>,
 			},
 		]}
 	/>
