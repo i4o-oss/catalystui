@@ -1,0 +1,13 @@
+{
+  "mode": "pre",
+  "tag": "alpha",
+  "initialVersions": {
+    "@catalystui/docs": "0.1.42",
+    "@catalystui/eslint-config": "0.0.0",
+    "@catalystui/tsconfig": "0.0.0",
+    "@i4o/catalystui": "0.9.3"
+  },
+  "changesets": [
+    "bright-penguins-flow"
+  ]
+}

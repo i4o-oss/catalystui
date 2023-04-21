@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.0
+
+### Major Changes
+
+-   Prerelease
+
 ## 0.9.3
 
 ### Patch Changes
