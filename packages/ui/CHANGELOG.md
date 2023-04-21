@@ -1,5 +1,12 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.2
+
+### Patch Changes
+
+-   99eff56: Use theme variables everywhere and add a few radix primitives
+-   875d6f8: Use theme variables everywhere and add a few radix primitives
+
 ## 1.0.0-alpha.1
 
 ### Patch Changes
