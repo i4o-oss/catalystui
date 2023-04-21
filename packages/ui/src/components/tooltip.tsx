@@ -4,20 +4,30 @@ import cx from 'classnames'
 
 interface Props {
 	align?: 'start' | 'center' | 'end'
+	defaultOpen?: boolean
 	content: string | ReactNode
 	children: ReactNode
+	open?: boolean
+	onOpenChange: (open: boolean) => void
 	side?: 'top' | 'right' | 'bottom' | 'left'
 }
 
 const Tooltip: FC<Props> = ({
 	align = 'center',
+	defaultOpen,
 	content,
 	children,
+	open,
+	onOpenChange,
 	side = 'top',
 }) => {
 	return (
 		<TooltipPrimitive.Provider>
-			<TooltipPrimitive.Root>
+			<TooltipPrimitive.Root
+				defaultOpen={defaultOpen}
+				open={open}
+				onOpenChange={onOpenChange}
+			>
 				<TooltipPrimitive.Trigger>{children}</TooltipPrimitive.Trigger>
 				<TooltipPrimitive.Portal>
 					<TooltipPrimitive.Content
@@ -28,14 +38,14 @@ const Tooltip: FC<Props> = ({
 							'radix-side-bottom:cui-animate-slide-up-fade',
 							'radix-side-left:cui-animate-slide-right-fade',
 							'cui-inline-flex cui-items-center cui-rounded-md cui-px-4 cui-py-2.5',
-							'cui-bg-white dark:cui-bg-gray-800',
+							'cui-bg-primary-subtle',
 							'cui-max-w-xs'
 						)}
 						side={side}
 						sideOffset={4}
 					>
-						<TooltipPrimitive.Arrow className='cui-fill-current cui-text-white dark:cui-text-gray-800' />
-						<span className='cui-block cui-text-xs cui-leading-none cui-text-gray-700 dark:cui-text-gray-100'>
+						<TooltipPrimitive.Arrow className='cui-fill-current cui-text-primary-subtle' />
+						<span className='cui-block cui-text-xs cui-leading-none cui-text-primary-foreground'>
 							{content}
 						</span>
 					</TooltipPrimitive.Content>

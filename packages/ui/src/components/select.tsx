@@ -74,7 +74,7 @@ const Select: FC<Props> = ({
 									key={`${f.value}-${i}`}
 									disabled={f?.disabled}
 									className={cx(
-										'cui-relative cui-flex cui-items-center cui-px-8 cui-py-2 cui-rounded-md cui-text-sm cui-text-primary-foreground cui-font-medium focus:cui-bg-primary-subtle',
+										'cui-relative cui-flex cui-items-center cui-px-8 cui-py-2 cui-rounded-md cui-text-sm cui-text-primary-foreground cui-font-medium focus:cui-bg-ui-states',
 										'radix-disabled:cui-opacity-50',
 										'focus:cui-outline-none cui-select-none'
 									)}

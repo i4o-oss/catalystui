@@ -16,19 +16,29 @@ interface DropdownMenuItem {
 
 interface DropdownMenuProps {
 	align?: 'end' | 'start' | 'center' | undefined
+	defaultOpen?: boolean
 	items: DropdownMenuItem[]
+	open?: boolean
+	onOpenChange?: (open: boolean) => void
 	sideOffset?: number
 	trigger: ReactNode
 }
 
 const DropdownMenu: FC<DropdownMenuProps> = ({
 	align = 'end',
+	defaultOpen,
 	items,
+	open,
+	onOpenChange,
 	sideOffset = 5,
 	trigger,
 }) => {
 	return (
-		<DropdownMenuPrimitive.Root>
+		<DropdownMenuPrimitive.Root
+			defaultOpen={defaultOpen}
+			open={open}
+			onOpenChange={onOpenChange}
+		>
 			<DropdownMenuPrimitive.Trigger asChild={true}>
 				{trigger}
 			</DropdownMenuPrimitive.Trigger>
@@ -39,7 +49,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 					className={cx(
 						'radix-side-top:cui-animate-slide-up radix-side-bottom:cui-animate-slide-down',
 						'cui-w-48 cui-rounded-lg cui-p-1 cui-shadow-md md:cui-w-56',
-						'cui-bg-white dark:cui-bg-gray-800',
+						'cui-bg-ui',
 						'cui-z-[100]'
 					)}
 					sideOffset={sideOffset}
@@ -63,7 +73,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 									return (
 										<DropdownMenuPrimitive.Separator
 											key={i}
-											className='cui-my-1 cui-h-px cui-bg-gray-200 dark:cui-bg-gray-700'
+											className='cui-my-1 cui-h-px cui-bg-subtle'
 										/>
 									)
 								} else if (type === 'submenu') {
@@ -72,7 +82,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 											<DropdownMenuPrimitive.SubTrigger
 												className={cx(
 													'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
-													'cui-text-gray-600 focus:cui-bg-gray-50 dark:cui-text-gray-400 dark:focus:cui-bg-gray-900'
+													'cui-text-primary-foreground focus:cui-bg-ui-states'
 												)}
 											>
 												<div className='cui-basis-4'>
@@ -87,7 +97,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 												className={cx(
 													' radix-side-top:cui-animate-slide-up radix-side-bottom:cui-animate-slide-down',
 													'cui-w-48 cui-rounded-lg cui-px-1.5 cui-py-1 cui-shadow-lg md:cui-w-56',
-													'cui-bg-white dark:cui-bg-gray-800'
+													'cui-bg-ui'
 												)}
 												sideOffset={sideOffset}
 												alignOffset={-5}
@@ -110,7 +120,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 															return (
 																<DropdownMenuPrimitive.Separator
 																	key={`${i}-${j}`}
-																	className='cui-my-1 cui-h-px cui-bg-gray-200 dark:cui-bg-gray-700'
+																	className='cui-my-1 cui-h-px cui-bg-subtle'
 																/>
 															)
 														} else {
@@ -123,7 +133,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																		key={i}
 																		className={cx(
 																			'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
-																			'cui-text-gray-600 focus:cui-bg-gray-50 dark:cui-text-gray-400 dark:focus:cui-bg-gray-900'
+																			'cui-text-primary-foreground focus:cui-bg-ui-states'
 																		)}
 																		onSelect={
 																			onSelect
@@ -140,7 +150,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																			}
 																		</span>
 																		{shortcut && (
-																			<div className='cui-text-xs cui-font-normal cui-text-gray-400 dark:cui-text-gray-600'>
+																			<div className='cui-text-xs cui-font-normal cui-text-primary-foreground-subtle'>
 																				{
 																					shortcut
 																				}
@@ -153,7 +163,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																	key={`${i}-${j}`}
 																	className={cx(
 																		'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
-																		'cui-text-gray-600 focus:cui-bg-gray-50 dark:cui-text-gray-400 dark:focus:cui-bg-gray-900'
+																		'cui-text-primary-foreground focus:cui-bg-ui-states'
 																	)}
 																	onSelect={
 																		onSelect
@@ -166,7 +176,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																		{label}
 																	</span>
 																	{shortcut && (
-																		<div className='cui-text-xs cui-font-normal cui-text-gray-400 dark:cui-text-gray-600'>
+																		<div className='cui-text-xs cui-font-normal cui-text-primary-foreground-subtle'>
 																			{
 																				shortcut
 																			}
@@ -196,7 +206,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 												key={i}
 												className={cx(
 													'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
-													'cui-text-gray-600 focus:cui-bg-gray-50 dark:cui-text-gray-400 dark:focus:cui-bg-gray-900'
+													'cui-text-primary-foreground focus:cui-bg-ui-states'
 												)}
 												onSelect={onSelect}
 											>
@@ -207,7 +217,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 													{label}
 												</span>
 												{shortcut && (
-													<div className='cui-text-xs cui-font-normal cui-text-gray-400 dark:cui-text-gray-600'>
+													<div className='cui-text-xs cui-font-normal cui-text-primary-foreground-subtle'>
 														{shortcut}
 													</div>
 												)}
@@ -218,7 +228,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 											key={i}
 											className={cx(
 												'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
-												'cui-text-gray-600 focus:cui-bg-gray-50 dark:cui-text-gray-400 dark:focus:cui-bg-gray-900'
+												'cui-text-primary-foreground focus:cui-bg-ui-states'
 											)}
 											onSelect={onSelect}
 										>
@@ -229,7 +239,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 												{label}
 											</span>
 											{shortcut && (
-												<div className='cui-text-xs cui-font-normal cui-text-gray-400 dark:cui-text-gray-600'>
+												<div className='cui-text-xs cui-font-normal cui-text-primary-foreground-subtle'>
 													{shortcut}
 												</div>
 											)}

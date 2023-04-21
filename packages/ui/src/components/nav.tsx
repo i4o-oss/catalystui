@@ -26,7 +26,7 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 	return (
 		<NavigationMenuPrimitive.Root className='relative'>
 			<NavigationMenuPrimitive.List
-				className={`cui-flex cui-rounded-lg cui-bg-transparent cui-p-2 ${
+				className={`cui-flex cui-rounded-lg cui-bg-ui cui-p-2 ${
 					type === 'column'
 						? 'cui-flex-col cui-space-y-2'
 						: 'cui-flex-row cui-space-x-2'

@@ -38,7 +38,7 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 		<AccordionPrimitive.Root
 			className={`${
 				type === 'multiple'
-					? 'radix-state-closed:cui-divide-y radix-state-closed:cui-divide-gray-200 radix-state-closed:dark:cui-divide-gray-700'
+					? 'radix-state-closed:cui-divide-y radix-state-closed:cui-divide-subtle'
 					: ''
 			}`}
 			type={type}
@@ -66,23 +66,23 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 											: ''
 									}`,
 									'focus:cui-outline-none',
-									'cui-inline-flex cui-w-full cui-items-center cui-justify-between !cui-bg-white cui-px-4 cui-py-2 cui-text-left dark:!cui-bg-gray-800',
-									'cui-border-b cui-border-gray-600 dark:cui-border-gray-600'
+									'cui-inline-flex cui-w-full cui-items-center cui-justify-between !cui-bg-ui cui-px-4 cui-py-2 cui-text-left',
+									'cui-border-b cui-border-subtle'
 								)}
 							>
-								<span className='cui-text-sm cui-font-medium cui-text-gray-900 dark:cui-text-gray-100'>
+								<span className='cui-text-sm cui-font-medium cui-text-primary-foreground'>
 									{item.title}
 								</span>
 								<ChevronDownIcon
 									className={cx(
-										'cui-ml-2 cui-h-5 cui-w-5 cui-shrink-0 cui-text-gray-700 cui-ease-in-out dark:cui-text-gray-400',
+										'cui-ml-2 cui-h-5 cui-w-5 cui-shrink-0 cui-text-primary-foreground cui-ease-in-out',
 										'group-radix-state-open:cui-rotate-180 group-radix-state-open:cui-duration-300'
 									)}
 								/>
 							</AccordionPrimitive.Trigger>
 							<AccordionPrimitive.Content
 								className={cx(
-									'cui-pt-2 cui-w-full cui-bg-gray-100 cui-px-4 cui-pb-2 dark:cui-bg-gray-700',
+									'cui-pt-2 cui-w-full cui-bg-ui-states cui-px-4 cui-pb-2',
 									`${
 										index === items.length - 1
 											? 'radix-state-open:cui-rounded-b-lg'
@@ -90,7 +90,7 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 									}`
 								)}
 							>
-								<div className='cui-text-sm cui-text-gray-700 dark:cui-text-gray-400'>
+								<div className='cui-text-sm cui-text-primary-foreground'>
 									{item.content}
 								</div>
 							</AccordionPrimitive.Content>
