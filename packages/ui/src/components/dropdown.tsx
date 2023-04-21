@@ -150,7 +150,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																			}
 																		</span>
 																		{shortcut && (
-																			<div className='cui-text-xs cui-font-normal cui-text-primary-foreground-subtle'>
+																			<div className='cui-font-mono cui-text-xs cui-font-normal cui-text-primary-foreground-subtle'>
 																				{
 																					shortcut
 																				}
@@ -176,7 +176,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																		{label}
 																	</span>
 																	{shortcut && (
-																		<div className='cui-text-xs cui-font-normal cui-text-primary-foreground-subtle'>
+																		<div className='cui-font-mono cui-text-xs cui-font-normal cui-text-primary-foreground-subtle'>
 																			{
 																				shortcut
 																			}
@@ -217,7 +217,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 													{label}
 												</span>
 												{shortcut && (
-													<div className='cui-text-xs cui-font-normal cui-text-primary-foreground-subtle'>
+													<div className='cui-font-mono cui-text-xs cui-font-normal cui-text-primary-foreground-subtle'>
 														{shortcut}
 													</div>
 												)}
@@ -239,7 +239,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 												{label}
 											</span>
 											{shortcut && (
-												<div className='cui-text-xs cui-font-normal cui-text-primary-foreground-subtle'>
+												<div className='cui-font-mono cui-text-xs cui-font-normal cui-text-primary-foreground-subtle'>
 													{shortcut}
 												</div>
 											)}
