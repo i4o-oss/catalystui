@@ -54,6 +54,26 @@ const theme = {
 		)
 	},
 	gitTimestamp: null,
+	sidebar: {
+		titleComponent({ title }) {
+			if (
+				title === 'Aspect Ratio' ||
+				title === 'Hover Card' ||
+				title === 'Progress'
+			) {
+				return (
+					<div className='flex items-center gap-x-2'>
+						{title}
+						<span className='text-xs px-1.5 py-0.5 rounded-md bg-brand-500 text-white'>
+							New
+						</span>
+					</div>
+				)
+			}
+
+			return title
+		},
+	},
 	// footer: {
 	// 	component: (
 	// 		<div className='w-screen h-20 sticky top-0 z-50 flex flex-wrap items-center justify-center px-4 sm:px-6 lg:px-8 py-4 border-t border-gray-200'>
