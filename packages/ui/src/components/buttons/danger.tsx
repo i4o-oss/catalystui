@@ -29,7 +29,7 @@ const DangerButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				<Tooltip content={tooltip}>
 					<button
 						aria-label={ariaLabel}
-						className={`!cui-bg-danger hover:!cui-bg-danger-hover active:!cui-bg-danger-states focus:!cui-bg-danger-states disabled:!cui-bg-danger-states cui-text-primary-foreground focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center cui-rounded cui-border cui-border-transparent ${textSize} cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200 ${className} cui-p-btn disabled:cui-opacity-80 cui-space-x-2 ${
+						className={`!cui-bg-danger hover:!cui-bg-danger-hover active:!cui-bg-danger-states focus:!cui-bg-danger-states disabled:!cui-bg-danger-states cui-text-white focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center cui-rounded cui-border cui-border-transparent ${textSize} cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200 ${className} cui-p-btn disabled:cui-opacity-80 cui-space-x-2 ${
 							loading ? 'cui-cursor-wait' : ''
 						}`}
 						disabled={disabled || loading}
@@ -42,7 +42,7 @@ const DangerButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
 						{leftIcon}
 						{loading && (
 							<svg
-								className='-cui-ml-1 cui-h-4 cui-w-4 cui-animate-spin cui-text-primary-foreground'
+								className='-cui-ml-1 cui-h-4 cui-w-4 cui-animate-spin cui-text-white'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='none'
 								viewBox='0 0 24 24'
@@ -73,7 +73,7 @@ const DangerButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
 		return (
 			<button
 				aria-label={ariaLabel}
-				className={`!cui-bg-danger hover:!cui-bg-danger-hover active:!cui-bg-danger-states focus:!cui-bg-danger-states disabled:!cui-bg-danger-states cui-text-primary-foreground focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center cui-rounded cui-border cui-border-transparent ${textSize} cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200 ${className} cui-p-btn disabled:cui-opacity-80 cui-space-x-2 ${
+				className={`!cui-bg-danger hover:!cui-bg-danger-hover active:!cui-bg-danger-states focus:!cui-bg-danger-states disabled:!cui-bg-danger-states cui-text-white focus-visible:cui-ring-blend-darken cui-inline-flex cui-items-center cui-justify-center cui-rounded cui-border cui-border-transparent ${textSize} cui-font-semibold focus:cui-outline-none focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2 cui-transition-all cui-duration-200 ${className} cui-p-btn disabled:cui-opacity-80 cui-space-x-2 ${
 					loading ? 'cui-cursor-wait' : ''
 				}`}
 				disabled={disabled || loading}
@@ -86,7 +86,7 @@ const DangerButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				{leftIcon}
 				{loading && (
 					<svg
-						className='-cui-ml-1 cui-h-4 cui-w-4 cui-animate-spin cui-text-primary-foreground'
+						className='-cui-ml-1 cui-h-4 cui-w-4 cui-animate-spin cui-text-white'
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
 						viewBox='0 0 24 24'
