@@ -11,6 +11,7 @@
     "avatar": "Avatar",
     "buttons": "Buttons",
     "checkbox": "Checkbox",
+    "collapsible": "Collapsible",
     "dialog": "Dialog",
     "dropdown": "Dropdown",
     "hover-card": "Hover Card",
