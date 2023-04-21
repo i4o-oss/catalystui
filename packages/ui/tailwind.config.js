@@ -8,6 +8,22 @@ module.exports = {
 	theme: {
 		extend: {
 			animation: {
+				'enter-from-right': {
+					'0%': { transform: 'translateX(200px)', opacity: 0 },
+					'100%': { transform: 'translateX(0)', opacity: 1 },
+				},
+				'enter-from-left': {
+					'0%': { transform: 'translateX(-200px)', opacity: 0 },
+					'100%': { transform: 'translateX(0)', opacity: 1 },
+				},
+				'exit-to-right': {
+					'0%': { transform: 'translateX(0)', opacity: 1 },
+					'100%': { transform: 'translateX(200px)', opacity: 0 },
+				},
+				'exit-to-left': {
+					'0%': { transform: 'translateX(0)', opacity: 1 },
+					'100%': { transform: 'translateX(-200px)', opacity: 0 },
+				},
 				'toast-hide': 'toast-hide 100ms ease-in forwards',
 				'toast-slide-in-right':
 					'toast-slide-in-right 150ms cubic-bezier(0.16, 1, 0.3, 1)',

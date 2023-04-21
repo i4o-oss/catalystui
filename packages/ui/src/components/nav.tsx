@@ -24,9 +24,9 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 	}, [])
 
 	return (
-		<NavigationMenuPrimitive.Root className='relative'>
+		<NavigationMenuPrimitive.Root className='cui-relative cui-z-[1] cui-flex cui-w-screen cui-justify-center'>
 			<NavigationMenuPrimitive.List
-				className={`cui-flex cui-rounded-lg cui-bg-ui cui-p-2 ${
+				className={`cui-center cui-m-0 cui-list-none cui-flex cui-rounded cui-bg-ui cui-p-2 ${
 					type === 'column'
 						? 'cui-flex-col cui-space-y-2'
 						: 'cui-flex-row cui-space-x-2'
@@ -42,8 +42,9 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 									className={cx(
 										'cui-px-4 cui-py-1 cui-text-sm',
 										'cui-text-sm cui-font-medium',
-										'cui-text-gray-700 dark:cui-text-gray-100',
-										'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
+										'cui-text-primary-foreground hover:cui-text-brand',
+										'cui-transition-colors cui-duration-200',
+										'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
 									)}
 								>
 									{label}
@@ -51,7 +52,7 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 								<NavigationMenuPrimitive.Content
 									className={cx(
 										'cui-absolute cui-w-auto cui-top-0 cui-left-0 cui-rounded-lg !cui-z-100',
-										'cui-bg-white dark:cui-bg-gray-800',
+										'cui-bg-ui',
 										'radix-motion-from-start:cui-animate-enter-from-left',
 										'radix-motion-from-end:cui-animate-enter-from-right',
 										'radix-motion-to-start:cui-animate-exit-to-left',
@@ -74,7 +75,8 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 									to={href as string}
 									className={cx(
 										'cui-px-4 cui-py-1 cui-text-sm',
-										'cui-text-sm cui-text-gray-700 dark:cui-text-gray-100',
+										'cui-text-sm cui-text-primary-foreground hover:cui-text-brand',
+										'cui-transition-colors cui-duration-200',
 										`${
 											pathname.includes(href as string)
 												? 'cui-bg-transparent cui-text-brand dark:cui-text-brand cui-font-semibold'
@@ -89,7 +91,8 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 									href={href as string}
 									className={cx(
 										'cui-px-4 cui-py-1 cui-text-sm',
-										'cui-text-sm cui-text-gray-700 dark:cui-text-gray-100',
+										'cui-text-sm cui-text-primary-foreground hover:cui-text-brand',
+										'cui-transition-colors cui-duration-200',
 										`${
 											pathname.includes(href as string)
 												? 'cui-bg-transparent cui-text-brand dark:cui-text-brand cui-font-semibold'
@@ -113,14 +116,14 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 						'cui-transition-[width_transform] cui-duration-[250ms] cui-ease-[ease]'
 					)}
 				>
-					<div className='cui-top-1 cui-relative cui-bg-white dark:cui-bg-gray-800 cui-w-2 cui-h-2 cui-rotate-45' />
+					<div className='cui-top-1 cui-relative cui-bg-ui cui-w-2 cui-h-2 cui-rotate-45' />
 				</NavigationMenuPrimitive.Indicator>
 			</NavigationMenuPrimitive.List>
 
 			<div
 				className={cx(
-					'cui-absolute cui-flex cui-justify-center',
-					'cui-w-[140%] cui-left-[-20%] cui-top-[100%] !cui-z-100'
+					'cui-perspective-[2000px] cui-absolute cui-top-[100%] cui-left-0 cui-flex cui-w-full cui-justify-center',
+					'!cui-z-100'
 				)}
 				style={{
 					perspective: '2000px',
@@ -128,7 +131,7 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 			>
 				<NavigationMenuPrimitive.Viewport
 					className={cx(
-						'cui-relative cui-mt-2 cui-shadow-lg cui-rounded-md cui-bg-white dark:cui-bg-gray-800 cui-overflow-hidden',
+						'cui-relative cui-mt-2 cui-shadow-lg cui-rounded-md cui-bg-ui cui-overflow-hidden',
 						'cui-w-radix-navigation-menu-viewport',
 						'cui-h-radix-navigation-menu-viewport',
 						'radix-state-open:cui-animate-scale-in-content',

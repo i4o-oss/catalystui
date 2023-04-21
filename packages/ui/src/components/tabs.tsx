@@ -41,14 +41,14 @@ const TabsList = React.forwardRef<TabsData, any>(
 						className={cx(
 							'cui-group',
 							'cui-rounded-lg',
-							'radix-state-inactive:cui-bg-gray-50 radix-state-active:cui-bg-brand-500 dark:radix-state-active:cui-bg-brand-500 dark:radix-state-inactive:cui-bg-gray-800',
-							'radix-state-inactive:cui-text-gray-800 radix-state-active:cui-text-white dark:radix-state-active:cui-text-white dark:radix-state-inactive:cui-text-gray-50',
+							'radix-state-inactive:cui-bg-transparent radix-state-active:cui-bg-ui-states',
+							'radix-state-inactive:cui-text-primary-foreground-subtle radix-state-active:cui-text-primary-foreground',
 							`${
 								props.type === 'row'
 									? 'cui-px-8 cui-py-2'
 									: 'cui-px-4 cui-py-2'
 							}`,
-							'focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
+							'focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
 						)}
 					>
 						<span className={cx('cui-text-sm cui-font-medium')}>
