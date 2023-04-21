@@ -8,6 +8,7 @@
     "@i4o/catalystui": "0.9.3"
   },
   "changesets": [
-    "bright-penguins-flow"
+    "bright-penguins-flow",
+    "light-toys-compare"
   ]
 }

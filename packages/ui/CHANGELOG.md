@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.1
+
+### Patch Changes
+
+-   b042150: Push again
+
 ## 1.0.0-alpha.0
 
 ### Major Changes
