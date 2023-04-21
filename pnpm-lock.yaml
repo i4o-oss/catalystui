@@ -79,6 +79,7 @@ importers:
       '@catalystui/tsconfig': workspace:*
       '@radix-ui/react-accordion': 1.1.1
       '@radix-ui/react-alert-dialog': 1.0.3
+      '@radix-ui/react-aspect-ratio': 1.0.2
       '@radix-ui/react-avatar': 1.0.2
       '@radix-ui/react-checkbox': 1.0.3
       '@radix-ui/react-dialog': 1.0.3
@@ -87,6 +88,7 @@ importers:
       '@radix-ui/react-label': 2.0.1
       '@radix-ui/react-navigation-menu': 1.1.2
       '@radix-ui/react-popover': 1.0.5
+      '@radix-ui/react-progress': ^1.0.2
       '@radix-ui/react-radio-group': 1.1.2
       '@radix-ui/react-select': 1.2.1
       '@radix-ui/react-switch': 1.0.2
@@ -113,6 +115,7 @@ importers:
     dependencies:
       '@radix-ui/react-accordion': 1.1.1_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-alert-dialog': 1.0.3_jf7puk66b2eiqxne3oe3xlxkou
+      '@radix-ui/react-aspect-ratio': 1.0.2_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-avatar': 1.0.2_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-checkbox': 1.0.3_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-dialog': 1.0.3_jf7puk66b2eiqxne3oe3xlxkou
@@ -121,6 +124,7 @@ importers:
       '@radix-ui/react-label': 2.0.1_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-navigation-menu': 1.1.2_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-popover': 1.0.5_jf7puk66b2eiqxne3oe3xlxkou
+      '@radix-ui/react-progress': 1.0.2_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-radio-group': 1.1.2_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-select': 1.2.1_jf7puk66b2eiqxne3oe3xlxkou
       '@radix-ui/react-switch': 1.0.2_biqbaboplfbrettd7655fr4n2y
@@ -1074,6 +1078,18 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
+  /@radix-ui/react-aspect-ratio/1.0.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-YCujQYnwcVcakbdhE8eTjhh4QR8CsngEcRlSzIPWw1vp3KPC9orETo8CxuVM65j5HAp0oFoOlIy6v7SuF+9P+Q==}
+    peerDependencies:
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    dependencies:
+      '@babel/runtime': 7.21.0
+      '@radix-ui/react-primitive': 1.0.2_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /@radix-ui/react-avatar/1.0.2_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-XRL8z2l9V7hRLCPjHWg/34RBPZUGpmOjmsRSNvIh2DI28GyIWDChbcsDUVc63MzOItk6Q83Ob2KK8k2FUlXlGA==}
     peerDependencies:
@@ -1425,6 +1441,19 @@ packages:
     dependencies:
       '@babel/runtime': 7.21.0
       '@radix-ui/react-slot': 1.0.1_react@18.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@radix-ui/react-progress/1.0.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-c16RVM43ct2koRcMmPw4b47JWFNs89qe5p4Um9dwoPs0yi+d7It1MJ35EpsX+93o31Mqdwe4vQyu0SrHrygdCg==}
+    peerDependencies:
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    dependencies:
+      '@babel/runtime': 7.21.0
+      '@radix-ui/react-context': 1.0.0_react@18.2.0
+      '@radix-ui/react-primitive': 1.0.2_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
