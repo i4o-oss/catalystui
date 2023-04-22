@@ -5,11 +5,7 @@ import DemoCard from '../../components/demo-card'
 
 <DemoCard>
 	<div className='flex flex-col space-y-2'>
-		<Checkbox
-			defaultChecked={true}
-			label='Checkbox 1'
-			name='test1'
-		/>
+		<Checkbox defaultChecked={true} label='Checkbox 1' name='test1' />
 		<Checkbox
 			defaultChecked={true}
 			disabled={true}
@@ -43,5 +39,3 @@ export default () => {
 | `label`          | `string \| ReactNode` | `''`    | The label of the checkbox                                         |
 | `name`           | `string`              | `''`    | The label of the checkbox                                         |
 | `required`       | `boolean`             | `false` | Whether the checkbox is required before the form can be submitted |
-
-// TODO: Update disabled state styles

@@ -6,7 +6,12 @@ import DemoCard from '../../components/demo-card'
 <DemoCard>
 	<Dialog
 		title={<p className='px-4 pt-4'>Edit Profile</p>}
-		description={<p className='px-4'>Change your profile information here. Click save when you are done.</p>}
+		description={
+			<p className='px-4'>
+				Change your profile information here. Click save when you are
+				done.
+			</p>
+		}
 		trigger={<Button>Edit Profile</Button>}
 	>
 		<div className='grid grid-cols-5 gap-4 px-4 pb-4'>
@@ -39,7 +44,12 @@ export default () => {
 			action={<PrimaryButton>OK</PrimaryButton>}
 			cancel={<Button>Cancel</Button>}
 			title={<p className='px-4 pt-4'>Edit Profile</p>}
-			description={<p className='px-4'>Change your profile information here. Click save when you are done.</p>}
+			description={
+				<p className='px-4'>
+					Change your profile information here. Click save when you
+					are done.
+				</p>
+			}
 			trigger={<Button>Edit Profile</Button>}
 		>
 			<div className='grid grid-cols-5 gap-4 px-4'>
@@ -65,10 +75,13 @@ export default () => {
 
 ### Props
 
-| Name        | Type                  | Default | Description                        |
-| :---------- | :-------------------- | :------ | :--------------------------------- |
-| title       | `ReactNode \| string` | -       | The title of the dialog.           |
-| description | `ReactNode \| string` | -       | The description of the dialog.     |
-| trigger     | ReactNode             | -       | The trigger element of the dialog. |
-| footer      | ReactNode             | -       | The footer of the dialog.          |
-| children    | ReactNode             | -       | The content of the dialog.         |
+| Name         | Type                  | Default | Description                                             |
+| :----------- | :-------------------- | :------ | :------------------------------------------------------ |
+| title        | `ReactNode \| string` | -       | The title of the dialog.                                |
+| description  | `ReactNode \| string` | -       | The description of the dialog.                          |
+| trigger      | ReactNode             | -       | The trigger element of the dialog.                      |
+| action       | ReactNode             | -       | Action button in the dialog.                            |
+| cancel       | ReactNode             | -       | Cancel button in the dialog.                            |
+| children     | ReactNode             | -       | The content of the dialog.                              |
+| open         | `boolean`             | -       | Open state of the dialog.                               |
+| onOpenChange | ReactNode             | -       | Function to call when open state of the dialog changes. |

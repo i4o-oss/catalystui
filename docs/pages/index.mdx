@@ -34,15 +34,17 @@ import Link from 'next/link'
 }
 
 <div className='flex items-center space-x-4 mt-8'>
-    <Link href='/docs'>
-        <Button className='h-12' padding='px-6 py-3' textSize='text-base'>Documentation</Button>
-    </Link>
-    <pre className="w-96 h-12 flex items-center justify-between !pl-4 !pr-2 space-x-2 rounded-lg border border-slate-100 bg-slate-100 dark:border-slate-700 dark:bg-black">
-        <code className="flex items-center justify-between font-mono text-sm font-semibold text-slate-900 dark:text-slate-50">
-            npm install @i4o/catalystui
-            <CopyToClipboard text='npm add @i4o/catalystui' />
-        </code>
-    </pre>
+	<Link href='/docs'>
+		<Button className='h-12' padding='px-6 py-3' textSize='text-base'>
+			Documentation
+		</Button>
+	</Link>
+	<pre className='w-96 h-12 flex items-center justify-between !pl-4 !pr-2 space-x-2 rounded-lg border border-slate-100 bg-slate-100 dark:border-slate-700 dark:bg-black'>
+		<code className='flex items-center justify-between font-mono text-sm font-semibold text-slate-900 dark:text-slate-50'>
+			npm install @i4o/catalystui
+			<CopyToClipboard text='npm add @i4o/catalystui' />
+		</code>
+	</pre>
 </div>
 
 <h2 className='text-2xl text-left font-semibold mt-16'>Get Started</h2>

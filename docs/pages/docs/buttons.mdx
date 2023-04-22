@@ -11,12 +11,12 @@ import '@i4o/catalystui/main.css'
 # Buttons
 
 <DemoCard>
-    <div className='flex space-x-2'>
-	    <Button>Button</Button>
-	    <PrimaryButton>Primary Button</PrimaryButton>
-	    <DangerButton>Danger Button</DangerButton>
-	    <IconButton icon={<HomeIcon />} />
-    </div>
+	<div className='flex space-x-2'>
+		<Button>Button</Button>
+		<PrimaryButton>Primary Button</PrimaryButton>
+		<DangerButton>Danger Button</DangerButton>
+		<IconButton icon={<HomeIcon />} />
+	</div>
 </DemoCard>
 
 ### Example
@@ -31,37 +31,33 @@ import {
 
 export default () => {
 	return (
-        <div className='flex space-x-2'>
-            <Button>Button</Button>
-            <PrimaryButton>Primary Button</PrimaryButton>
-	        <DangerButton>Danger Button</DangerButton>
-	        <IconButton icon={<HomeIcon />} />
-        </div>
-    )
+		<div className='flex space-x-2'>
+			<Button>Button</Button>
+			<PrimaryButton>Primary Button</PrimaryButton>
+			<DangerButton>Danger Button</DangerButton>
+			<IconButton icon={<HomeIcon />} />
+		</div>
+	)
 }
 ```
 
 ### Props
 
-| Name         | Type                        | Default | Description           |
-| :----------- | :-------------------------- | :------ | :-------------------- |
-| bg           | string                      |         | Background color      |
-| borderRadius | string                      |         | Border radius         |
-| children     | ReactNode                   |         | Button content        |
-| className    | string                      |         | Additional class name |
-| disabled     | boolean                     |         | Disabled state        |
-| loading      | boolean                     |         | Loading state         |
-| loadingText  | string                      |         | Loading text          |
-| onClick      | (event: MouseEvent) => void |         | Click handler         |
-| onMouseDown  | (event: MouseEvent) => void |         | Mouse down handler    |
-| padding      | string                      |         | Padding               |
-| leftIcon     | ReactNode                   |         | Left icon             |
-| rightIcon    | ReactNode                   |         | Right icon            |
-| shadow       | string                      |         | Box shadow            |
-| textColor    | string                      |         | Text color            |
-| textSize     | string                      |         | Text size             |
-| tooltip      | string                      |         | Tooltip text          |
-| type         | string                      |         | Button type           |
+| Name        | Type                        | Default | Description                |
+| :---------- | :-------------------------- | :------ | :------------------------- |
+| ariaLabel   | string                      |         | `aria-label` of the button |
+| children    | ReactNode                   |         | Button content             |
+| className   | string                      |         | Additional class name      |
+| disabled    | boolean                     |         | Disabled state             |
+| loading     | boolean                     |         | Loading state              |
+| loadingText | string                      |         | Loading text               |
+| onClick     | (event: MouseEvent) => void |         | Click handler              |
+| onMouseDown | (event: MouseEvent) => void |         | Mouse down handler         |
+| leftIcon    | ReactNode                   |         | Left icon                  |
+| rightIcon   | ReactNode                   |         | Right icon                 |
+| textSize    | string                      |         | Text size                  |
+| tooltip     | string                      |         | Tooltip text               |
+| type        | string                      |         | Button type                |
 
 ### IconButton Props
 
@@ -76,18 +72,30 @@ Refer to [Default Button Props](#props). Icon Button also has the following prop
 ### Left/Right Icons
 
 <DemoCard>
-    <div className='flex flex-col space-y-2'>
-    <div className='flex space-x-2'>
-	    <Button leftIcon={<PauseIcon />} padding='pl-3 pr-4 py-1'>Pause</Button>
-	    <PrimaryButton leftIcon={<PlayIcon />} padding='pl-3 pr-4 py-1'>Play</PrimaryButton>
-	    <DangerButton leftIcon={<StopIcon />} padding='pl-3 pr-4 py-1'>Stop</DangerButton>
-    </div>
-    <div className='flex space-x-2'>
-	    <Button rightIcon={<PauseIcon />} padding='pl-4 pr-3 py-1'>Pause</Button>
-	    <PrimaryButton rightIcon={<PlayIcon />} padding='pl-4 pr-3 py-1'>Play</PrimaryButton>
-	    <DangerButton rightIcon={<StopIcon />} padding='pl-4 pr-3 py-1'>Stop</DangerButton>
-    </div>
-    </div>
+	<div className='flex flex-col space-y-2'>
+		<div className='flex space-x-2'>
+			<Button leftIcon={<PauseIcon />} padding='pl-3 pr-4 py-1'>
+				Pause
+			</Button>
+			<PrimaryButton leftIcon={<PlayIcon />} padding='pl-3 pr-4 py-1'>
+				Play
+			</PrimaryButton>
+			<DangerButton leftIcon={<StopIcon />} padding='pl-3 pr-4 py-1'>
+				Stop
+			</DangerButton>
+		</div>
+		<div className='flex space-x-2'>
+			<Button rightIcon={<PauseIcon />} padding='pl-4 pr-3 py-1'>
+				Pause
+			</Button>
+			<PrimaryButton rightIcon={<PlayIcon />} padding='pl-4 pr-3 py-1'>
+				Play
+			</PrimaryButton>
+			<DangerButton rightIcon={<StopIcon />} padding='pl-4 pr-3 py-1'>
+				Stop
+			</DangerButton>
+		</div>
+	</div>
 </DemoCard>
 
 ## States
@@ -95,20 +103,25 @@ Refer to [Default Button Props](#props). Icon Button also has the following prop
 ### Loading
 
 <DemoCard>
-    <div className='flex space-x-2'>
-	    <Button loading={true} loadingText='Loading...'>Button</Button>
-	    <PrimaryButton loading={true} loadingText='Loading...'>Primary Button</PrimaryButton>
-	    <DangerButton loading={true} loadingText='Loading...'>Danger Button</DangerButton>
-    </div>
+	<div className='flex space-x-2'>
+		<Button loading={true} loadingText='Loading...'>
+			Button
+		</Button>
+		<PrimaryButton loading={true} loadingText='Loading...'>
+			Primary Button
+		</PrimaryButton>
+		<DangerButton loading={true} loadingText='Loading...'>
+			Danger Button
+		</DangerButton>
+	</div>
 </DemoCard>
 
 ### Disabled
 
 <DemoCard>
-    <div className='flex space-x-2'>
-	    <Button disabled={true}>Button</Button>
-	    <PrimaryButton disabled={true}>Primary Button</PrimaryButton>
-	    <DangerButton disabled={true}>Danger Button</DangerButton>
-    </div>
+	<div className='flex space-x-2'>
+		<Button disabled={true}>Button</Button>
+		<PrimaryButton disabled={true}>Primary Button</PrimaryButton>
+		<DangerButton disabled={true}>Danger Button</DangerButton>
+	</div>
 </DemoCard>
-

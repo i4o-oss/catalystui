@@ -6,13 +6,15 @@ import { RowSpacingIcon } from '@radix-ui/react-icons'
 
 <DemoCard>
 	<Collapsible
-        first={<span>ClickHouse/NoiSQL</span>}
-        items={[
-            <span>GyulyVGC/sniffnet</span>,
-            <span>rvaiya/keyd</span>
-        ]}
+		first={<span>ClickHouse/NoiSQL</span>}
+		items={[<span>GyulyVGC/sniffnet</span>, <span>rvaiya/keyd</span>]}
 		title='orhun starred 3 repositories'
-		trigger={<IconButton className='p-1 rounded-full' icon={<RowSpacingIcon />} />}
+		trigger={
+			<IconButton
+				className='p-1 rounded-full'
+				icon={<RowSpacingIcon />}
+			/>
+		}
 	/>
 </DemoCard>
 
@@ -24,11 +26,11 @@ import { Alert, Button, DangerButton } from '@i4o/catalystui'
 export default () => {
 	return (
 		<DemoCard>
-	<Collapsible
-        first={<span>First Item</span>}
-		title='Are you sure?'
-		trigger={<IconButton icon={<RowSpacingIcon />} />}
-	/>
+			<Collapsible
+				first={<span>First Item</span>}
+				title='Are you sure?'
+				trigger={<IconButton icon={<RowSpacingIcon />} />}
+			/>
 		</DemoCard>
 	)
 }
@@ -36,9 +38,9 @@ export default () => {
 
 ### Props
 
-| Name        | Type                  | Default | Description                   |
-| :---------- | :-------------------- | :------ | :---------------------------- |
-| first      | `ReactNode`           |         | First element of the collapsible. It will always be visible.            |
-| items      | `ReactNode[]`           |         | List of elements in the collapsible.            |
-| title       | `string \| ReactNode` |         | The title of the collapsible.       |
-| trigger     | `string \| ReactNode`           |         | The trigger button.           |
+| Name    | Type                  | Default | Description                                                  |
+| :------ | :-------------------- | :------ | :----------------------------------------------------------- |
+| first   | `ReactNode`           |         | First element of the collapsible. It will always be visible. |
+| items   | `ReactNode[]`         |         | List of elements in the collapsible.                         |
+| title   | `string \| ReactNode` |         | The title of the collapsible.                                |
+| trigger | `string \| ReactNode` |         | The trigger button.                                          |

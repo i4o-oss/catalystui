@@ -149,9 +149,19 @@ export default () => {
 
 ### Props
 
-| Name      | Type   | Default | Description |
-| :-------- | :----- | :------ | :---------- |
-| className | string |         |             |
-| items     | Array  |         |             |
+| Name      | Type        | Default | Description |
+| :-------- | :---------- | :------ | :---------- |
+| className | string      |         |             |
+| items     | ToolbarItem |         |             |
 
-// TODO: Improve props table
+#### ToolbarItem
+
+| Name           | Type                                          | Default | Description                                                                   |
+| :------------- | :-------------------------------------------- | :------ | :---------------------------------------------------------------------------- |
+| buttonOnSelect | `() => void`                                  |         | Function to execute when a button is clicked. Use when `type` is `button`.    |
+| buttonText     | `string`                                      |         | Text inside the button. Use when `type` is `button`                           |
+| groupType      | `single \| multiple`                          |         | If multiple toggles can be enabled at once. Use when `type` is `toggle-group` |
+| groupItems     | `ToggleGroupItem[]`                           |         | List of items in a toggle group. Use when `type` is `toggle-group`            |
+| link           | `string`                                      |         | URL of the link. Use when `type` is `link`                                    |
+| linkText       | `string`                                      |         | Text of the link. Use when `type` is `link`                                   |
+| type           | `toggle-group \| separator \| link \| button` |         | Text of the link. Use when `type` is `link`                                   |

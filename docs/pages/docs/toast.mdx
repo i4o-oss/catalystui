@@ -25,7 +25,7 @@ export default () => {
 			action='Okay'
 			description='This is your starter pokemon. Take good care of it.'
 			duration={5000}
-		    trigger='Show Toast'
+			trigger='Show Toast'
 			title='You have chosen Chikorita'
 		/>
 	)
@@ -34,15 +34,13 @@ export default () => {
 
 ### Props
 
-| Name         | Type                  | Default | Description                                |
-| :----------- | :-------------------- | :------ | :----------------------------------------- |
-| trigger | `ReactNode \| string` | `null`  | The element that triggers the toast.       |
-| title        | `string`              | `null`  | The title of the toast.                    |
-| description  | `string`              | `null`  | The description of the toast.              |
-| duration     | `number`              | `5000`  | The duration of the toast in milliseconds. |
-| action       | `ReactNode`           | `null`  | The action button of the toast.            |
-| actionAltText       | `string`           | `null`  | Alt text for action button.            |
-| dismiss       | `boolean`           | `true`  | If toast should have a dismiss button. |
-| dismissText       | `string`           | `'Dismiss'`  | Dismiss button text, if shown.  |
-
-
+| Name          | Type                  | Default | Description                                                        |
+| :------------ | :-------------------- | :------ | :----------------------------------------------------------------- |
+| trigger       | `ReactNode \| string` | `null`  | The element that triggers the toast.                               |
+| title         | `string`              | `null`  | The title of the toast.                                            |
+| description   | `string`              | `null`  | The description of the toast.                                      |
+| duration      | `number`              | `5000`  | The duration of the toast in milliseconds.                         |
+| action        | `ReactNode`           | `null`  | The action button of the toast.                                    |
+| actionAltText | `string`              | `null`  | Alt text for action button.                                        |
+| dismiss       | `boolean`             | `true`  | If toast should have a dismiss button.                             |
+| defaultOpen   | `boolean`             | `false` | Default open state of the toast. Use when a trigger is not needed. |

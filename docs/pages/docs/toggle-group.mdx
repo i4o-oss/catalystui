@@ -30,8 +30,8 @@ import DemoCard from '../../components/demo-card'
 				icon: <UnderlineIcon />,
 			},
 		]}
-        orientation='vertical'
-        type='multiple'
+		orientation='vertical'
+		type='multiple'
 	/>
 	<ToggleGroup
 		items={[
@@ -51,7 +51,7 @@ import DemoCard from '../../components/demo-card'
 				icon: <TextAlignRightIcon />,
 			},
 		]}
-        style='pills'
+		style='pills'
 		type='single'
 	/>
 </DemoCard>
@@ -123,5 +123,3 @@ export default function ToggleGroupExample() {
 | :---- | :---------------------------------------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------- |
 | items | `Array<{ value: string, label: string, icon: ReactNode  }>` | []       | Array of items to render                                                                                                     |
 | type  | 'single' \| 'multiple'                                      | 'single' | Type of toggle group. Single allows only one button to be toggled in a group. Multiple allows multiple toggles in the group. |
-
-// TODO: Add toggle component or add a toggle prop to the button component

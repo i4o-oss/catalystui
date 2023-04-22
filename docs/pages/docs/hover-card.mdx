@@ -5,35 +5,47 @@ import { MixIcon } from '@radix-ui/react-icons'
 # Alert
 
 <DemoCard>
-    <HoverCard trigger={<IconButton icon={<MixIcon />} />}>
-        <div className="flex flex-col gap-[7px]">
-          <img
-            className="block h-[60px] w-[60px] rounded-full"
-            src="https://pbs.twimg.com/profile_images/1337055608613253126/r_eiMp2H_400x400.png"
-            alt="Radix UI"
-          />
-          <div className="flex flex-col gap-[15px]">
-            <div>
-              <div className="text-mauve12 m-0 text-[15px] font-medium leading-[1.5]">Radix</div>
-              <div className="text-mauve10 m-0 text-[15px] leading-[1.5]">@radix_ui</div>
-            </div>
-            <div className="text-mauve12 m-0 text-[15px] leading-[1.5]">
-              Components, icons, colors, and templates for building high-quality, accessible UI.
-              Free and open-source.
-            </div>
-            <div className="flex gap-[15px]">
-              <div className="flex gap-[5px]">
-                <div className="text-mauve12 m-0 text-[15px] font-medium leading-[1.5]">0</div>{' '}
-                <div className="text-mauve10 m-0 text-[15px] leading-[1.5]">Following</div>
-              </div>
-              <div className="flex gap-[5px]">
-                <div className="text-mauve12 m-0 text-[15px] font-medium leading-[1.5]">2,900</div>{' '}
-                <div className="text-mauve10 m-0 text-[15px] leading-[1.5]">Followers</div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </HoverCard>
+	<HoverCard trigger={<IconButton icon={<MixIcon />} />}>
+		<div className='flex flex-col gap-[7px]'>
+			<img
+				className='block h-[60px] w-[60px] rounded-full'
+				src='https://pbs.twimg.com/profile_images/1337055608613253126/r_eiMp2H_400x400.png'
+				alt='Radix UI'
+			/>
+			<div className='flex flex-col gap-[15px]'>
+				<div>
+					<div className='text-mauve12 m-0 text-[15px] font-medium leading-[1.5]'>
+						Radix
+					</div>
+					<div className='text-mauve10 m-0 text-[15px] leading-[1.5]'>
+						@radix_ui
+					</div>
+				</div>
+				<div className='text-mauve12 m-0 text-[15px] leading-[1.5]'>
+					Components, icons, colors, and templates for building
+					high-quality, accessible UI. Free and open-source.
+				</div>
+				<div className='flex gap-[15px]'>
+					<div className='flex gap-[5px]'>
+						<div className='text-mauve12 m-0 text-[15px] font-medium leading-[1.5]'>
+							0
+						</div>{' '}
+						<div className='text-mauve10 m-0 text-[15px] leading-[1.5]'>
+							Following
+						</div>
+					</div>
+					<div className='flex gap-[5px]'>
+						<div className='text-mauve12 m-0 text-[15px] font-medium leading-[1.5]'>
+							2,900
+						</div>{' '}
+						<div className='text-mauve10 m-0 text-[15px] leading-[1.5]'>
+							Followers
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</HoverCard>
 </DemoCard>
 
 ### Example
@@ -44,35 +56,48 @@ import { Alert, Button, DangerButton } from '@i4o/catalystui'
 export default () => {
 	return (
 		<DemoCard>
-            <HoverCard>
-                <div className="flex flex-col gap-[7px]">
-                    <img
-                        className="block h-[60px] w-[60px] rounded-full"
-                        src="https://pbs.twimg.com/profile_images/1337055608613253126/r_eiMp2H_400x400.png"
-                        alt="Radix UI"
-                    />
-                    <div className="flex flex-col gap-[15px]">
-                        <div>
-                            <div className="text-mauve12 m-0 text-[15px] font-medium leading-[1.5]">Radix</div>
-                            <div className="text-mauve10 m-0 text-[15px] leading-[1.5]">@radix_ui</div>
-                        </div>
-                        <div className="text-mauve12 m-0 text-[15px] leading-[1.5]">
-                            Components, icons, colors, and templates for building high-quality, accessible UI.
-                            Free and open-source.
-                        </div>
-                        <div className="flex gap-[15px]">
-                            <div className="flex gap-[5px]">
-                                <div className="text-mauve12 m-0 text-[15px] font-medium leading-[1.5]">0</div>{' '}
-                                <div className="text-mauve10 m-0 text-[15px] leading-[1.5]">Following</div>
-                            </div>
-                            <div className="flex gap-[5px]">
-                                <div className="text-mauve12 m-0 text-[15px] font-medium leading-[1.5]">2,900</div>{' '}
-                                <div className="text-mauve10 m-0 text-[15px] leading-[1.5]">Followers</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </HoverCard>
+			<HoverCard>
+				<div className='flex flex-col gap-[7px]'>
+					<img
+						className='block h-[60px] w-[60px] rounded-full'
+						src='https://pbs.twimg.com/profile_images/1337055608613253126/r_eiMp2H_400x400.png'
+						alt='Radix UI'
+					/>
+					<div className='flex flex-col gap-[15px]'>
+						<div>
+							<div className='text-mauve12 m-0 text-[15px] font-medium leading-[1.5]'>
+								Radix
+							</div>
+							<div className='text-mauve10 m-0 text-[15px] leading-[1.5]'>
+								@radix_ui
+							</div>
+						</div>
+						<div className='text-mauve12 m-0 text-[15px] leading-[1.5]'>
+							Components, icons, colors, and templates for
+							building high-quality, accessible UI. Free and
+							open-source.
+						</div>
+						<div className='flex gap-[15px]'>
+							<div className='flex gap-[5px]'>
+								<div className='text-mauve12 m-0 text-[15px] font-medium leading-[1.5]'>
+									0
+								</div>{' '}
+								<div className='text-mauve10 m-0 text-[15px] leading-[1.5]'>
+									Following
+								</div>
+							</div>
+							<div className='flex gap-[5px]'>
+								<div className='text-mauve12 m-0 text-[15px] font-medium leading-[1.5]'>
+									2,900
+								</div>{' '}
+								<div className='text-mauve10 m-0 text-[15px] leading-[1.5]'>
+									Followers
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</HoverCard>
 		</DemoCard>
 	)
 }
@@ -80,6 +105,7 @@ export default () => {
 
 ### Props
 
-| Name        | Type                  | Default | Description                   |
-| :---------- | :-------------------- | :------ | :---------------------------- |
-| children      | `ReactNode`           |         | React element to render inside the hover card            |
+| Name     | Type        | Default | Description                                   |
+| :------- | :---------- | :------ | :-------------------------------------------- |
+| children | `ReactNode` |         | React element to render inside the hover card |
+| trigger  | `ReactNode` |         | React element that triggers the hover card    |
