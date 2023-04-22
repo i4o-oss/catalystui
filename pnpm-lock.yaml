@@ -92,6 +92,7 @@ importers:
       '@radix-ui/react-popover': 1.0.5
       '@radix-ui/react-progress': ^1.0.2
       '@radix-ui/react-radio-group': 1.1.2
+      '@radix-ui/react-scroll-area': ^1.0.3
       '@radix-ui/react-select': 1.2.1
       '@radix-ui/react-switch': 1.0.2
       '@radix-ui/react-tabs': 1.0.3
@@ -130,6 +131,7 @@ importers:
       '@radix-ui/react-popover': 1.0.5_g6eqzmexmujy3zvaqhkicj5z64
       '@radix-ui/react-progress': 1.0.2_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-radio-group': 1.1.2_biqbaboplfbrettd7655fr4n2y
+      '@radix-ui/react-scroll-area': 1.0.3_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-select': 1.2.1_g6eqzmexmujy3zvaqhkicj5z64
       '@radix-ui/react-switch': 1.0.2_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-tabs': 1.0.3_biqbaboplfbrettd7655fr4n2y
@@ -1521,6 +1523,26 @@ packages:
       '@radix-ui/react-primitive': 1.0.2_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-use-callback-ref': 1.0.0_react@18.2.0
       '@radix-ui/react-use-controllable-state': 1.0.0_react@18.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@radix-ui/react-scroll-area/1.0.3_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-sBX9j8Q+0/jReNObEAveKIGXJtk3xUoSIx4cMKygGtO128QJyVDn01XNOFsyvihKDCTcu7SINzQ2jPAZEhIQtw==}
+    peerDependencies:
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    dependencies:
+      '@babel/runtime': 7.21.0
+      '@radix-ui/number': 1.0.0
+      '@radix-ui/primitive': 1.0.0
+      '@radix-ui/react-compose-refs': 1.0.0_react@18.2.0
+      '@radix-ui/react-context': 1.0.0_react@18.2.0
+      '@radix-ui/react-direction': 1.0.0_react@18.2.0
+      '@radix-ui/react-presence': 1.0.0_biqbaboplfbrettd7655fr4n2y
+      '@radix-ui/react-primitive': 1.0.2_biqbaboplfbrettd7655fr4n2y
+      '@radix-ui/react-use-callback-ref': 1.0.0_react@18.2.0
+      '@radix-ui/react-use-layout-effect': 1.0.0_react@18.2.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false

@@ -1,5 +1,13 @@
 import Image from 'next/image'
 
+const newItems = [
+	'Aspect Ratio',
+	'Collapsible',
+	'Hover Card',
+	'Progress',
+	'Scroll Area',
+]
+
 const theme = {
 	logo: (
 		<span className='flex items-center space-x-2'>
@@ -56,12 +64,7 @@ const theme = {
 	gitTimestamp: null,
 	sidebar: {
 		titleComponent({ title }) {
-			if (
-				title === 'Aspect Ratio' ||
-				title === 'Collapsible' ||
-				title === 'Hover Card' ||
-				title === 'Progress'
-			) {
+			if (newItems.includes(title)) {
 				return (
 					<div className='flex items-center gap-x-2'>
 						{title}
