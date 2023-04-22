@@ -1,0 +1,68 @@
+import { ScrollArea } from '@i4o/catalystui'
+import DemoCard from '../../components/demo-card'
+
+# Alert
+
+<DemoCard>
+	<ScrollArea
+        className='w-[300px] h-[400px]'
+        title='Releases'
+	>
+        <div className='w-full h-full flex flex-col divide-y cui-divide-y-subtle'>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.50</span>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.51</span>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.52</span>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.53</span>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.54</span>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.55</span>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.56</span>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.57</span>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.58</span>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.59</span>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.60</span>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.61</span>
+            <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.62</span>
+        </div>
+    </ScrollArea>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Alert, Button, DangerButton } from '@i4o/catalystui'
+
+export default () => {
+	return (
+		<DemoCard>
+            <ScrollArea
+                className='w-[300px] h-[400px]'
+    	    	items={[
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.50</span>
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.51</span>
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.52</span>
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.53</span>
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.54</span>
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.55</span>
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.56</span>
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.57</span>
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.58</span>
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.59</span>
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.60</span>
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.61</span>
+                    <span className='text-[13px] leading-[18px]  py-2.5'>v1.2.0-beta.62</span>
+                ]}
+                title='Releases'
+        	/>
+		</DemoCard>
+	)
+}
+```
+
+### Props
+
+| Name        | Type                  | Default | Description                   |
+| :---------- | :-------------------- | :------ | :---------------------------- |
+| className      | `string`           |         | Classname for the scroll area container.            |
+| items | `Array<string \| ReactNode>` |         | List of items to display. |
+| title       | `string \| ReactNode` |         | The title of the alert.       |
+| trigger     | `ReactNode`           |         | The trigger button.           |
