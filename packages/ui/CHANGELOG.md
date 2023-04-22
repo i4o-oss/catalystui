@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.3
+
+### Patch Changes
+
+-   5530fd5: Add few more components and update docs
+
 ## 1.0.0-alpha.2
 
 ### Patch Changes
