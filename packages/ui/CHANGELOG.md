@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.4
+
+### Patch Changes
+
+-   d759ad6: Update scroll area
+
 ## 1.0.0-alpha.3
 
 ### Patch Changes
