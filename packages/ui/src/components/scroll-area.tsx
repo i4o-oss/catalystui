@@ -14,10 +14,12 @@ const ScrollArea: FC<ScrollAreaProps> = ({ className, children, title }) => (
 	>
 		<ScrollAreaPrimitive.Viewport className='cui-w-full cui-h-full cui-rounded'>
 			<div className='cui-py-[15px] cui-px-5'>
-				<div className='cui-text-primary-foreground cui-text-[15px] cui-leading-[18px] cui-font-medium'>
-					{title}
-				</div>
-				<div className='cui-text-primary-foreground cui-mt-2.5 cui-border-t cui-border-subtle'>
+				{title ? (
+					<div className='cui-text-primary-foreground cui-text-[15px] cui-leading-[18px] cui-font-medium cui-border-b cui-border-subtle'>
+						{title}
+					</div>
+				) : null}
+				<div className='cui-text-primary-foreground cui-mt-2.5'>
 					{children}
 				</div>
 			</div>
