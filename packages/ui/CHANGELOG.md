@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.5
+
+### Patch Changes
+
+-   ae2a551: Fix default value not working in select
+
 ## 1.0.0-alpha.4
 
 ### Patch Changes
