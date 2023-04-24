@@ -22,7 +22,7 @@ interface Props {
 	name: string
 	open?: boolean
 	onOpenChange?: Dispatch<SetStateAction<boolean>>
-	onValueChange?: (item: SelectItem) => void
+	onValueChange?: (value: string) => void
 }
 
 const Select: FC<Props> = ({
@@ -33,19 +33,20 @@ const Select: FC<Props> = ({
 	onOpenChange,
 	onValueChange,
 }) => {
-	const [selected, setSelected] = useState(items[0])
+	const defaultItem = items.find((item) => item.value === defaultValue)
+	const [selected, setSelected] = useState(defaultItem || items[0])
 
 	const handleSelect = (value: string) => {
 		const item = items.find((item) => item.value === value)
 		if (item) {
 			setSelected(item)
-			onValueChange?.(item)
+			onValueChange?.(item.value)
 		}
 	}
 
 	return (
 		<SelectPrimitive.Root
-			defaultValue={defaultValue}
+			defaultValue={defaultItem?.value}
 			name={name}
 			open={open}
 			onOpenChange={onOpenChange}
