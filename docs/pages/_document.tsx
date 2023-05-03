@@ -1,4 +1,5 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Head, Html, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default function Document() {
 	return (
@@ -14,6 +15,11 @@ export default function Document() {
 			<body>
 				<Main />
 				<NextScript />
+				<Script
+					src='https://analytics.i4o.dev/script.js'
+					strategy='lazyOnload'
+					data-website-id='6e2975d1-ff50-41f3-bc2b-ac5f25909cb2'
+				/>
 			</body>
 		</Html>
 	)
