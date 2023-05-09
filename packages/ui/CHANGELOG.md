@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.6
+
+### Patch Changes
+
+-   23bfad9: Update shortcut styles in dropdown component
+
 ## 1.0.0-alpha.5
 
 ### Patch Changes
