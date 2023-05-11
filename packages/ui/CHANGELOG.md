@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.7
+
+### Patch Changes
+
+-   df9314a: Add change event handler prop to checkbox component
+
 ## 1.0.0-alpha.6
 
 ### Patch Changes
