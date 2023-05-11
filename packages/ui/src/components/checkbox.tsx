@@ -9,18 +9,22 @@ const CheckboxIndicator = CheckboxPrimitive.Indicator
 const Label = LabelPrimitive.Label
 
 interface Props {
+    checked?: boolean
 	defaultChecked?: boolean
 	disabled?: boolean
 	label: string | ReactNode
 	name: string
+    onCheckedChange?: (checked: boolean) => void
 	required?: boolean
 }
 
 const Checkbox: FC<Props> = ({
+    checked,
 	defaultChecked = false,
 	disabled = false,
 	label,
 	name,
+    onCheckedChange,
 	required = false,
 }) => {
 	return (
@@ -33,9 +37,11 @@ const Checkbox: FC<Props> = ({
 					'radix-state-checked:cui-bg-brand radix-state-unchecked:cui-bg-ui',
 					'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
 				)}
+                checked={checked}
 				defaultChecked={defaultChecked}
 				disabled={disabled}
 				name={name}
+                onCheckedChange={onCheckedChange}
 				required={required}
 			>
 				<CheckboxIndicator>
