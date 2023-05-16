@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.8
+
+### Patch Changes
+
+-   161e778: Update z-index of close button in dialog component
+
 ## 1.0.0-alpha.7
 
 ### Patch Changes
