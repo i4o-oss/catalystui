@@ -78,7 +78,7 @@ const Dialog: FC<Props> = ({
 
 					<DialogPrimitive.Close
 						className={cx(
-							'cui-absolute cui-top-3.5 cui-right-3.5 cui-inline-flex cui-items-center cui-justify-center cui-rounded-full cui-p-1',
+							'cui-absolute cui-top-3.5 cui-right-3.5 cui-z-[100] cui-inline-flex cui-items-center cui-justify-center cui-rounded-full cui-p-1',
 							'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 						)}
 					>
