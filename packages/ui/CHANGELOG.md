@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.10
+
+### Patch Changes
+
+-   e098bd9: Update readme and package details
+
 ## 1.0.0-alpha.9
 
 ### Patch Changes

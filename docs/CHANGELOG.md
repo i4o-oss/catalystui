@@ -1,5 +1,12 @@
 # @catalystui/docs
 
+## 0.1.43-alpha.10
+
+### Patch Changes
+
+-   Updated dependencies [e098bd9]
+    -   @i4o/catalystui@1.0.0-alpha.10
+
 ## 0.1.43-alpha.9
 
 ### Patch Changes
