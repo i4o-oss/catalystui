@@ -71,7 +71,7 @@
     "publishConfig": {
         "access": "public"
     },
-    "homepage": "https://catalyst-ui.com/",
+    "homepage": "https://catalyst-ui.com",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/i4o-oss/catalystui.git"

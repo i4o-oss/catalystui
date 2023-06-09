@@ -4,7 +4,7 @@ Catalyst UI is a component library built on top of Radix UI Primitives styled wi
 
 ## Documentation
 
-For full documentation and a complete list of components, visit [catalyst.i4o.dev](https://catalyst.i4o.dev/)
+For full documentation and a complete list of components, visit [catalyst-ui.com](https://catalyst-ui.com/)
 
 ## Installation
 
