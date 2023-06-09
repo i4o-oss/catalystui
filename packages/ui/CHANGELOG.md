@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.9
+
+### Patch Changes
+
+-   fe2ebbf: Update package homepage
+
 ## 1.0.0-alpha.8
 
 ### Patch Changes
