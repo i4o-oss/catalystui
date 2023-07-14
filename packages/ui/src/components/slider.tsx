@@ -13,6 +13,7 @@ interface SliderProps {
     value?: number[]
 }
 
+// TODO: update styles
 const Slider: FC<SliderProps> = ({
     ariaLabel,
     defaultValue,
