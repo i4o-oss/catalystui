@@ -1,11 +1,12 @@
 import Image from 'next/image'
 
 const newItems = [
-	'Aspect Ratio',
-	'Collapsible',
-	'Hover Card',
-	'Progress',
-	'Scroll Area',
+	'Context Menu',
+	'Label',
+	'Menubar',
+	'Separator',
+	'Slider',
+	'Toggle',
 ]
 
 const theme = {
