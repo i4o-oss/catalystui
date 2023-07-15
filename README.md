@@ -43,6 +43,11 @@ CatalystUI and its docs are powered by these incredible open source projects:
 -   [classnames](https://github.com/JedWatson/classnames)
 -   [copy-to-clipboard](https://github.com/sudodoki/copy-to-clipboard)
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=i4o-oss/catalystui&type=Date)](https://star-history.com/#i4o-oss/catalystui&Date)
+
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
