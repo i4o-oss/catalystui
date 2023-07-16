@@ -18,6 +18,7 @@ pnpm add @i4o/catalystui
 -   Goes beyond Radix UI Primitives to provide more components
 -   Utility components and hooks
 -   Built-in dark mode support
+-   Customizable styles with Tailwind or CSS Variables
 
 ## Roadmap
 
