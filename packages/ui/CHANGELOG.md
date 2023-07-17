@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.11
+
+### Patch Changes
+
+-   d6189ff: Fix select not opening in uncontrolled operation
+
 ## 1.0.0-alpha.10
 
 ### Patch Changes
