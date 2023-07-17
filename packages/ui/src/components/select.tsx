@@ -17,6 +17,7 @@ interface SelectItem {
 
 // TODO: Add default label, onchange
 interface Props {
+    defaultOpen?: boolean
 	defaultValue?: string
 	items: SelectItem[]
 	name: string
@@ -26,6 +27,7 @@ interface Props {
 }
 
 const Select: FC<Props> = ({
+    defaultOpen = false,
 	defaultValue,
 	items,
 	name,
@@ -46,6 +48,7 @@ const Select: FC<Props> = ({
 
 	return (
 		<SelectPrimitive.Root
+            defaultOpen={defaultOpen}
 			defaultValue={defaultItem?.value}
 			name={name}
 			open={open}
