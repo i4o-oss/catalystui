@@ -1,1 +1,50 @@
+import { Separator } from '@i4o/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Separator
+
+<DemoCard>
+	<div className='text-gray-100 dark:text-gray-900'>
+		<h1>Catalyst UI</h1>
+		<p>
+			React component library built with Radix Primitives and Tailwind CSS
+		</p>
+		<Separator decorative={true} orientation='horizontal' />
+		<div className='flex items-center h-5'>
+			<a href='https://github.com/i4o-oss/catalystui'>Github</a>
+			<Separator decorative={true} orientation='vertical' />
+			<a href='https://catalyst-ui.com'>Website</a>
+		</div>
+	</div>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Label } from '@i4o/catalystui'
+
+export default () => {
+	return (
+		<div className='text-gray-100 dark:text-gray-900'>
+			<h1>Catalyst UI</h1>
+			<p>
+				React component library built with Radix Primitives and Tailwind
+				CSS
+			</p>
+			<Separator decorative={true} orientation='horizontal' />
+			<div className='flex items-center h-5'>
+				<a href='https://github.com/i4o-oss/catalystui'>Github</a>
+				<Separator decorative={true} orientation='vertical' />
+				<a href='https://catalyst-ui.com'>Website</a>
+			</div>
+		</div>
+	)
+}
+```
+
+### Props
+
+| Name        | Type                         | Default        | Description                                                   |
+| :---------- | :--------------------------- | :------------- | :------------------------------------------------------------ |
+| decorative  | `boolean`                    |                | If separator is purely decorative and has no semantic meaning |
+| orientation | `'horizontal' \| 'vertical'` | `'horizontal'` | Orientation of the Separator                                  |
