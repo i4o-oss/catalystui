@@ -6,11 +6,10 @@ interface LabelProps {
     label: string
 }
 
-// TODO: update styles
 const Label: FC<LabelProps> = ({ htmlFor, label }) => {
     return (
         <LabelPrimitive.Root
-            className='text-[15px] font-medium leading-[35px] text-white'
+            className='cui-text-sm cui-font-medium leading-loose cui-text-primary-foreground'
             htmlFor={htmlFor}
         >
             {label}
