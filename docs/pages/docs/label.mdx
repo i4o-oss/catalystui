@@ -1,1 +1,33 @@
+import { Label } from '@i4o/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Label
+
+<DemoCard>
+	<>
+		<Label label='First Name' htmlFor='first-name' />
+		<input className='h-10 rounded-md' id='first-name' />
+	</>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Label } from '@i4o/catalystui'
+
+export default () => {
+	return (
+		<>
+			<Label label='First Name' htmlFor='first-name' />
+			<input className='h-10 rounded-md' id='first-name' />
+		</>
+	)
+}
+```
+
+### Props
+
+| Name    | Type     | Default | Description                  |
+| :------ | :------- | :------ | :--------------------------- |
+| label   | `string` | `''`    | Label Text                   |
+| htmlFor | `string` | `''`    | ID of the associated element |
