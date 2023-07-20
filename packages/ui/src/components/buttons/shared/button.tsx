@@ -2,6 +2,7 @@ import type { ButtonProps } from '../types'
 import cx from 'classnames'
 import React from 'react'
 
+// TODO: update styles here using the custom tailwind theme instead of using defaults
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 	({ children, ...props }, ref) => {
 		return (
