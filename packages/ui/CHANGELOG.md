@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.12
+
+### Patch Changes
+
+-   09f5160: Add 4 new components - label, separator, slider, and toggle
+
 ## 1.0.0-alpha.11
 
 ### Patch Changes
