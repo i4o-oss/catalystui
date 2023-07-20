@@ -3,50 +3,66 @@ import * as SliderPrimitive from '@radix-ui/react-slider'
 import cx from 'classnames'
 
 interface SliderProps {
-    ariaLabel: string
-    defaultValue: number[]
-    max: number
-    name?: string
-    onValueChange?: (value: number[]) => void
-    onValueCommit?: (value: number[]) => void
-    step: number
-    value?: number[]
+	ariaLabel: string
+	defaultValue: number[]
+	min?: number
+	max: number
+	name?: string
+	onValueChange?: (value: number[]) => void
+	onValueCommit?: (value: number[]) => void
+	step: number
+	value?: number[]
 }
 
 // TODO: update styles
 const Slider: FC<SliderProps> = ({
-    ariaLabel,
-    defaultValue,
-    max,
-    name,
-    onValueChange,
-    onValueCommit,
-    step,
-    value,
+	ariaLabel,
+	defaultValue,
+	min = 0,
+	max,
+	name,
+	onValueChange,
+	onValueCommit,
+	step,
+	value,
 }) => {
-    return (
-        <SliderPrimitive.Root
-            aria-label={ariaLabel}
-            className='relative flex h-5 w-64 touch-none items-center'
-            defaultValue={defaultValue}
-            max={max}
-            name={name}
-            onValueChange={onValueChange}
-            onValueCommit={onValueCommit}
-            step={step}
-            value={value}
-        >
-            <SliderPrimitive.Track className='relative h-1 w-full grow rounded-full bg-white dark:bg-gray-800'>
-                <SliderPrimitive.Range className='absolute h-full rounded-full bg-purple-600 dark:bg-white' />
-            </SliderPrimitive.Track>
-            <SliderPrimitive.Thumb
-                className={cx(
-                    'block h-5 w-5 rounded-full bg-purple-600 dark:bg-white',
-                    'focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75'
-                )}
-            />
-        </SliderPrimitive.Root>
-    )
+	return (
+		<SliderPrimitive.Root
+			aria-label={ariaLabel}
+			className='cui-relative cui-flex cui-h-5 cui-w-64 cui-touch-none cui-items-center'
+			defaultValue={defaultValue}
+			min={min}
+			max={max}
+			name={name}
+			onValueChange={onValueChange}
+			onValueCommit={onValueCommit}
+			step={step}
+			value={value}
+		>
+			<SliderPrimitive.Track className='cui-relative cui-h-1 cui-w-full cui-grow cui-rounded-full cui-bg-ui'>
+				<SliderPrimitive.Range className='cui-absolute cui-h-full cui-rounded-full cui-bg-brand' />
+			</SliderPrimitive.Track>
+			{defaultValue && defaultValue.length > 0
+				? defaultValue.map((_, index) => (
+						<SliderPrimitive.Thumb
+							className={cx(
+								'cui-block cui-h-5 cui-w-5 cui-rounded-full cui-bg-brand',
+								'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
+							)}
+							key={`thumb-${index}`}
+						/>
+				  ))
+				: value?.map((_, index) => (
+						<SliderPrimitive.Thumb
+							className={cx(
+								'cui-block cui-h-5 cui-w-5 cui-rounded-full cui-bg-brand',
+								'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
+							)}
+							key={`thumb-${index}`}
+						/>
+				  ))}
+		</SliderPrimitive.Root>
+	)
 }
 
 export default Slider
