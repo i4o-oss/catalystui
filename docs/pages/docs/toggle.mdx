@@ -1,1 +1,45 @@
+import { useState } from 'react'
+import { Toggle } from '@i4o/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Toggle
+
+export function ToggleDemo() {
+    const [pressed, setPressed] = useState(false)
+
+    return (
+        <DemoCard>
+            <Toggle ariaLabel='Star' pressed={pressed} onPressedChange={setPressed}>
+                {pressed ? 'Starred' : 'Star'}
+            </Toggle>
+        </DemoCard>
+    )
+
+}
+
+<ToggleDemo />
+
+### Example
+
+```tsx
+import { Toggle } from '@i4o/catalystui'
+
+export default () => {
+	const [pressed, setPressed] = useState(false)
+
+	return (
+		<Toggle ariaLabel='Star' pressed={pressed} onPressedChange={setPressed}>
+			{pressed ? 'Starred' : 'Star'}
+		</Toggle>
+	)
+}
+```
+
+### Props
+
+| Name            | Type                         | Default | Description                                                                     |
+| :-------------- | :--------------------------- | :------ | :------------------------------------------------------------------------------ |
+| ariaLabel       | `string`                     | `''`    | `aria-label` for the Toggle component                                           |
+| defaultPressed  | `boolean`                    | `false` | If the Toggle should be active by default. Use for uncontrolled operation.      |
+| pressed         | `boolean`                    | `-`     | Pressed state of the Toggle. Use for controlled operation with onPressedChange. |
+| onPressedChange | `(pressed: boolean) => void` | `-`     | Event handler called when the pressed state of the Toggle changes.              |
