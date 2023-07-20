@@ -1,1 +1,48 @@
+import { Slider } from '@i4o/catalystui'
+import DemoCard from '../../components/demo-card'
+
 # Slider
+
+<DemoCard>
+	<Slider
+		ariaLabel='Test Slider'
+		defaultValue={[4, 12]}
+		min={0}
+		max={20}
+		name='test-slider'
+		step={1}
+	/>
+</DemoCard>
+
+### Example
+
+```tsx
+import { Slider } from '@i4o/catalystui'
+
+export default () => {
+	return (
+		<Slider
+			ariaLabel='Test Slider'
+			defaultValue={[0, 4]}
+			min={0}
+			max={20}
+			name='test-slider'
+			step={1}
+		/>
+	)
+}
+```
+
+### Props
+
+| Name          | Type                        | Default | Description                                                                                                                           |
+| :------------ | :-------------------------- | :------ | :------------------------------------------------------------------------------------------------------------------------------------ |
+| ariaLabel     | `string`                    | `''`    | Aria Label for the Slider                                                                                                             |
+| defaultValue  | `number[]`                  | `-`     | Default value(s) of the slider. Use for uncontrolled operations.                                                                      |
+| value         | `number[]`                  | `-`     | Value(s) of the slider. Use for controlled operations (along with onValueChange).                                                     |
+| onValueChange | `(value: number[]) => void` | `-`     | This function is called when the slider value changes.                                                                                |
+| onValueCommit | `(value: number[]) => void` | `-`     | This function is called when the slider value changes but only at the end of the interaction. Use when you only need the final value. |
+| name          | `string`                    | `''`    | Name of the slider component                                                                                                          |
+| min           | `number`                    | `0`     | Minimum value of the slider                                                                                                           |
+| max           | `number`                    | `100`   | Maximum value of the slider                                                                                                           |
+| step          | `number`                    | `1`     | Stepping interval for the slider                                                                                                      |
