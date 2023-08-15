@@ -25,16 +25,17 @@ pnpm add @i4o/catalystui
 ## Roadmap
 
 -   [x] Have a base list of usable components
--   [x] Fix library styles being overridden by nextra styles
+-   [x] Fix library styles being overridden by Nextra styles
 -   [x] Make the API and styles more consistent
 -   [x] Make docs light/dark mode work for the components
 -   [ ] Implement all Radix UI Primitives
 -   [ ] Fix accessibility issues
+-   [ ] Better types and runtime type-checking with Zod
 -   [ ] Add explanation for props in the docs
 
 ## Acknowledgements
 
-CatalystUI and its docs are powered by these incredible open source projects:
+CatalystUI and its docs are powered by these incredible open-source projects:
 
 -   [React](https://reactjs.org/)
 -   [TypeScript](https://www.typescriptlang.org/)
