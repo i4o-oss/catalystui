@@ -3,43 +3,67 @@
 @tailwind utilities;
 
 :root {
-	--primary: 252 252 252;
-	--primary-subtle: 248 248 248;
-	--primary-foreground: 22 22 22;
-	--primary-foreground-subtle: 28 28 28;
-	--ui: 243 243 243;
-	--ui-hover: 237 237 237;
-	--ui-states: 232 232 232;
+	/* color palette */
+	--primary: 0 0% 99%;
+	--primary-subtle: 0 0% 97.5%;
 
-	--subtle: 226 226 226;
+	--ui: 0 0% 94.6%;
+	--ui-hover: 0 0% 92%;
+	--ui-states: 0 0% 89.5%;
 
-	--brand: 44 182 125;
-	--brand-hover: 70 210 152;
-	--brand-states: 119 222 179;
+	--subtle: 0 0% 86.8%;
+	--subtle-int: 0 0% 83%;
+	--subtle-int-states: 0 0% 73.2%;
 
-	--danger: 229 72 77;
-	--danger-hover: 235 144 145;
-	--danger-states: 243 174 175;
+	--brand: 155 61% 44%;
+	--brand-states: 156 63.1% 39.7%;
 
+	--foreground: 0 0% 12.5%;
+	--foreground-subtle: 0 0% 39.3%;
+
+	/* semantic colors */
+	--danger: 358 75% 59%;
+	--danger-states: 358 67.4% 54.6%;
+
+	--success: 151 55% 41.5%;
+	--success-states: 152 57.5% 37.6%;
+
+	/* border radius and shadows  */
 	--ui-border-radius: 0.5rem;
 
+    /* font families */
 	--font-sans: 'Inter, sans-serif';
 	--font-serif: 'Merriweather, serif';
 	--font-mono: 'monospace';
 
+    /* spacing - paddings and margins */
 	--ui-p: 1rem;
 	--ui-btn-p: 0.5rem 1rem;
 	--ui-icon-btn-p: 0.75rem;
 }
 
 .dark {
-	--primary: 22 22 22;
-	--primary-subtle: 28 28 28;
-	--primary-foreground: 252 252 252;
-	--primary-foreground-subtle: 248 248 248;
-	--ui: 35 35 35;
-	--ui-hover: 40 40 40;
-	--ui-states: 46 46 46;
+	/* color palette */
+	--primary: 0 0% 9.5%;
+	--primary-subtle: 0 0% 10.5%;
 
-	--subtle: 52 52 52;
+	--ui: 0 0% 15.8%;
+	--ui-hover: 0 0% 18.9%;
+	--ui-states: 0 0% 21.7%;
+
+	--subtle: 0 0% 24.7%;
+	--subtle-int: 0 0% 29.1%;
+	--subtle-int-states: 0 0% 37.5%;
+
+	/* brand colors will apply for both modes */
+
+	--foreground: 0 0% 69.5%;
+	--foreground-subtle: 0 0% 93.5%;
+
+	/* semantic colors */
+	--danger: 358 75% 59%;
+	--danger-states: 359 84.8% 67.6%;
+
+	--success: 151 55% 41.5%;
+	--success-states: 151 55.2% 46.7%;
 }

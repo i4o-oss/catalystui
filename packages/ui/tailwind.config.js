@@ -26,37 +26,41 @@ module.exports = {
 				DEFAULT: 'var(--ui-border-radius)',
 			},
 			colors: {
-				brand: {
-					DEFAULT: 'rgb(var(--brand) / <alpha-value>)',
-					subtle: 'rgb(var(--brand-subtle) / <alpha-value>)',
-					hover: 'rgb(var(--brand-hover) / <alpha-value>)',
-					states: 'rgb(var(--brand-states) / <alpha-value>)',
-				},
-
-				danger: {
-					DEFAULT: 'rgb(var(--danger) / <alpha-value>)',
-					subtle: 'rgb(var(--danger-subtle) / <alpha-value>)',
-					hover: 'rgb(var(--danger-hover) / <alpha-value>)',
-					states: 'rgb(var(--danger-states) / <alpha-value>)',
-				},
-
 				primary: {
-					DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
-					subtle: 'rgb(var(--primary-subtle) / <alpha-value>)',
-					foreground:
-						'rgb(var(--primary-foreground) / <alpha-value>)',
-					'foreground-subtle':
-						'rgb(var(--primary-foreground-subtle) / <alpha-value>)',
-				},
-
-				subtle: {
-					DEFAULT: 'rgb(var(--subtle) / <alpha-value>)',
+					DEFAULT: 'hsl(var(--primary) / <alpha-value>)',
+					subtle: 'hsl(var(--primary-subtle) / <alpha-value>)',
 				},
 
 				ui: {
-					DEFAULT: 'rgb(var(--ui) / <alpha-value>)',
-					hover: 'rgb(var(--ui-hover) / <alpha-value>)',
-					states: 'rgb(var(--ui-states) / <alpha-value>)',
+					DEFAULT: 'hsl(var(--ui) / <alpha-value>)',
+					hover: 'hsl(var(--ui-hover) / <alpha-value>)',
+					states: 'hsl(var(--ui-states) / <alpha-value>)',
+				},
+
+				subtle: {
+					DEFAULT: 'hsl(var(--subtle) / <alpha-value>)',
+					int: 'hsl(var(--subtle-int) / <alpha-value>)',
+					intStates: 'hsl(var(--subtle-int-states) / <alpha-value>)',
+				},
+
+				brand: {
+					DEFAULT: 'hsl(var(--brand) / <alpha-value>)',
+					states: 'hsl(var(--brand-states) / <alpha-value>)',
+				},
+
+				foreground: {
+					DEFAULT: 'hsl(var(--primary-foreground) / <alpha-value>)',
+					subtle: 'hsl(var(--primary-foreground-subtle) / <alpha-value>)',
+				},
+
+				danger: {
+					DEFAULT: 'hsl(var(--danger) / <alpha-value>)',
+					states: 'hsl(var(--danger-states) / <alpha-value>)',
+				},
+
+				success: {
+					DEFAULT: 'hsl(var(--success) / <alpha-value>)',
+					states: 'hsl(var(--success-states) / <alpha-value>)',
 				},
 			},
 			fontFamily: {
