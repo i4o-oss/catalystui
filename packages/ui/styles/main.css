@@ -20,6 +20,7 @@
 
 	--foreground: 0 0% 12.5%;
 	--foreground-subtle: 0 0% 39.3%;
+	--foreground-btn: 0 0% 100%;
 
 	/* semantic colors */
 	--danger: 358 75% 59%;
@@ -31,12 +32,12 @@
 	/* border radius and shadows  */
 	--ui-border-radius: 0.5rem;
 
-    /* font families */
+	/* font families */
 	--font-sans: 'Inter, sans-serif';
 	--font-serif: 'Merriweather, serif';
 	--font-mono: 'monospace';
 
-    /* spacing - paddings and margins */
+	/* spacing - paddings and margins */
 	--ui-p: 1rem;
 	--ui-btn-p: 0.5rem 1rem;
 	--ui-icon-btn-p: 0.75rem;

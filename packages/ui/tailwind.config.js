@@ -49,8 +49,9 @@ module.exports = {
 				},
 
 				foreground: {
-					DEFAULT: 'hsl(var(--primary-foreground) / <alpha-value>)',
-					subtle: 'hsl(var(--primary-foreground-subtle) / <alpha-value>)',
+					DEFAULT: 'hsl(var(--foreground) / <alpha-value>)',
+					subtle: 'hsl(var(--foreground-subtle) / <alpha-value>)',
+					btn: 'hsl(var(--foreground-btn) / <alpha-value>)',
 				},
 
 				danger: {
