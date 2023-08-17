@@ -1,5 +1,7 @@
 node_modules/
 
+.changeset
+.github/
 .next/
 docs/.next
 packages/ui/dist
