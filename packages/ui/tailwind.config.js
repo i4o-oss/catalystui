@@ -40,7 +40,7 @@ module.exports = {
 				subtle: {
 					DEFAULT: 'hsl(var(--subtle) / <alpha-value>)',
 					int: 'hsl(var(--subtle-int) / <alpha-value>)',
-					intStates: 'hsl(var(--subtle-int-states) / <alpha-value>)',
+					'int-states': 'hsl(var(--subtle-int-states) / <alpha-value>)',
 				},
 
 				brand: {
@@ -118,8 +118,9 @@ module.exports = {
 			},
 			padding: {
 				DEFAULT: 'var(--ui-p)',
-				btn: 'var(--ui-btn-p)',
-				'icon-btn': 'var(--ui-icon-btn-p)',
+				btn: 'var(--ui-p-btn)',
+				select: 'var(--ui-p-select)',
+				'icon-btn': 'var(--ui-p-icon-btn)',
 			},
 		},
 	},

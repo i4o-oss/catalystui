@@ -39,8 +39,9 @@
 
 	/* spacing - paddings and margins */
 	--ui-p: 1rem;
-	--ui-btn-p: 0.5rem 1rem;
-	--ui-icon-btn-p: 0.75rem;
+	--ui-p-btn: 0.5rem 1rem;
+	--ui-p-select: 1rem 0.5rem;
+	--ui-p-icon-btn: 0.75rem;
 }
 
 .dark {
@@ -58,8 +59,8 @@
 
 	/* brand colors will apply for both modes */
 
-	--foreground: 0 0% 69.5%;
-	--foreground-subtle: 0 0% 93.5%;
+	--foreground: 0 0% 93.5%;
+	--foreground-subtle: 0 0% 69.5%;
 
 	/* semantic colors */
 	--danger: 358 75% 59%;
