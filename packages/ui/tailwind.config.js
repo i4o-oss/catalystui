@@ -40,7 +40,8 @@ module.exports = {
 				subtle: {
 					DEFAULT: 'hsl(var(--subtle) / <alpha-value>)',
 					int: 'hsl(var(--subtle-int) / <alpha-value>)',
-					'int-states': 'hsl(var(--subtle-int-states) / <alpha-value>)',
+					'int-states':
+						'hsl(var(--subtle-int-states) / <alpha-value>)',
 				},
 
 				brand: {
