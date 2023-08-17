@@ -47,19 +47,17 @@ const Dialog: FC<Props> = ({
 					)}
 				>
 					{title ? (
-						<DialogPrimitive.Title className='cui-text-md cui-font-semibold cui-text-primary-foreground'>
+						<DialogPrimitive.Title className='cui-text-md cui-font-semibold cui-text-foreground'>
 							{title}
 						</DialogPrimitive.Title>
 					) : null}
 					{description ? (
-						<DialogPrimitive.Description className='cui-mt-2 cui-mb-4 cui-text-sm cui-font-normal cui-text-primary-foreground-subtle'>
+						<DialogPrimitive.Description className='cui-mt-2 cui-mb-4 cui-text-sm cui-font-normal cui-text-foreground-subtle'>
 							{description}
 						</DialogPrimitive.Description>
 					) : null}
 
-					<div className='cui-text-primary-foreground'>
-						{children}
-					</div>
+					<div className='cui-text-foreground'>{children}</div>
 
 					{action || cancel ? (
 						<div className='cui-mt-4 cui-flex cui-justify-end cui-space-x-2 cui-px-4 cui-pb-4'>
@@ -82,7 +80,7 @@ const Dialog: FC<Props> = ({
 							'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
 						)}
 					>
-						<Cross1Icon className='cui-h-4 cui-w-4 cui-text-primary-foreground-subtle hover:text-primary-foreground' />
+						<Cross1Icon className='cui-h-4 cui-w-4 cui-text-foreground-subtle hover:text-foreground' />
 					</DialogPrimitive.Close>
 				</DialogPrimitive.Content>
 			</DialogPrimitive.Portal>

@@ -44,12 +44,12 @@ const Alert: FC<AlertProps> = ({
 					)}
 				>
 					{title && (
-						<AlertPrimitive.Title className='cui-text-sm cui-font-semibold cui-text-primary-foreground'>
+						<AlertPrimitive.Title className='cui-text-sm cui-font-semibold cui-text-foreground'>
 							{title}
 						</AlertPrimitive.Title>
 					)}
 					{description && (
-						<AlertPrimitive.Description className='cui-mt-2 cui-text-sm cui-font-normal cui-text-primary-foreground-subtle'>
+						<AlertPrimitive.Description className='cui-mt-2 cui-text-sm cui-font-normal cui-text-foreground-subtle'>
 							{description}
 						</AlertPrimitive.Description>
 					)}

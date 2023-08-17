@@ -68,7 +68,7 @@ const Select: FC<Props> = ({
 			</SelectPrimitive.Trigger>
 			<SelectPrimitive.Portal>
 				<SelectPrimitive.Content>
-					<SelectPrimitive.ScrollUpButton className='cui-flex cui-items-center cui-justify-center cui-text-primary-foreground'>
+					<SelectPrimitive.ScrollUpButton className='cui-flex cui-items-center cui-justify-center cui-text-foreground'>
 						<ChevronUpIcon />
 					</SelectPrimitive.ScrollUpButton>
 					<SelectPrimitive.Viewport className='cui-bg-ui cui-p-2 cui-rounded-lg cui-shadow-lg'>
@@ -78,7 +78,7 @@ const Select: FC<Props> = ({
 									key={`${f.value}-${i}`}
 									disabled={f?.disabled}
 									className={cx(
-										'cui-relative cui-flex cui-items-center cui-px-8 cui-py-2 cui-rounded-md cui-text-sm cui-text-primary-foreground cui-font-medium focus:cui-bg-ui-states',
+										'cui-relative cui-flex cui-items-center cui-px-8 cui-py-2 cui-rounded-md cui-text-sm cui-text-foreground cui-font-medium focus:cui-bg-ui-states',
 										'radix-disabled:cui-opacity-50',
 										'focus:cui-outline-none cui-select-none'
 									)}
@@ -94,7 +94,7 @@ const Select: FC<Props> = ({
 							))}
 						</SelectPrimitive.Group>
 					</SelectPrimitive.Viewport>
-					<SelectPrimitive.ScrollDownButton className='cui-flex cui-items-center cui-justify-center cui-text-primary-foreground'>
+					<SelectPrimitive.ScrollDownButton className='cui-flex cui-items-center cui-justify-center cui-text-foreground'>
 						<ChevronDownIcon />
 					</SelectPrimitive.ScrollDownButton>
 				</SelectPrimitive.Content>

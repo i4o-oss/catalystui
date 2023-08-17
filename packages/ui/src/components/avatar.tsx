@@ -35,7 +35,7 @@ const Avatar: FC<AvatarProps> = ({ alt, fallback, src, variant }) => {
 				)}
 				delayMs={500}
 			>
-				<span className='cui-text-sm cui-font-medium cui-uppercase cui-text-primary-foreground'>
+				<span className='cui-text-sm cui-font-medium cui-uppercase cui-text-foreground'>
 					{fallback}
 				</span>
 			</AvatarPrimitive.Fallback>

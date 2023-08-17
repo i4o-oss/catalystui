@@ -27,7 +27,7 @@ const Collapsibe: FC<CollapsibeProps> = ({ first, items, title, trigger }) => {
 					justifyContent: 'space-between',
 				}}
 			>
-				<span className='cui-text-primary-foreground cui-text-[15px] cui-leading-[25px]'>
+				<span className='cui-text-foreground cui-text-[15px] cui-leading-[25px]'>
 					{title}
 				</span>
 				<CollapsiblePrimitive.Trigger asChild>

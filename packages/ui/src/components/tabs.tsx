@@ -42,7 +42,7 @@ const TabsList = React.forwardRef<TabsData, any>(
 							'cui-group',
 							'cui-rounded-lg',
 							'radix-state-inactive:cui-bg-transparent radix-state-active:cui-bg-ui-states',
-							'radix-state-inactive:cui-text-primary-foreground-subtle radix-state-active:cui-text-primary-foreground',
+							'radix-state-inactive:cui-text-foreground-subtle radix-state-active:cui-text-foreground',
 							`${
 								props.type === 'row'
 									? 'cui-px-8 cui-py-2'

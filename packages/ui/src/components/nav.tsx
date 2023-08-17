@@ -42,7 +42,7 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 									className={cx(
 										'cui-px-4 cui-py-1 cui-text-sm',
 										'cui-text-sm cui-font-medium',
-										'cui-text-primary-foreground hover:cui-text-brand',
+										'cui-text-foreground hover:cui-text-brand',
 										'cui-transition-colors cui-duration-200',
 										'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
 									)}
@@ -75,7 +75,7 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 									to={href as string}
 									className={cx(
 										'cui-px-4 cui-py-1 cui-text-sm',
-										'cui-text-sm cui-text-primary-foreground hover:cui-text-brand',
+										'cui-text-sm cui-text-foreground hover:cui-text-brand',
 										'cui-transition-colors cui-duration-200',
 										`${
 											pathname.includes(href as string)
@@ -91,7 +91,7 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 									href={href as string}
 									className={cx(
 										'cui-px-4 cui-py-1 cui-text-sm',
-										'cui-text-sm cui-text-primary-foreground hover:cui-text-brand',
+										'cui-text-sm cui-text-foreground hover:cui-text-brand',
 										'cui-transition-colors cui-duration-200',
 										`${
 											pathname.includes(href as string)

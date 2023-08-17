@@ -55,7 +55,7 @@ const Checkbox: FC<Props> = ({
 
 			<Label
 				htmlFor={name}
-				className='cui-ml-2 cui-text-sm cui-text-primary-foreground'
+				className='cui-ml-2 cui-text-sm cui-text-foreground'
 			>
 				{label}
 			</Label>

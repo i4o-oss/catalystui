@@ -47,7 +47,7 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 							<ToolbarPrimitive.Link
 								className={cx(
 									'cui-h-full cui-flex cui-items-center',
-									'cui-text-sm !cui-text-primary-foreground',
+									'cui-text-sm !cui-text-foreground',
 									'focus:cui-outline-none focus-visible:cui-z-20 focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
 								)}
 								href={link}

@@ -57,7 +57,7 @@ const ToggleGroup: FC<ToggleGroupProps> = ({
 						`${
 							style === 'stitched'
 								? '!cui-bg-ui radix-state-on:!cui-bg-ui-states'
-								: 'radix-state-on:!cui-bg-ui-states cui-text-primary-foreground'
+								: 'radix-state-on:!cui-bg-ui-states cui-text-foreground'
 						}`,
 						'cui-p-2',
 						`${style === 'pills' ? 'cui-rounded-md' : ''}`,

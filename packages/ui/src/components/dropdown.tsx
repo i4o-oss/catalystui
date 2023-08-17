@@ -82,7 +82,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 											<DropdownMenuPrimitive.SubTrigger
 												className={cx(
 													'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
-													'cui-text-primary-foreground focus:cui-bg-ui-states'
+													'cui-text-foreground focus:cui-bg-ui-states'
 												)}
 											>
 												<div className='cui-basis-4'>
@@ -133,7 +133,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																		key={i}
 																		className={cx(
 																			'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
-																			'cui-text-primary-foreground focus:cui-bg-ui-states'
+																			'cui-text-foreground focus:cui-bg-ui-states'
 																		)}
 																		onSelect={
 																			onSelect
@@ -152,7 +152,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																		{shortcut && (
 																			<kbd
 																				className={cx(
-																					'cui-font-mono cui-text-[0.65rem] cui-font-normal cui-text-primary-foreground-subtle cui-px-1.5',
+																					'cui-font-mono cui-text-[0.65rem] cui-font-normal cui-text-foreground-subtle cui-px-1.5',
 																					'cui-min-w-[1.6rem] cui-min-h-[1.6rem] cui-inline-flex cui-items-center cui-justify-center',
 																					'cui-border cui-border-subtle cui-bg-primary cui-rounded'
 																				)}
@@ -169,7 +169,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																	key={`${i}-${j}`}
 																	className={cx(
 																		'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
-																		'cui-text-primary-foreground focus:cui-bg-ui-states'
+																		'cui-text-foreground focus:cui-bg-ui-states'
 																	)}
 																	onSelect={
 																		onSelect
@@ -184,7 +184,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 																	{shortcut && (
 																		<kbd
 																			className={cx(
-																				'cui-font-mono cui-text-[0.65rem] cui-font-normal cui-text-primary-foreground-subtle cui-px-1.5',
+																				'cui-font-mono cui-text-[0.65rem] cui-font-normal cui-text-foreground-subtle cui-px-1.5',
 																				'cui-min-w-[1.6rem] cui-min-h-[1.6rem] cui-inline-flex cui-items-center cui-justify-center',
 																				'cui-border cui-border-subtle cui-bg-primary cui-rounded'
 																			)}
@@ -218,7 +218,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 												key={i}
 												className={cx(
 													'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
-													'cui-text-primary-foreground focus:cui-bg-ui-states'
+													'cui-text-foreground focus:cui-bg-ui-states'
 												)}
 												onSelect={onSelect}
 											>
@@ -231,7 +231,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 												{shortcut && (
 													<kbd
 														className={cx(
-															'cui-font-mono cui-text-[0.65rem] cui-font-normal cui-text-primary-foreground-subtle cui-px-1.5',
+															'cui-font-mono cui-text-[0.65rem] cui-font-normal cui-text-foreground-subtle cui-px-1.5',
 															'cui-min-w-[1.6rem] cui-min-h-[1.6rem] cui-inline-flex cui-items-center cui-justify-center',
 															'cui-border cui-border-subtle cui-bg-primary cui-rounded'
 														)}
@@ -246,7 +246,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 											key={i}
 											className={cx(
 												'cui-flex cui-cursor-pointer cui-select-none cui-items-center cui-space-x-2 cui-rounded-md cui-px-2 cui-py-2 cui-outline-none',
-												'cui-text-primary-foreground focus:cui-bg-ui-states'
+												'cui-text-foreground focus:cui-bg-ui-states'
 											)}
 											onSelect={onSelect}
 										>
@@ -259,7 +259,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
 											{shortcut && (
 												<kbd
 													className={cx(
-														'cui-font-mono cui-text-[0.65rem] cui-font-normal cui-text-primary-foreground-subtle cui-px-1.5',
+														'cui-font-mono cui-text-[0.65rem] cui-font-normal cui-text-foreground-subtle cui-px-1.5',
 														'cui-min-w-[1.6rem] cui-min-h-[1.6rem] cui-inline-flex cui-items-center cui-justify-center',
 														'cui-border cui-border-subtle cui-bg-primary cui-rounded'
 													)}

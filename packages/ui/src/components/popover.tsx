@@ -48,7 +48,7 @@ const Popover: FC<PopoverProps> = ({
 					>
 						<PopoverPrimitive.Arrow className='cui-fill-current cui-text-primary-subtle' />
 						{title ? (
-							<h3 className='cui-text-md cui-font-medium cui-text-primary-foreground'>
+							<h3 className='cui-text-md cui-font-medium cui-text-foreground'>
 								{title}
 							</h3>
 						) : null}
@@ -60,7 +60,7 @@ const Popover: FC<PopoverProps> = ({
 									'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
 								)}
 							>
-								<Cross1Icon className='cui-h-4 cui-w-4 cui-text-primary-foreground-subtle hover:text-primary-foreground' />
+								<Cross1Icon className='cui-h-4 cui-w-4 cui-text-foreground-subtle hover:text-foreground' />
 							</PopoverPrimitive.Close>
 						)}
 					</PopoverPrimitive.Content>

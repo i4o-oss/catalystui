@@ -15,13 +15,11 @@ const ScrollArea: FC<ScrollAreaProps> = ({ className, children, title }) => (
 		<ScrollAreaPrimitive.Viewport className='cui-w-full cui-h-full cui-rounded'>
 			<div className='cui-py-[15px] cui-px-5'>
 				{title ? (
-					<div className='cui-text-primary-foreground cui-text-[15px] cui-leading-[18px] cui-font-medium cui-border-b cui-border-subtle'>
+					<div className='cui-text-foreground cui-text-[15px] cui-leading-[18px] cui-font-medium cui-border-b cui-border-subtle'>
 						{title}
 					</div>
 				) : null}
-				<div className='cui-text-primary-foreground cui-mt-2.5'>
-					{children}
-				</div>
+				<div className='cui-text-foreground cui-mt-2.5'>{children}</div>
 			</div>
 		</ScrollAreaPrimitive.Viewport>
 		<ScrollAreaPrimitive.Scrollbar
@@ -33,7 +31,7 @@ const ScrollArea: FC<ScrollAreaProps> = ({ className, children, title }) => (
 		>
 			<ScrollAreaPrimitive.Thumb
 				className={cx(
-					'cui-flex-1 cui-bg-primary-foreground-subtle cui-rounded-[10px] cui-relative',
+					'cui-flex-1 cui-bg-foreground-subtle cui-rounded-[10px] cui-relative',
 					"before:cui-content-[''] before:cui-absolute before:cui-top-1/2 before:cui-left-1/2 before:-cui-translate-x-1/2",
 					'before:-cui-translate-y-1/2 before:cui-w-full before:cui-h-full before:cui-min-w-[44px] before:cui-min-h-[44px]'
 				)}

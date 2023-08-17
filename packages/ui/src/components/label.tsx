@@ -9,7 +9,7 @@ interface LabelProps {
 const Label: FC<LabelProps> = ({ htmlFor, label }) => {
 	return (
 		<LabelPrimitive.Root
-			className='cui-text-sm cui-font-medium leading-loose cui-text-primary-foreground'
+			className='cui-text-sm cui-font-medium leading-loose cui-text-foreground'
 			htmlFor={htmlFor}
 		>
 			{label}

@@ -1,11 +1,11 @@
 import type { FC, ReactNode } from 'react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import type {
-	AccordionSingleProps,
 	AccordionMultipleProps,
+	AccordionSingleProps,
 } from '@radix-ui/react-accordion'
 import { ChevronDownIcon } from '@radix-ui/react-icons'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 interface AccordionItemType {
 	id: string
@@ -54,7 +54,7 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 					>
 						<AccordionPrimitive.Header className='cui-w-full'>
 							<AccordionPrimitive.Trigger
-								className={cx(
+								className={clsx([
 									'cui-group',
 									` ${
 										index === 0
@@ -67,30 +67,30 @@ const Accordion: FC<AccordionSingle | AccordionMultiple> = ({
 									}`,
 									'focus:cui-outline-none',
 									'cui-inline-flex cui-w-full cui-items-center cui-justify-between !cui-bg-ui cui-px-4 cui-py-2 cui-text-left',
-									'cui-border-b cui-border-subtle'
-								)}
+									'cui-border-b cui-border-subtle',
+								])}
 							>
-								<span className='cui-text-sm cui-font-medium cui-text-primary-foreground'>
+								<span className='cui-text-sm cui-font-medium cui-text-foreground'>
 									{item.title}
 								</span>
 								<ChevronDownIcon
-									className={cx(
-										'cui-ml-2 cui-h-5 cui-w-5 cui-shrink-0 cui-text-primary-foreground cui-ease-in-out',
-										'group-radix-state-open:cui-rotate-180 group-radix-state-open:cui-duration-300'
-									)}
+									className={clsx([
+										'cui-ml-2 cui-h-5 cui-w-5 cui-shrink-0 cui-text-foreground cui-ease-in-out',
+										'group-radix-state-open:cui-rotate-180 group-radix-state-open:cui-duration-300',
+									])}
 								/>
 							</AccordionPrimitive.Trigger>
 							<AccordionPrimitive.Content
-								className={cx(
+								className={clsx([
 									'cui-pt-2 cui-w-full cui-bg-ui-states cui-px-4 cui-pb-2',
 									`${
 										index === items.length - 1
 											? 'radix-state-open:cui-rounded-b-lg'
 											: ''
-									}`
-								)}
+									}`,
+								])}
 							>
-								<div className='cui-text-sm cui-text-primary-foreground'>
+								<div className='cui-text-sm cui-text-foreground'>
 									{item.content}
 								</div>
 							</AccordionPrimitive.Content>

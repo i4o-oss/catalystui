@@ -13,7 +13,7 @@ const Progress: FC<ProgressProps> = ({ percent }) => {
 		>
 			<ProgressPrimitive.Indicator
 				style={{ width: `${percent}%` }}
-				className='cui-h-full cui-bg-primary-foreground cui-duration-300 cui-ease-in-out'
+				className='cui-h-full cui-bg-foreground cui-duration-300 cui-ease-in-out'
 			/>
 		</ProgressPrimitive.Root>
 	)

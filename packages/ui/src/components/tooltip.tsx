@@ -45,7 +45,7 @@ const Tooltip: FC<Props> = ({
 						sideOffset={4}
 					>
 						<TooltipPrimitive.Arrow className='cui-fill-current cui-text-primary-subtle' />
-						<span className='cui-block cui-text-xs cui-leading-none cui-text-primary-foreground'>
+						<span className='cui-block cui-text-xs cui-leading-none cui-text-foreground'>
 							{content}
 						</span>
 					</TooltipPrimitive.Content>

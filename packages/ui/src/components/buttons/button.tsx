@@ -48,7 +48,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				{leftIcon}
 				{loading && (
 					<svg
-						className='-cui-ml-1 cui-h-4 cui-w-4 cui-animate-spin cui-text-primary-foreground'
+						className='-cui-ml-1 cui-h-4 cui-w-4 cui-animate-spin cui-text-foreground'
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
 						viewBox='0 0 24 24'
