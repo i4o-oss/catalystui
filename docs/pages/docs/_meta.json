@@ -1,47 +1,47 @@
 {
-    "index": "Introduction",
-    "getting-started": "Get Started",
-    "-- Components --": {
-        "type": "separator",
-        "title": "Components"
-    },
-    "accordion": "Accordion",
-    "alert": "Alert",
-    "aspect-ratio": "Aspect Ratio",
-    "avatar": "Avatar",
-    "buttons": "Buttons",
-    "checkbox": "Checkbox",
-    "collapsible": "Collapsible",
-    "dialog": "Dialog",
-    "dropdown": "Dropdown",
-    "hover-card": "Hover Card",
-    "label": "Label",
-    "nav": "Navigation Menu",
-    "popover": "Popover",
-    "progress": "Progress",
-    "radio-group": "Radio Group",
-    "scroll-area": "Scroll Area",
-    "select": "Select",
-    "separator": "Separator",
-    "slider": "Slider",
-    "switch": "Switch",
-    "tabs": "Tabs",
-    "toast": "Toast",
-    "toggle": "Toggle",
-    "toggle-group": "Toggle Group",
-    "toolbar": "Toolbar",
-    "tooltip": "Tooltip",
-    "-- Utils --": {
-        "type": "separator",
-        "title": "Utils"
-    },
-    "copy-to-clipboard": "Copy to Clipboard",
-    "-- About --": {
-        "type": "separator",
-        "title": "More"
-    },
-    "about link": {
-        "title": "About CatalystUI",
-        "href": "/about"
-    }
+	"index": "Introduction",
+	"getting-started": "Get Started",
+	"-- Components --": {
+		"type": "separator",
+		"title": "Components"
+	},
+	"accordion": "Accordion",
+	"alert": "Alert",
+	"aspect-ratio": "Aspect Ratio",
+	"avatar": "Avatar",
+	"buttons": "Buttons",
+	"checkbox": "Checkbox",
+	"collapsible": "Collapsible",
+	"dialog": "Dialog",
+	"dropdown": "Dropdown",
+	"hover-card": "Hover Card",
+	"label": "Label",
+	"nav": "Navigation Menu",
+	"popover": "Popover",
+	"progress": "Progress",
+	"radio-group": "Radio Group",
+	"scroll-area": "Scroll Area",
+	"select": "Select",
+	"separator": "Separator",
+	"slider": "Slider",
+	"switch": "Switch",
+	"tabs": "Tabs",
+	"toast": "Toast",
+	"toggle": "Toggle",
+	"toggle-group": "Toggle Group",
+	"toolbar": "Toolbar",
+	"tooltip": "Tooltip",
+	"-- Utils --": {
+		"type": "separator",
+		"title": "Utils"
+	},
+	"copy-to-clipboard": "Copy to Clipboard",
+	"-- About --": {
+		"type": "separator",
+		"title": "More"
+	},
+	"about link": {
+		"title": "About CatalystUI",
+		"href": "/about"
+	}
 }

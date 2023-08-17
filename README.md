@@ -2,7 +2,7 @@
 
 Catalyst UI is a component library built on top of Radix UI Primitives styled with Tailwind CSS made to make prototyping faster.
 
-> **Note:** This project is NOT the Catalyst that Adam Wathan talked about in his keynote at Tailwind Connect 2023. This project is not affiliated with Tailwind Labs and Radix UI (and by extension WorkOS) in any way. 
+> **Note:** This project is NOT the Catalyst that Adam Wathan talked about in his keynote at Tailwind Connect 2023. This project is not affiliated with Tailwind Labs and Radix UI (and by extension WorkOS) in any way.
 
 ## Documentation
 
@@ -50,7 +50,6 @@ CatalystUI and its docs are powered by these incredible open-source projects:
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=i4o-oss/catalystui&type=Date)](https://star-history.com/#i4o-oss/catalystui&Date)
-
 
 ## License
 

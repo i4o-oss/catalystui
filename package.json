@@ -1,27 +1,27 @@
 {
-    "name": "catalystui",
-    "version": "0.1.0",
-    "private": true,
-    "workspaces": [
-        "docs",
-        "packages/*"
-    ],
-    "scripts": {
-        "build": "turbo run build",
-        "dev": "turbo run dev --parallel",
-        "lint": "turbo run lint",
-        "start": "turbo run start --scope=@catalystui/docs",
-        "format": "prettier --write .",
-        "release": "turbo run build --filter=@i4o/catalystui && changeset publish"
-    },
-    "devDependencies": {
-        "@catalystui/eslint-config": "workspace:*",
-        "@changesets/cli": "^2.26.1",
-        "prettier": "latest",
-        "turbo": "latest"
-    },
-    "engines": {
-        "node": ">=18.0.0"
-    },
-    "packageManager": "pnpm@7.18.2"
+	"name": "catalystui",
+	"version": "0.1.0",
+	"private": true,
+	"workspaces": [
+		"docs",
+		"packages/*"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev --parallel",
+		"lint": "turbo run lint",
+		"start": "turbo run start --scope=@catalystui/docs",
+		"format": "prettier --write .",
+		"release": "turbo run build --filter=@i4o/catalystui && changeset publish"
+	},
+	"devDependencies": {
+		"@catalystui/eslint-config": "workspace:*",
+		"@changesets/cli": "^2.26.1",
+		"prettier": "latest",
+		"turbo": "latest"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"packageManager": "pnpm@7.18.2"
 }
