@@ -2,7 +2,6 @@ import type { ButtonProps } from '../types'
 import cx from 'classnames'
 import React from 'react'
 
-// TODO: update styles here using the custom tailwind theme instead of using defaults
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 	({ children, ...props }, ref) => {
 		return (
@@ -10,19 +9,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				aria-label={props.ariaLabel}
 				ref={ref}
 				{...props}
-				// className={`focus-visible:ring-blend-darken inline-flex items-center justify-center rounded-md border border-transparent text-sm font-semibold hover:bg-blend-darken focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${className} ${bg} ${padding} ${shadow} ${textColor}`}
-				className={cx(
-					'cui-inline-flex cui-select-none cui-items-center cui-justify-center cui-rounded-md cui-px-4 cui-py-2 cui-text-sm cui-font-medium',
-					'!cui-bg-white cui-text-gray-700 hover:!cui-bg-gray-50 dark:!cui-bg-gray-800 dark:cui-text-gray-100 dark:hover:!cui-bg-gray-900',
-					'hover:cui-bg-gray-50',
-					'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75',
-					// Register all radix states
-					'cui-group',
-					'radix-state-open:cui-bg-gray-50 dark:radix-state-open:cui-bg-gray-900',
-					'radix-state-on:cui-bg-gray-50 dark:radix-state-on:cui-bg-gray-900',
-					'radix-state-instant-open:cui-bg-gray-50 radix-state-delayed-open:cui-bg-gray-50',
-					`${props.className}`
-				)}
+				className={clsx([
+					'cui-group cui-inline-flex cui-items-center cui-justify-center cui-rounded cui-p-select cui-space-x-2 cui-select-none', // display, look, spacing, behavior
+					'!cui-bg-ui hover:!cui-bg-ui-hover active:!cui-bg-ui-states focus:!cui-bg-ui-states disabled:!cui-bg-ui-states/75', // background
+					'cui-text-foreground cui-text-sm cui-font-medium', // text
+					'cui-border cui-border-transparent', // borders, ourlines
+					'focus:cui-outline-none focus-visible:cui-ring-blend-darken focus-visible:cui-ring-2 focus-visible:cui-ring-offset-2', // focus rings. TODO: needs rework
+					// 'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75',
+					'cui-transition-all cui-duration-200', // animations
+					'radix-state-open:cui-bg-ui radix-state-on:cui-bg-ui radix-state-instant-open:cui-bg-ui', // radix states
+					`${props.className}`, // custom
+				])}
 				disabled={props.disabled}
 				onClick={props.onClick}
 			>
