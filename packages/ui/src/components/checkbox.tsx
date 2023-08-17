@@ -2,7 +2,7 @@ import type { FC, ReactNode } from 'react'
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
 import { CheckIcon } from '@radix-ui/react-icons'
 import * as LabelPrimitive from '@radix-ui/react-label'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 const CheckboxRoot = CheckboxPrimitive.Root
 const CheckboxIndicator = CheckboxPrimitive.Indicator
@@ -31,12 +31,12 @@ const Checkbox: FC<Props> = ({
 		<div className='cui-flex cui-items-center cui-cursor-pointer'>
 			<CheckboxRoot
 				id={name}
-				className={cx(
-					'cui-flex cui-h-5 cui-w-5 cui-items-center cui-justify-center cui-rounded',
+				className={clsx([
+					'cui-flex cui-h-5 cui-w-5 cui-items-center cui-justify-center cui-rounded-md',
 					'radix-disabled:cui-bg-brand-subtle radix-disabled:cui-cursor-not-allowed',
 					'radix-state-checked:cui-bg-brand radix-state-unchecked:cui-bg-ui',
-					'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
-				)}
+					'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75',
+				])}
 				checked={checked}
 				defaultChecked={defaultChecked}
 				disabled={disabled}
@@ -46,9 +46,14 @@ const Checkbox: FC<Props> = ({
 			>
 				<CheckboxIndicator>
 					<CheckIcon
-						className={`cui-h-4 cui-w-4 cui-self-center ${
-							disabled ? 'cui-text-gray-300' : 'cui-text-white'
-						}`}
+						className={clsx([
+							'cui-h-4 cui-w-4 cui-self-center',
+							`${
+								disabled
+									? 'cui-text-foreground-subtle'
+									: 'cui-text-foreground'
+							}`,
+						])}
 					/>
 				</CheckboxIndicator>
 			</CheckboxRoot>

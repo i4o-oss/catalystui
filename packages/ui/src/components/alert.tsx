@@ -1,6 +1,6 @@
 import type { Dispatch, FC, ReactNode, SetStateAction } from 'react'
 import * as AlertPrimitive from '@radix-ui/react-alert-dialog'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 type AlertProps = {
 	title?: ReactNode | string
@@ -35,13 +35,12 @@ const Alert: FC<AlertProps> = ({
 				/>
 				<AlertPrimitive.Content
 					forceMount
-					className={cx(
-						'cui-fixed cui-z-50',
-						'cui-w-[95vw] cui-max-w-md cui-rounded-lg cui-p-4 md:cui-w-full',
-						'cui-top-[50%] cui-left-[50%] -cui-translate-x-[50%] -cui-translate-y-[50%]',
-						'cui-bg-primary-subtle',
-						'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
-					)}
+					className={clsx([
+						'cui-w-[95vw] cui-max-w-md cui-rounded cui-p-4 md:cui-w-full',
+						'cui-fixed cui-z-50 cui-top-[50%] cui-left-[50%] -cui-translate-x-[50%] -cui-translate-y-[50%]',
+						'cui-bg-ui',
+						'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75',
+					])}
 				>
 					{title && (
 						<AlertPrimitive.Title className='cui-text-sm cui-font-semibold cui-text-foreground'>

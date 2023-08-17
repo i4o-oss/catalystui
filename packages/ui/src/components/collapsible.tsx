@@ -1,7 +1,9 @@
 import type { FC, ReactNode } from 'react'
 import { useState } from 'react'
 import * as CollapsiblePrimitive from '@radix-ui/react-collapsible'
-import { RowSpacingIcon, Cross2Icon } from '@radix-ui/react-icons'
+import { Cross2Icon, RowSpacingIcon } from '@radix-ui/react-icons'
+import clsx from 'clsx'
+import { IconButton } from './buttons'
 
 type CollapsedItem = ReactNode | string
 
@@ -20,13 +22,7 @@ const Collapsibe: FC<CollapsibeProps> = ({ first, items, title, trigger }) => {
 			open={open}
 			onOpenChange={setOpen}
 		>
-			<div
-				style={{
-					display: 'flex',
-					alignItems: 'center',
-					justifyContent: 'space-between',
-				}}
-			>
+			<div className='cui-flex cui-items-center cui-justify-between'>
 				<span className='cui-text-foreground cui-text-[15px] cui-leading-[25px]'>
 					{title}
 				</span>
@@ -34,9 +30,13 @@ const Collapsibe: FC<CollapsibeProps> = ({ first, items, title, trigger }) => {
 					{typeof trigger !== 'string' ? (
 						trigger
 					) : (
-						<button className='cui-rounded-full cui-h-[25px] cui-w-[25px] cui-inline-flex cui-items-center cui-justify-center cui-text-violet11 cui-shadow-[0_2px_10px] cui-shadow-blackA7 cui-outline-none data-[state=closed]:cui-bg-white data-[state=open]:cui-bg-violet3 hover:cui-bg-violet3 focus:cui-shadow-[0_0_0_2px] focus:cui-shadow-black'>
-							{open ? <Cross2Icon /> : <RowSpacingIcon />}
-						</button>
+						<IconButton
+							className={clsx([
+								'cui-rounded-full cui-h-[25px] cui-w-[25px] cui-shadow-md',
+								'cui-outline-none focus:cui-shadow-black',
+							])}
+							icon={open ? <Cross2Icon /> : <RowSpacingIcon />}
+						/>
 					)}
 				</CollapsiblePrimitive.Trigger>
 			</div>

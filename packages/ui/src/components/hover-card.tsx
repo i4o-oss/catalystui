@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from 'react'
 import * as HoverCardPrimitive from '@radix-ui/react-hover-card'
-import cx from 'classnames'
+import clsx from 'clsx'
 import { Button } from './buttons'
 
 interface HoverCardProps {
@@ -34,13 +34,13 @@ const HoverCard: FC<HoverCardProps> = ({
 			<HoverCardPrimitive.Content
 				align='center'
 				sideOffset={4}
-				className={cx(
+				className={clsx([
 					'radix-side-top:cui-animate-slide-up radix-side-bottom:cui-animate-slide-down',
-					'cui-max-w-md cui-rounded-lg cui-p-4 md:cui-w-full',
+					'cui-max-w-md cui-rounded cui-p-4 md:cui-w-full',
 					'cui-bg-ui',
 					'cui-z-[100] cui-shadow-lg',
-					'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
-				)}
+					'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75',
+				])}
 			>
 				<HoverCardPrimitive.Arrow className='cui-fill-current cui-text-ui' />
 				{children}

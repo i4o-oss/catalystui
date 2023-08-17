@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from 'react'
 import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 interface ScrollAreaProps {
 	className?: string
@@ -23,18 +23,18 @@ const ScrollArea: FC<ScrollAreaProps> = ({ className, children, title }) => (
 			</div>
 		</ScrollAreaPrimitive.Viewport>
 		<ScrollAreaPrimitive.Scrollbar
-			className={cx(
+			className={clsx([
 				'cui-flex cui-select-none cui-touch-none cui-p-0.5 cui-bg-ui-hover cui-transition-colors cui-duration-[160ms] cui-ease-out',
-				'data-[orientation=vertical]:cui-w-2.5 data-[orientation=horizontal]:cui-flex-col data-[orientation=horizontal]:cui-h-2.5'
-			)}
+				'data-[orientation=vertical]:cui-w-2.5 data-[orientation=horizontal]:cui-flex-col data-[orientation=horizontal]:cui-h-2.5',
+			])}
 			orientation='vertical'
 		>
 			<ScrollAreaPrimitive.Thumb
-				className={cx(
+				className={clsx([
 					'cui-flex-1 cui-bg-foreground-subtle cui-rounded-[10px] cui-relative',
 					"before:cui-content-[''] before:cui-absolute before:cui-top-1/2 before:cui-left-1/2 before:-cui-translate-x-1/2",
-					'before:-cui-translate-y-1/2 before:cui-w-full before:cui-h-full before:cui-min-w-[44px] before:cui-min-h-[44px]'
-				)}
+					'before:-cui-translate-y-1/2 before:cui-w-full before:cui-h-full before:cui-min-w-[44px] before:cui-min-h-[44px]',
+				])}
 			/>
 		</ScrollAreaPrimitive.Scrollbar>
 	</ScrollAreaPrimitive.Root>

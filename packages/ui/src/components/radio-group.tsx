@@ -1,6 +1,6 @@
 import * as RadioGroupPrimitive from '@radix-ui/react-radio-group'
 import type { FC, ReactNode } from 'react'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 type RadioOption = {
 	value: string
@@ -37,11 +37,11 @@ const RadioGroup: FC<RadioGroupProps> = ({
 					className='cui-flex cui-items-center cui-space-x-2'
 				>
 					<RadioGroupPrimitive.Item
-						className={cx(
+						className={clsx([
 							'cui-h-5 cui-w-5 cui-rounded-full cui-border cui-border-transparent !cui-bg-ui cui-text-brand',
-							'focus:cui-outline-none focus:cui-ring-0 focus:cui-ring-offset-0 focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75 focus-visible:cui-ring-offset-2 dark:focus-visible:cui-ring-offset-gray-800',
-							'cui-border cui-border-transparent radix-state-checked:cui-border-transparent'
-						)}
+							'focus:cui-outline-none focus:cui-ring-0 focus:cui-ring-offset-0 focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75 focus-visible:cui-ring-offset-2 dark:focus-visible:cui-ring-offset-brand',
+							'cui-border cui-border-transparent radix-state-checked:cui-border-transparent',
+						])}
 						key={option.id}
 						id={option.id}
 						value={option.value}

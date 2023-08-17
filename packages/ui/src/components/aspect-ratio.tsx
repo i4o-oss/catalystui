@@ -1,6 +1,6 @@
 import { FC, Fragment } from 'react'
 import * as AspectRatioPrimitive from '@radix-ui/react-aspect-ratio'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 interface AspectRatioProps {
 	alt: string
@@ -16,15 +16,16 @@ const AspectRatio: FC<AspectRatioProps> = ({ alt, ratio, src }) => {
 				className='cui-group cui-relative cui-h-full cui-w-full cui-overflow-hidden cui-rounded-lg cui-shadow-md'
 			>
 				<div
-					className={cx(
+					className={clsx([
 						'cui-absolute cui-inset-0 cui-bg-ui cui-object-cover group-hover:cui-bg-ui',
-						'cui-transition-colors cui-duration-300 cui-ease-in-out'
-					)}
+						'cui-transition-colors cui-duration-300 cui-ease-in-out',
+					])}
 				>
 					<img
-						src={src}
 						alt={alt}
 						className='h-full w-full mix-blend-overlay'
+						loading='lazy'
+						src={src}
 					/>
 				</div>
 			</AspectRatioPrimitive.Root>

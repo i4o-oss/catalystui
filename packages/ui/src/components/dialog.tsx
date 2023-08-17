@@ -1,6 +1,6 @@
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { Cross1Icon } from '@radix-ui/react-icons'
-import cx from 'classnames'
+import clsx from 'clsx'
 import type { Dispatch, FC, ReactNode, SetStateAction } from 'react'
 
 interface Props {
@@ -38,13 +38,12 @@ const Dialog: FC<Props> = ({
 				/>
 				<DialogPrimitive.Content
 					forceMount
-					className={cx(
-						'cui-fixed',
-						'cui-rounded-lg',
-						'cui-top-[50%] cui-left-[50%] -cui-translate-x-[50%] -cui-translate-y-[50%]',
-						'cui-bg-primary-subtle',
-						'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
-					)}
+					className={clsx([
+						'cui-rounded',
+						'cui-fixed cui-top-[50%] cui-left-[50%] -cui-translate-x-[50%] -cui-translate-y-[50%]',
+						'cui-bg-ui',
+						'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75',
+					])}
 				>
 					{title ? (
 						<DialogPrimitive.Title className='cui-text-md cui-font-semibold cui-text-foreground'>
@@ -75,10 +74,10 @@ const Dialog: FC<Props> = ({
 					) : null}
 
 					<DialogPrimitive.Close
-						className={cx(
+						className={clsx([
 							'cui-absolute cui-top-3.5 cui-right-3.5 cui-z-[100] cui-inline-flex cui-items-center cui-justify-center cui-rounded-full cui-p-1',
-							'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
-						)}
+							'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75',
+						])}
 					>
 						<Cross1Icon className='cui-h-4 cui-w-4 cui-text-foreground-subtle hover:text-foreground' />
 					</DialogPrimitive.Close>
