@@ -4,7 +4,7 @@ import {
 	ChevronUpIcon,
 } from '@radix-ui/react-icons'
 import * as SelectPrimitive from '@radix-ui/react-select'
-import cx from 'classnames'
+import clsx from 'clsx'
 import { Dispatch, SetStateAction, useState } from 'react'
 import type { FC, ReactNode } from 'react'
 import { Button } from './buttons'
@@ -77,18 +77,19 @@ const Select: FC<Props> = ({
 								<SelectPrimitive.Item
 									key={`${f.value}-${i}`}
 									disabled={f?.disabled}
-									className={cx(
-										'cui-relative cui-flex cui-items-center cui-px-8 cui-py-2 cui-rounded-md cui-text-sm cui-text-foreground cui-font-medium focus:cui-bg-ui-states',
+									className={clsx([
+										'cui-relative cui-flex cui-items-center cui-px-8 cui-py-2 cui-rounded-md cui-text-sm cui-font-medium focus:cui-bg-ui-states',
+										'cui-text-foreground data-[state="checked"]:cui-text-brand',
 										'radix-disabled:cui-opacity-50',
-										'focus:cui-outline-none cui-select-none'
-									)}
+										'focus:cui-outline-none cui-select-none',
+									])}
 									value={f.value}
 								>
 									<SelectPrimitive.ItemText>
 										{f.label}
 									</SelectPrimitive.ItemText>
 									<SelectPrimitive.ItemIndicator className='cui-absolute cui-left-2 cui-inline-flex cui-items-center'>
-										<CheckIcon />
+										<CheckIcon className='cui-text-brand' />
 									</SelectPrimitive.ItemIndicator>
 								</SelectPrimitive.Item>
 							))}

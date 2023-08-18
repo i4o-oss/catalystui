@@ -1,5 +1,5 @@
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu'
-import cx from 'classnames'
+import clsx from 'clsx'
 import type { FC, ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 
@@ -39,25 +39,25 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 								key={`nav-item-${id}`}
 							>
 								<NavigationMenuPrimitive.Trigger
-									className={cx(
+									className={clsx([
 										'cui-px-4 cui-py-1 cui-text-sm',
 										'cui-text-sm cui-font-medium',
 										'cui-text-foreground hover:cui-text-brand',
 										'cui-transition-colors cui-duration-200',
-										'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
-									)}
+										'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75',
+									])}
 								>
 									{label}
 								</NavigationMenuPrimitive.Trigger>
 								<NavigationMenuPrimitive.Content
-									className={cx(
+									className={clsx([
 										'cui-absolute cui-w-auto cui-top-0 cui-left-0 cui-rounded-lg !cui-z-100',
 										'cui-bg-ui',
 										'radix-motion-from-start:cui-animate-enter-from-left',
 										'radix-motion-from-end:cui-animate-enter-from-right',
 										'radix-motion-to-start:cui-animate-exit-to-left',
-										'radix-motion-to-end:cui-animate-exit-to-right'
-									)}
+										'radix-motion-to-end:cui-animate-exit-to-right',
+									])}
 								>
 									{content}
 								</NavigationMenuPrimitive.Content>
@@ -73,7 +73,7 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 							{Link ? (
 								<Link
 									to={href as string}
-									className={cx(
+									className={clsx([
 										'cui-px-4 cui-py-1 cui-text-sm',
 										'cui-text-sm cui-text-foreground hover:cui-text-brand',
 										'cui-transition-colors cui-duration-200',
@@ -81,15 +81,15 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 											pathname.includes(href as string)
 												? 'cui-bg-transparent cui-text-brand dark:cui-text-brand cui-font-semibold'
 												: 'cui-font-medium'
-										}`
-									)}
+										}`,
+									])}
 								>
 									{label}
 								</Link>
 							) : (
 								<a
 									href={href as string}
-									className={cx(
+									className={clsx([
 										'cui-px-4 cui-py-1 cui-text-sm',
 										'cui-text-sm cui-text-foreground hover:cui-text-brand',
 										'cui-transition-colors cui-duration-200',
@@ -97,8 +97,8 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 											pathname.includes(href as string)
 												? 'cui-bg-transparent cui-text-brand dark:cui-text-brand cui-font-semibold'
 												: 'cui-font-medium'
-										}`
-									)}
+										}`,
+									])}
 								>
 									{label}
 								</a>
@@ -108,36 +108,36 @@ const Nav: FC<Props> = ({ items, type = 'row', Link }) => {
 				})}
 
 				<NavigationMenuPrimitive.Indicator
-					className={cx(
+					className={clsx([
 						'!cui-z-100',
 						'cui-top-[100%] cui-flex cui-items-end cui-justify-center cui-h-2 cui-overflow-hidden',
 						'radix-state-visible:cui-animate-fade-in',
 						'radix-state-hidden:cui-animate-fade-out',
-						'cui-transition-[width_transform] cui-duration-[250ms] cui-ease-[ease]'
-					)}
+						'cui-transition-[width_transform] cui-duration-[250ms] cui-ease-[ease]',
+					])}
 				>
 					<div className='cui-top-1 cui-relative cui-bg-ui cui-w-2 cui-h-2 cui-rotate-45' />
 				</NavigationMenuPrimitive.Indicator>
 			</NavigationMenuPrimitive.List>
 
 			<div
-				className={cx(
+				className={clsx([
 					'cui-perspective-[2000px] cui-absolute cui-top-[100%] cui-left-0 cui-flex cui-w-full cui-justify-center',
-					'!cui-z-100'
-				)}
+					'!cui-z-100',
+				])}
 				style={{
 					perspective: '2000px',
 				}}
 			>
 				<NavigationMenuPrimitive.Viewport
-					className={cx(
+					className={clsx([
 						'cui-relative cui-mt-2 cui-shadow-lg cui-rounded-md cui-bg-ui cui-overflow-hidden',
 						'cui-w-radix-navigation-menu-viewport',
 						'cui-h-radix-navigation-menu-viewport',
 						'radix-state-open:cui-animate-scale-in-content',
 						'radix-state-closed:cui-animate-scale-out-content',
-						'cui-origin-[top_center] cui-transition-[width_height] cui-duration-300 cui-ease-[ease]'
-					)}
+						'cui-origin-[top_center] cui-transition-[width_height] cui-duration-300 cui-ease-[ease]',
+					])}
 				/>
 			</div>
 		</NavigationMenuPrimitive.Root>
