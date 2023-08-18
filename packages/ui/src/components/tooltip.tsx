@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from 'react'
 import * as TooltipPrimitive from '@radix-ui/react-tooltip'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 interface Props {
 	align?: 'start' | 'center' | 'end'
@@ -32,15 +32,15 @@ const Tooltip: FC<Props> = ({
 				<TooltipPrimitive.Portal>
 					<TooltipPrimitive.Content
 						align={align}
-						className={cx(
+						className={clsx([
 							'radix-side-top:cui-animate-slide-down-fade',
 							'radix-side-right:cui-animate-slide-left-fade',
 							'radix-side-bottom:cui-animate-slide-up-fade',
 							'radix-side-left:cui-animate-slide-right-fade',
 							'cui-inline-flex cui-items-center cui-rounded-md cui-px-4 cui-py-2.5',
 							'cui-bg-primary-subtle',
-							'cui-max-w-xs'
-						)}
+							'cui-max-w-xs',
+						])}
 						side={side}
 						sideOffset={4}
 					>

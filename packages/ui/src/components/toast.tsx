@@ -1,7 +1,7 @@
 import type { FC, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
 import * as ToastPrimitive from '@radix-ui/react-toast'
-import cx from 'classnames'
+import clsx from 'clsx'
 import { Button } from './buttons'
 
 interface ToastProps {
@@ -69,7 +69,7 @@ const Toast: FC<ToastProps> = ({
 				</Button>
 			)}
 			<ToastPrimitive.Root
-				className={cx(
+				className={clsx([
 					'cui-fixed cui-inset-x-4 cui-bottom-4 cui-z-50 cui-w-auto cui-rounded-lg cui-shadow-lg md:cui-top-4 md:cui-right-4 md:cui-left-auto md:cui-bottom-auto md:cui-w-full md:cui-max-w-sm',
 					'cui-bg-ui',
 					'radix-state-open:cui-animate-toast-slide-in-bottom md:radix-state-open:cui-animate-toast-slide-in-right',
@@ -77,8 +77,8 @@ const Toast: FC<ToastProps> = ({
 					'radix-swipe-end:cui-animate-toast-swipe-out',
 					'cui-translate-x-cui-radix-toast-swipe-move-x',
 					'radix-swipe-cancel:cui-translate-x-0 radix-swipe-cancel:cui-duration-200 radix-swipe-cancel:cui-ease-[ease]',
-					'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
-				)}
+					'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75',
+				])}
 				defaultOpen={defaultOpen}
 				duration={duration}
 				open={open || isToastOpen}
@@ -97,7 +97,14 @@ const Toast: FC<ToastProps> = ({
 					</div>
 					{action && dismiss && (
 						<div className='cui-grid cui-grid-cols-1 cui-border-l cui-border-subtle'>
-							<div className='cui-flex cui-items-center cui-justify-center cui-rounded-tr-lg cui-text-sm cui-text-foreground hover:cui-bg-ui-hover cui-font-medium focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'>
+							<div
+								className={clsx([
+									'cui-flex cui-items-center cui-justify-center cui-rounded-tr',
+									'cui-text-sm cui-text-foreground cui-font-medium',
+									'cui-bg-ui hover:cui-bg-ui-hover',
+									'focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75',
+								])}
+							>
 								<ToastPrimitive.Action
 									asChild={typeof action !== 'string'}
 									altText={actionAltText as string}
@@ -106,7 +113,15 @@ const Toast: FC<ToastProps> = ({
 									{action}
 								</ToastPrimitive.Action>
 							</div>
-							<div className='cui-flex cui-items-center cui-justify-center cui-border-t cui-border-subtle cui-rounded-br-lg cui-text-sm cui-font-medium cui-text-foreground hover:cui-bg-ui-hover focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'>
+							<div
+								className={clsx([
+									'cui-flex cui-items-center cui-justify-center cui-rounded-br',
+									'cui-text-sm cui-text-foreground cui-font-medium',
+									'cui-border-t cui-border-subtle',
+									'cui-bg-ui hover:cui-bg-ui-hover',
+									'focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75',
+								])}
+							>
 								<ToastPrimitive.Close
 									asChild={typeof dismiss !== 'string'}
 									className='cui-px-3 cui-py-2'
@@ -121,7 +136,12 @@ const Toast: FC<ToastProps> = ({
 							<ToastPrimitive.Action
 								asChild={typeof action !== 'string'}
 								altText={actionAltText as string}
-								className='cui-flex cui-w-full cui-items-center cui-justify-center cui-rounded-lg cui-px-3 cui-py-2 cui-text-sm cui-font-medium cui-text-foreground hover:cui-bg-ui-hover focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
+								className={clsx([
+									'cui-flex cui-w-full cui-items-center cui-justify-center cui-rounded-lg cui-px-3 cui-py-2',
+									'cui-text-sm cui-text-foreground cui-font-medium',
+									'cui-bg-ui hover:cui-bg-ui-hover',
+									'focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75',
+								])}
 							>
 								{action}
 							</ToastPrimitive.Action>

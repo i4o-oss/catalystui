@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from 'react'
 import * as ToolbarPrimitive from '@radix-ui/react-toolbar'
-import cx from 'classnames'
+import clsx from 'clsx'
 import { PrimaryButton } from './buttons'
 
 interface ToggleGroupItem {
@@ -45,11 +45,11 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 					if (type === 'link') {
 						return (
 							<ToolbarPrimitive.Link
-								className={cx(
+								className={clsx([
 									'cui-h-full cui-flex cui-items-center',
 									'cui-text-sm !cui-text-foreground',
-									'focus:cui-outline-none focus-visible:cui-z-20 focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
-								)}
+									'focus:cui-outline-none focus-visible:cui-z-20 focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75',
+								])}
 								href={link}
 								key={index}
 								target='_blank'
@@ -90,19 +90,13 @@ const Toolbar: FC<ToolbarProps> = ({ className, items }) => {
 											asChild
 										>
 											<button
-												className={cx(
+												className={clsx([
 													'cui-group cui-transition-colors cui-duration-200',
 													'hover:cui-bg-ui-hover',
 													'!cui-bg-ui radix-state-on:!cui-bg-ui-states',
 													'cui-p-2',
-													'focus:cui-relative focus:cui-outline-none focus-visible:cui-z-20 focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
-												)}
-												// className={cx(
-												// 	'cui-group radix-state-on:!cui-bg-gray-100 dark:radix-state-on:!cui-bg-gray-900',
-												// 	'cui-border-y cui-px-2.5 cui-py-2 first:cui-rounded-l-md first:cui-border-x last:cui-rounded-r-md last:cui-border-x',
-												// 	'cui-border-gray-200 radix-state-on:cui-border-transparent dark:cui-border-gray-600 dark:radix-state-on:cui-border-transparent',
-												// 	'focus:cui-relative focus:cui-outline-none focus-visible:cui-z-20 focus-visible:cui-ring focus-visible:cui-ring-brand-500 focus-visible:cui-ring-opacity-75'
-												// )}
+													'focus:cui-relative focus:cui-outline-none focus-visible:cui-z-20 focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75',
+												])}
 												onClick={onSelect}
 											>
 												{icon}

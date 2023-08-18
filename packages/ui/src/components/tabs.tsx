@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import * as TabsPrimitive from '@radix-ui/react-tabs'
-import cx from 'classnames'
+import clsx from 'clsx'
 import React from 'react'
 
 interface TabContent {
@@ -26,10 +26,10 @@ const Tabs = TabsPrimitive.Root
 const TabsList = React.forwardRef<TabsData, any>(
 	({ className, ...props }, ref) => (
 		<TabsPrimitive.List
-			className={cx(
+			className={clsx([
 				'cui-col-span-1 cui-flex cui-gap-2',
-				`${props.type === 'column' ? 'cui-flex-col' : ''}`
-			)}
+				`${props.type === 'column' ? 'cui-flex-col' : ''}`,
+			])}
 			// @ts-ignore
 			ref={ref}
 		>
@@ -38,9 +38,9 @@ const TabsList = React.forwardRef<TabsData, any>(
 					<TabsPrimitive.Trigger
 						key={`tab-trigger-${id}`}
 						value={id}
-						className={cx(
+						className={clsx([
 							'cui-group',
-							'cui-rounded-lg',
+							'cui-rounded',
 							'radix-state-inactive:cui-bg-transparent radix-state-active:cui-bg-ui-states',
 							'radix-state-inactive:cui-text-foreground-subtle radix-state-active:cui-text-foreground',
 							`${
@@ -48,10 +48,10 @@ const TabsList = React.forwardRef<TabsData, any>(
 									? 'cui-px-8 cui-py-2'
 									: 'cui-px-4 cui-py-2'
 							}`,
-							'focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
-						)}
+							'focus:cui-z-10 focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75',
+						])}
 					>
-						<span className={cx('cui-text-sm cui-font-medium')}>
+						<span className={'cui-text-sm cui-font-medium'}>
 							{title}
 						</span>
 					</TabsPrimitive.Trigger>
@@ -76,10 +76,10 @@ const TabsContent = React.forwardRef<TabsData, any>(
 					<TabsPrimitive.Content
 						key={`tab-content-${id}`}
 						value={id}
-						className={cx(
-							'cui-col-span-2 cui-rounded-lg',
-							'focus:cui-outline-none'
-						)}
+						className={clsx([
+							'cui-col-span-2 cui-rounded',
+							'focus:cui-outline-none',
+						])}
 						// @ts-ignore
 						ref={ref}
 					>

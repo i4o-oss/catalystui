@@ -1,5 +1,5 @@
 import type { ButtonProps } from '../types'
-import cx from 'classnames'
+import clsx from 'clsx'
 import React from 'react'
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(

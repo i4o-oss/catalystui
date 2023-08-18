@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 import * as SliderPrimitive from '@radix-ui/react-slider'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 interface SliderProps {
 	ariaLabel: string
@@ -45,19 +45,19 @@ const Slider: FC<SliderProps> = ({
 			{defaultValue && defaultValue.length > 0
 				? defaultValue.map((_, index) => (
 						<SliderPrimitive.Thumb
-							className={cx(
+							className={clsx([
 								'cui-block cui-h-5 cui-w-5 cui-rounded-full cui-bg-brand',
-								'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
-							)}
+								'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75',
+							])}
 							key={`thumb-${index}`}
 						/>
 				  ))
 				: value?.map((_, index) => (
 						<SliderPrimitive.Thumb
-							className={cx(
+							className={clsx([
 								'cui-block cui-h-5 cui-w-5 cui-rounded-full cui-bg-brand',
-								'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75'
-							)}
+								'focus:cui-outline-none focus-visible:cui-ring focus-visible:cui-ring-brand focus-visible:cui-ring-opacity-75',
+							])}
 							key={`thumb-${index}`}
 						/>
 				  ))}

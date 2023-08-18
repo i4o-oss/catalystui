@@ -1,6 +1,5 @@
 import type { FC, ReactNode } from 'react'
 import * as TogglePrimitive from '@radix-ui/react-toggle'
-import cx from 'classnames'
 import Button from './buttons/shared/button'
 
 interface ToggleProps {
