@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.13
+
+### Patch Changes
+
+-   f5a6b1d: Improve colors, update styles, replace classnames with clsx, refactor some components
+
 ## 1.0.0-alpha.12
 
 ### Patch Changes
