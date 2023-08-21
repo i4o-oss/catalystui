@@ -5,13 +5,14 @@ import DemoCard from '../../components/demo-card'
 
 <DemoCard>
 	<Select
-		defaultValue='2'
+		value='2'
 		items={[
 			{ value: '1', label: 'Charmander' },
 			{ value: '2', label: 'Squirtle' },
 			{ value: '3', label: 'Bulbasaur' },
 			{ value: '4', label: 'Chikorita', disabled: true },
 		]}
+		onValueChange={(value) => console.log(value)}
 	/>
 </DemoCard>
 
@@ -23,12 +24,14 @@ import { Select } from '@i4o/catalystui'
 export default () => {
 	return (
 		<Select
+			value='2'
 			items={[
 				{ value: '1', label: 'Charmander' },
 				{ value: '2', label: 'Squirtle' },
 				{ value: '3', label: 'Bulbasaur' },
 				{ value: '4', label: 'Chikorita', disabled: true },
 			]}
+			onValueChange={(value) => console.log(value)}
 		/>
 	)
 }
@@ -36,9 +39,10 @@ export default () => {
 
 ### Props
 
-| Name          | Type                                                         | Default | Description                             |
-| :------------ | :----------------------------------------------------------- | :------ | :-------------------------------------- |
-| defaultValue  | `string`                                                     | `''`    | Default selected value                  |
-| items         | `Array<{ label: string, value: string, disabled: boolean }>` | []      | Array of items to display in the select |
-| name          | `string`                                                     | `''`    | Name of the select component            |
-| onValueChange | `(item: { label: string, value: string }) => void`           | -       | Callback when the value changes         |
+| Name          | Type                                                         | Default | Description                                                                        |
+| :------------ | :----------------------------------------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| defaultValue  | `string`                                                     | `''`    | Default selected value. Use for uncontrolled operation.                            |
+| items         | `Array<{ label: string, value: string, disabled: boolean }>` | []      | Array of items to display in the select                                            |
+| name          | `string`                                                     | `''`    | Name of the select component                                                       |
+| onValueChange | `(item: { label: string, value: string }) => void`           | -       | Callback when the value changes                                                    |
+| value         | `string`                                                     | `''`    | Currently selected value. Use for controlled operation along with `onValueChange`. |

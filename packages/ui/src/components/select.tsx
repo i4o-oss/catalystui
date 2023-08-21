@@ -24,6 +24,7 @@ interface Props {
 	open?: boolean
 	onOpenChange?: Dispatch<SetStateAction<boolean>>
 	onValueChange?: (value: string) => void
+	value?: string
 }
 
 const Select: FC<Props> = ({
@@ -34,8 +35,11 @@ const Select: FC<Props> = ({
 	open,
 	onOpenChange,
 	onValueChange,
+	value,
 }) => {
-	const defaultItem = items.find((item) => item.value === defaultValue)
+	const defaultItem = items.find((item) =>
+		defaultValue ? item.value === defaultValue : item.value === value
+	)
 	const [selected, setSelected] = useState(defaultItem || items[0])
 
 	const handleSelect = (value: string) => {
