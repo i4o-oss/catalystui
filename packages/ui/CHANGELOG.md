@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.14
+
+### Patch Changes
+
+-   24b4499: Add value prop to select component for controlled operations
+
 ## 1.0.0-alpha.13
 
 ### Patch Changes
