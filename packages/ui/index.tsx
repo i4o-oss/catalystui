@@ -9,9 +9,12 @@ export { default as DangerButton } from './src/components/buttons/danger'
 export { default as IconButton } from './src/components/buttons/icon-button'
 export { default as PrimaryButton } from './src/components/buttons/primary'
 export { default as SharedButton } from './src/components/buttons/shared/button'
+
+
 export { default as Checkbox } from './src/components/checkbox'
 export { default as Collapsible } from './src/components/collapsible'
 export { default as CopyToClipboard } from './src/components/copy-to-clipboard'
+export { default as DatePicker } from './src/components/date-picker'
 export { default as Dialog } from './src/components/dialog'
 export { default as Dropdown } from './src/components/dropdown'
 export { default as HoverCard } from './src/components/hover-card'
