@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.16
+
+### Patch Changes
+
+-   e6fa1e0: Update date picker component
+
 ## 1.0.0-alpha.15
 
 ### Patch Changes
