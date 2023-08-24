@@ -1,24 +1,26 @@
 import * as PopoverPrimitive from '@radix-ui/react-popover'
-import Button from './buttons/shared/button'
 import Calendar from '../internal/calendar'
-import { useState } from 'react'
+import { Dispatch, ReactNode, SetStateAction, useState } from 'react'
 import clsx from 'clsx'
-import { format } from 'date-fns'
-import { CalendarIcon } from '@radix-ui/react-icons'
 
-export default function DatePicker() {
+interface DatePickerProps {
+    onDateChange?: Dispatch<SetStateAction<Date | undefined>>
+    trigger: ReactNode
+}
+
+export default function DatePicker({ onDateChange, trigger }: DatePickerProps) {
     const [date, setDate] = useState<Date | undefined>(new Date())
+
+    const dateChangeHandler = (day: Date | undefined) => {
+        onDateChange?.(day)
+        setDate(day)
+    }
 
     return (
         <div className='cui-relative cui-inline-block cui-text-left'>
             <PopoverPrimitive.Root>
                 <PopoverPrimitive.Trigger>
-                    <Button
-                        className='cui-w-[258px] !cui-justify-start cui-gap-2 !cui-bg-transparent hover:!cui-bg-transparent active:!cui-bg-transparent focus:!cui-bg-transparent cui-border !cui-border-subtle !cui-p-4'
-                        leftIcon={<CalendarIcon />}
-                    >
-                        {date ? format(date, 'PPP') : <span>Pick a date</span>}
-                    </Button>
+                    {trigger}
                 </PopoverPrimitive.Trigger>
                 <PopoverPrimitive.Portal>
                     <PopoverPrimitive.Content
@@ -32,7 +34,7 @@ export default function DatePicker() {
                         <Calendar
                             mode='single'
                             selected={date}
-                            onSelect={setDate}
+                            onSelect={dateChangeHandler}
                         />
                     </PopoverPrimitive.Content>
                 </PopoverPrimitive.Portal>
