@@ -6,7 +6,7 @@ Catalyst UI is a component library built on top of Radix UI Primitives styled wi
 
 ## Documentation
 
-For full documentation and a complete list of components, visit [catalyst-ui.com](https://catalyst-ui.com/)
+For full documentation and a complete list of components, visit [catalyst-ui.netlify.app](https://catalyst-ui.netlify.app/)
 
 ## Installation
 
