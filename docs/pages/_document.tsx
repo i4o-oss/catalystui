@@ -16,9 +16,9 @@ export default function Document() {
 				<Main />
 				<NextScript />
 				<Script
-					src='https://analytics.i4o.dev/script.js'
+					src='https://plausible.i4o.dev/js/script.js'
 					strategy='lazyOnload'
-					data-website-id='6e2975d1-ff50-41f3-bc2b-ac5f25909cb2'
+					data-domain='catalyst-ui.com'
 				/>
 			</body>
 		</Html>
