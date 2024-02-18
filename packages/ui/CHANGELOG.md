@@ -1,5 +1,11 @@
 # @i4o-oss/catalystui
 
+## 1.0.0-alpha.17
+
+### Patch Changes
+
+-   55bdbd9: Update select component styles and add size prop for avatar component
+
 ## 1.0.0-alpha.16
 
 ### Patch Changes
