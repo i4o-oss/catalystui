@@ -68,7 +68,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 						/>
 					</svg>
 				)}
-				<span className='cui-flex cui-items-center'>
+				<span className='cui-w-full cui-flex cui-items-center cui-justify-center'>
 					{loading ? loadingText : children}
 				</span>
 				{rightIcon}
