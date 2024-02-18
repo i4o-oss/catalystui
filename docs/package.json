@@ -1,6 +1,6 @@
 {
 	"name": "@catalystui/docs",
-	"version": "0.1.43-alpha.16",
+	"version": "0.1.43-alpha.17",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
