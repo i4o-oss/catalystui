@@ -5,13 +5,31 @@ import clsx from 'clsx'
 interface AvatarProps {
 	alt?: string
 	fallback?: ReactNode | string
+	size: 'small' | 'base' | 'large'
 	src?: string
 	variant?: 'circle' | 'rounded'
 }
 
-const Avatar: FC<AvatarProps> = ({ alt, fallback, src, variant }) => {
+const Avatar: FC<AvatarProps> = ({
+	alt,
+	fallback,
+	size = 'base',
+	src,
+	variant,
+}) => {
 	return (
-		<AvatarPrimitive.Root className='cui-relative cui-inline-flex cui-h-10 cui-w-10 cui-overflow-hidden'>
+		<AvatarPrimitive.Root
+			className={clsx(
+				'cui-relative cui-inline-flex cui-overflow-hidden',
+				`${
+					size === 'small'
+						? 'cui-h-8 cui-w-8'
+						: size === 'base'
+						? 'cui-h-10 cui-w-10'
+						: 'cui-h-12 cui-w-12'
+				}`
+			)}
+		>
 			<AvatarPrimitive.Image
 				alt={alt}
 				className={clsx([

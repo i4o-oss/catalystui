@@ -62,12 +62,14 @@ const Select: FC<Props> = ({
 		>
 			<SelectPrimitive.Trigger asChild>
 				<Button className='cui-flex'>
-					<SelectPrimitive.Value>
-						{selected.label}
-					</SelectPrimitive.Value>
-					<SelectPrimitive.Icon className='cui-ml-2'>
-						<ChevronDownIcon />
-					</SelectPrimitive.Icon>
+					<span className='cui-w-full cui-flex cui-items-center cui-justify-between'>
+						<SelectPrimitive.Value>
+							{selected.label}
+						</SelectPrimitive.Value>
+						<SelectPrimitive.Icon className='cui-ml-2'>
+							<ChevronDownIcon />
+						</SelectPrimitive.Icon>
+					</span>
 				</Button>
 			</SelectPrimitive.Trigger>
 			<SelectPrimitive.Portal>

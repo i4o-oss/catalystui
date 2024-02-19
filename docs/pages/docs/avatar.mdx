@@ -3,7 +3,18 @@ import DemoCard from '../../components/demo-card'
 
 # Avatar
 
-<DemoCard className='space-x-4'>
+<DemoCard className='flex-wrap flex flex-col gap-4'>
+    <div className='flex items-center gap-4'>
+	<Avatar
+        size='small'
+		src='https://images.unsplash.com/photo-1670525975578-4051a7803c38?&w=128&h=128&dpr=2&q=80'
+		variant='circle'
+	/>
+	<Avatar
+        size='small'
+		src='https://images.unsplash.com/photo-1669585997967-06d776524f7a?&w=128&h=128&dpr=2&q=80'
+		variant='rounded'
+	/>
 	<Avatar
 		src='https://images.unsplash.com/photo-1670525975578-4051a7803c38?&w=128&h=128&dpr=2&q=80'
 		variant='circle'
@@ -12,8 +23,25 @@ import DemoCard from '../../components/demo-card'
 		src='https://images.unsplash.com/photo-1669585997967-06d776524f7a?&w=128&h=128&dpr=2&q=80'
 		variant='rounded'
 	/>
+	<Avatar
+        size='large'
+		src='https://images.unsplash.com/photo-1670525975578-4051a7803c38?&w=128&h=128&dpr=2&q=80'
+		variant='circle'
+	/>
+	<Avatar
+        size='large'
+		src='https://images.unsplash.com/photo-1669585997967-06d776524f7a?&w=128&h=128&dpr=2&q=80'
+		variant='rounded'
+	/>
+    </div>
+    <div className='flex items-center gap-4'>
+	<Avatar fallback='J' size='small' variant='circle' />
+	<Avatar fallback='S' size='small' variant='rounded' />
 	<Avatar fallback='J' variant='circle' />
 	<Avatar fallback='S' variant='rounded' />
+	<Avatar fallback='J' size='large' variant='circle' />
+	<Avatar fallback='S' size='large' variant='rounded' />
+    </div>
 </DemoCard>
 
 ### Example
@@ -25,10 +53,17 @@ export default () => {
 	return (
 		<>
 			<Avatar
+                size='small'
 				src='https://images.unsplash.com/photo-1670525975578-4051a7803c38?&w=128&h=128&dpr=2&q=80'
 				variant='circle'
 			/>
 			<Avatar
+                size='base'
+				src='https://images.unsplash.com/photo-1670525975578-4051a7803c38?&w=128&h=128&dpr=2&q=80'
+				variant='circle'
+			/>
+			<Avatar
+                size='large'
 				src='https://images.unsplash.com/photo-1669585997967-06d776524f7a?&w=128&h=128&dpr=2&q=80'
 				variant='rounded'
 			/>
