@@ -11,16 +11,21 @@ export default function Document() {
 					rel='stylesheet'
 					href='https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700&amp;family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;family=Orbitron:wght@700&amp;display=swap'
 				/>
-			</Head>
-			<body>
-				<Main />
-				<NextScript />
-				<Script
+
+		<body className='mx-auto overflow-x-hidden'>
+			<div className=' overflow-hidden overflow-x-hidden w-screen '>
+					<Main />
+					<NextScript />
+					<Script
 					src='https://plausible.i4o.dev/js/script.js'
 					strategy='lazyOnload'
 					data-domain='catalyst-ui.com'
 				/>
-			</body>
+			</div>
+		</body>
+
+			
+
 		</Html>
 	)
 }
